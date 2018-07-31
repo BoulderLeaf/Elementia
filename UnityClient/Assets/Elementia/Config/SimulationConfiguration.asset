@@ -15,4 +15,4 @@ MonoBehaviour:
     _width: 200
     _height: 200
   _radius: 10
-  _simulationDevisions: 4
+  _simulationDevisions: 10

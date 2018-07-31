@@ -32,29 +32,19 @@ public class WorldSimulationStateService : Service
 
             string filepath = _indexGenerator.dataRootDirectory + SimulationConfiguration.IndexFilename;
 
-            if (File.Exists(filepath))
+            var request = new LoadSimulationStateJob.LoadSimulationStateJobRequest(filepath);
+            LoadSimulationStateJob loadJob = new LoadSimulationStateJob(request);
+            loadJob.Start();
+
+            yield return new WaitUntil(() => loadJob.IsDone);
+
+            if (loadJob.Output == null)
             {
-                FileStream fileStream = File.Open(filepath, FileMode.Open);
-
-                Debug.Log("Loading Simulation State from " + filepath);
-
-                using (var stream = fileStream)
-                {
-                    state = _serializer.Deserialize(stream) as WorldSimulationState;
-                }
+                state = _simulationConfiguration.GenerateSimulationState(worldIndex);
             }
             else
             {
-                FileStream fileStream = File.Open(filepath, FileMode.OpenOrCreate);
-
-                Debug.Log("Generating new simulation state at " + filepath);
-
-                state = _simulationConfiguration.GenerateSimulationState(worldIndex);
-
-                using (var stream = fileStream)
-                {
-                    _serializer.Serialize(state, fileStream);
-                }
+                state = loadJob.Output;
             }
 
             onComplete(state);
@@ -78,21 +68,26 @@ public class WorldSimulationStateService : Service
         {
             yield return 0;
 
+            WorldSimulationState state = null;
+
             _getRequest.AddRequest((worldSimulationState) =>
             {
-                string filepath = _indexGenerator.dataRootDirectory + SimulationConfiguration.IndexFilename;
-                FileStream fileStream = File.Open(filepath, FileMode.OpenOrCreate);
-
-                using (var stream = fileStream)
-                {
-                    _serializer.Serialize(worldSimulationState, fileStream);
-                }
-
-                onComplete(worldSimulationState);
-
-                ClearCache();
-
+                state = worldSimulationState;
             }, () => { });
+
+            yield return new WaitUntil(() => state != null);
+
+            string filepath = _indexGenerator.dataRootDirectory + SimulationConfiguration.IndexFilename;
+
+            var request = new SaveSimulationStateJob.SaveSimulationStateJobRequest(filepath, state);
+            SaveSimulationStateJob savejob = new SaveSimulationStateJob(request);
+            savejob.Start();
+
+            yield return new WaitUntil(() => savejob.IsDone);
+
+            onComplete(state);
+
+            ClearCache();
         }
     }
 
@@ -128,4 +123,96 @@ public class WorldSimulationStateService : Service
     {
         _worldSimulateSaveRequest.AddRequest((worldSimulationState) => {}, () => { });
     }
+
+    private class LoadSimulationStateJob : ThreadedJob
+    {
+        public class LoadSimulationStateJobRequest
+        {
+            private string _filepath;
+            public string Filepath { get
+                {
+                    return _filepath;
+                } }
+            public LoadSimulationStateJobRequest(string filepath)
+            {
+                _filepath = filepath;
+            }
+        }
+
+        public WorldSimulationState Output;
+        private LoadSimulationStateJobRequest _request;
+        private SharpSerializer _serializer;
+
+        public LoadSimulationStateJob(LoadSimulationStateJobRequest request)
+        {
+            _request = request;
+            _serializer = new SharpSerializer();
+        }
+
+        protected override void ThreadFunction()
+        {
+            string filepath = _request.Filepath;
+            if (File.Exists(filepath))
+            {
+                FileStream fileStream = File.Open(filepath, FileMode.Open);
+
+                Debug.Log("Loading Simulation State from " + filepath);
+
+                using (var stream = fileStream)
+                {
+                    Output = _serializer.Deserialize(stream) as WorldSimulationState;
+                }
+            }
+        }
+    }
+
+    private class SaveSimulationStateJob : ThreadedJob
+    {
+        public class SaveSimulationStateJobRequest
+        {
+            private WorldSimulationState _state;
+            public WorldSimulationState State
+            {
+                get
+                {
+                    return _state;
+                }
+            }
+            private string _filepath;
+            public string Filepath
+            {
+                get
+                {
+                    return _filepath;
+                }
+            }
+            public SaveSimulationStateJobRequest(string filepath, WorldSimulationState state)
+            {
+                _filepath = filepath;
+                _state = state;
+            }
+        }
+
+        public WorldSimulationState Output;
+        private SaveSimulationStateJobRequest _request;
+        private SharpSerializer _serializer;
+
+        public SaveSimulationStateJob(SaveSimulationStateJobRequest request)
+        {
+            _request = request;
+            _serializer = new SharpSerializer();
+        }
+
+        protected override void ThreadFunction()
+        {
+            FileStream fileStream = File.Open(_request.Filepath, FileMode.OpenOrCreate);
+
+            using (var stream = fileStream)
+            {
+                _serializer.Serialize(_request.State, fileStream);
+            }
+        }
+    }
 }
+
+

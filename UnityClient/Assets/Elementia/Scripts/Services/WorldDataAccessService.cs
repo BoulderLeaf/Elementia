@@ -14,6 +14,7 @@ public class WorldDataAccessService : Service
     private List<WorldDataToken> _tokens;
     private Dictionary<string, AreaIndex> _areaCache;
     private WorldSimulationState _worldSimulationState;
+    private List<LoadAreaJob> _jobCache = new List<LoadAreaJob>();
 
     public override void StartService(ServiceManager serviceManager)
     {
@@ -24,12 +25,13 @@ public class WorldDataAccessService : Service
         _worldPersistanceService = serviceManager.GetService<WorldPersistanceService>();
         _worldSimulationStateService = serviceManager.GetService<WorldSimulationStateService>();
         _worldSimulationStateService.Load((simulationState) => _worldSimulationState = simulationState, () => { });
+        _jobCache.Clear();
     }
 
     public void ReturnToken(WorldDataToken token)
     {
         return;
-        if(_tokens.Contains(token))
+        if (_tokens.Contains(token))
         {
             _tokens.Remove(token);
 
@@ -44,7 +46,7 @@ public class WorldDataAccessService : Service
             {
                 foreach (KeyValuePair<AreaIndex, string> keyValuePair in cachedToken.Filepaths)
                 {
-                    if(_removeCachedAreas.Contains(keyValuePair.Value))
+                    if (_removeCachedAreas.Contains(keyValuePair.Value))
                     {
                         _removeCachedAreas.Remove(keyValuePair.Value);
                     }
@@ -74,13 +76,24 @@ public class WorldDataAccessService : Service
     {
         StartCoroutine(SaveTokenCoroutine(token, onComplete));
     }
-
+    private HashSet<string> savingAreas = new HashSet<string>();
     public IEnumerator SaveTokenCoroutine(WorldDataToken token, Action<WorldDataToken> onComplete)
     {
-        SaveAreaJob job = new SaveAreaJob(token);
+        List<SaveAreaJob.SaveAreaRequest> saveRequests = new List<SaveAreaJob.SaveAreaRequest>();
+        foreach (KeyValuePair<AreaIndex, string> tokenFile in token.Filepaths)
+        {
+            if(!savingAreas.Contains(tokenFile.Value))
+            {
+                savingAreas.Add(tokenFile.Value);
+                saveRequests.Add(new SaveAreaJob.SaveAreaRequest(tokenFile.Key, tokenFile.Value));
+            }
+        }
+
+        SaveAreaJob job = new SaveAreaJob(saveRequests, token.WorldIndex);
         job.Start();
         yield return new WaitUntil(() => job.IsDone);
         onComplete(token);
+        saveRequests.ForEach((request) => savingAreas.Remove(request.filename));
     }
 
     public void GetToken(TokenRequest request, Action<WorldDataToken> onComplete, Action onError)
@@ -88,13 +101,23 @@ public class WorldDataAccessService : Service
         StartCoroutine(GetTokenCoroutine(request, onComplete, onError));
     }
 
+    private int testInt = 0;
+    private int remainingJobs = 0;
     private IEnumerator GetTokenCoroutine(TokenRequest request, Action<WorldDataToken> onComplete, Action onError)
     {
-        BinaryFormatter bf = new BinaryFormatter();
+        DateTime timeCheck = DateTime.UtcNow;
+        
         WorldIndex index = null;
         bool hasError = false;
         _worldPersistanceService.Load((worldIndex) => { index = worldIndex; }, () => { hasError = true; });
-        yield return new WaitUntil(() => index != null || hasError);
+        DateTime startWorldIndexLoad = DateTime.UtcNow;
+        yield return new WaitUntil(() => index != null || hasError || (DateTime.UtcNow - startWorldIndexLoad).TotalMilliseconds > 10000);
+        timeCheck = DateTime.UtcNow;
+
+        if ((DateTime.UtcNow - startWorldIndexLoad).TotalMilliseconds > 10000)
+        {
+            Debug.Log("TIMEOUT ERROR LOADING WORLD INDEX");
+        }
 
         if (!hasError)
         {
@@ -110,6 +133,10 @@ public class WorldDataAccessService : Service
             Dictionary<AreaIndex, string> filepaths = new Dictionary<AreaIndex, string>();
 
             List<LoadAreaJob.AreaRequest> requests = new List<LoadAreaJob.AreaRequest>();
+            List<LoadAreaJob.AreaRequest> loadRequests = new List<LoadAreaJob.AreaRequest>();
+            //List<string> 
+
+            List<LoadAreaJob> collaborators = new List<LoadAreaJob>();
 
             for (int i = 0; i < horizontalAreaCount; i++)
             {
@@ -117,29 +144,91 @@ public class WorldDataAccessService : Service
                 {
                     int areaX = i + leftArea;
                     int areaY = j + topArea;
-                    requests.Add(new LoadAreaJob.AreaRequest(areaX, areaY));
+                    LoadAreaJob.AreaRequest newRequest = new LoadAreaJob.AreaRequest(areaX, areaY);
+                    bool hasMatching = false;
+                    foreach (LoadAreaJob job in _jobCache)
+                    {
+                        if(job.ContainsMatchingAreaRequest(newRequest))
+                        {
+                            hasMatching = true;
+                            collaborators.Add(job);
+                            continue;
+                        }
+                    }
+                    
+                    if (!hasMatching)
+                    {
+                        requests.Add(newRequest);
+                        loadRequests.Add(newRequest);
+                    }
+                    else
+                    {
+                        requests.Add(newRequest);
+                    }
                 }
             }
 
-            LoadAreaJob loadAreaJob = new LoadAreaJob(requests, index, _areaCache, _worldPersistanceService.areaDataDirectoryPath);
-
+            LoadAreaJob loadAreaJob = new LoadAreaJob(loadRequests, index, _areaCache, _worldPersistanceService.areaDataDirectoryPath);
+            _jobCache.Add(loadAreaJob);
             loadAreaJob.Start();
+            int jobNumber = testInt++;
+            DateTime startLoad = DateTime.UtcNow;
+            bool timeout = false;
 
-            yield return new WaitUntil(() => loadAreaJob.IsDone);
-
-            foreach(LoadAreaJob.AreaRequestResult result in loadAreaJob.OutData)
+            yield return new WaitUntil(() =>
             {
-                filepaths[result.Result] = result.Filepath;
-                _areaCache[result.Filepath] = result.Result;
-                areas[result.Request.areaX - leftArea, result.Request.areaY - topArea] = result.Result;
-            }
+                bool isDone = true;
+                isDone &= loadAreaJob.IsDone;
+                collaborators.ForEach((collaborator) => isDone &= collaborator.IsDone);
+                timeout = (DateTime.UtcNow - startLoad).TotalMilliseconds > 10000;
+                isDone |= timeout;
+                return isDone;
+            });
+            
+            timeCheck = DateTime.UtcNow;
+            if (!timeout)
+            {
+                requests.ForEach((loadedRequest) =>
+                {
+                    LoadAreaJob.AreaRequestResult areaResult = default(LoadAreaJob.AreaRequestResult);
+                    loadAreaJob.OutDataTable.TryGetValue(loadedRequest.areaX.ToString() + loadedRequest.areaY.ToString(), out areaResult);
 
-            WorldDataToken token = new WorldDataToken(request, index, areas, filepaths);
-            _tokens.Add(token);
-            onComplete(token);
+                    if(areaResult.Result != null)
+                    {
+                        filepaths[areaResult.Result] = areaResult.Filepath;
+                        _areaCache[areaResult.Filepath] = areaResult.Result;
+                        areas[areaResult.Request.areaX - leftArea, areaResult.Request.areaY - topArea] = areaResult.Result;
+                    }
+
+                    collaborators.ForEach((collaborator) =>
+                    {
+                        areaResult = default(LoadAreaJob.AreaRequestResult);
+                        loadAreaJob.OutDataTable.TryGetValue(loadedRequest.areaX.ToString() + loadedRequest.areaY.ToString(), out areaResult);
+
+                        if (areaResult.Result != null)
+                        {
+                            filepaths[areaResult.Result] = areaResult.Filepath;
+                            areas[areaResult.Request.areaX - leftArea, areaResult.Request.areaY - topArea] = areaResult.Result;
+                        }
+                    });
+                });
+
+                _jobCache.Remove(loadAreaJob);
+
+                WorldDataToken token = new WorldDataToken(request, index, areas, filepaths);
+                _tokens.Add(token);
+                Debug.Log("timeCheck3: " + (DateTime.UtcNow - timeCheck).TotalMilliseconds);
+                onComplete(token);
+            }
+            else
+            {
+                Debug.LogError("Timeout error occured attempting to load area files.");
+                onError();
+            }
         }
         else
         {
+            Debug.LogError("There was an error loading the World Index");
             onError();
         }
     }
@@ -147,31 +236,42 @@ public class WorldDataAccessService : Service
 
 public class SaveAreaJob : ThreadedJob
 {
-    private WorldDataToken _token;
-    public SaveAreaJob(WorldDataToken token)
+    public class SaveAreaRequest
     {
-        _token = token;
+        public AreaIndex area;
+        public string filename;
+        public SaveAreaRequest(AreaIndex area, string filename)
+        {
+            this.area = area;
+            this.filename = filename;
+        }
+    }
+
+    private List<SaveAreaRequest> _requests;
+    private WorldIndex _worldIndex;
+    public SaveAreaJob(List<SaveAreaRequest> requests, WorldIndex worldIndex)
+    {
+        _requests = requests;
+        _worldIndex = worldIndex;
     }
 
     protected override void ThreadFunction()
     {
-        SharpSerializer serializer = new SharpSerializer();
-
-        foreach (KeyValuePair<AreaIndex, string> file in _token.Filepaths)
+        foreach (SaveAreaRequest saveAreaRequest in _requests)
         {
-            string filepath = file.Value;
-            FileStream areaFileStream = File.Open(filepath, FileMode.OpenOrCreate);
+            FileStream areaFileStream = File.Open(saveAreaRequest.filename, FileMode.Create);
 
-            switch (_token.WorldIndex.SerializationType)
+            switch (_worldIndex.SerializationType)
             {
                 case SerializationType.Binary:
                     BinaryFormatter bf = new BinaryFormatter();
-                    bf.Serialize(areaFileStream, file.Key);
+                    bf.Serialize(areaFileStream, saveAreaRequest.area);
                     break;
                 case SerializationType.SharpSerializer:
+                    SharpSerializer serializer = new SharpSerializer();
                     using (var stream = areaFileStream)
                     {
-                        serializer.Serialize(file.Key, areaFileStream);
+                        serializer.Serialize(saveAreaRequest.area, areaFileStream);
                     }
                     break;
             }
@@ -195,6 +295,21 @@ public class LoadAreaJob: ThreadedJob
         {
             _areaX = areaX;
             _areaY = areaY;
+        }
+
+        public static bool operator ==(AreaRequest a1, AreaRequest a2)
+        {
+            return a1.areaX == a2.areaX && a1.areaY == a2.areaY;
+        }
+
+        public static bool operator !=(AreaRequest a1, AreaRequest a2)
+        {
+            return a1.areaX != a2.areaX || a1.areaY != a2.areaY;
+        }
+
+        public override string ToString()
+        {
+            return string.Format("[areaX:{0}, areaY:{1}]", _areaX, _areaY);
         }
     }
 
@@ -220,6 +335,7 @@ public class LoadAreaJob: ThreadedJob
     private List<AreaRequest> _areaRequests;  // arbitary job data
     private WorldIndex _worldIndex;
     public List<AreaRequestResult> OutData; // arbitary job data
+    public Dictionary<string, AreaRequestResult> OutDataTable; // arbitary job data
     public WorldDataToken token;
     private string _areaDataDirectoryPath;
     BinaryFormatter bf = new BinaryFormatter();
@@ -231,6 +347,20 @@ public class LoadAreaJob: ThreadedJob
         _areaCache = areaCache;
         _areaDataDirectoryPath = areaDataDirectoryPath;
         OutData = new List<AreaRequestResult>();
+        OutDataTable = new Dictionary<string, AreaRequestResult>();
+    }
+
+    public bool ContainsMatchingAreaRequest(AreaRequest areaRequest)
+    {
+        foreach(AreaRequest matchingAreaRequest in _areaRequests)
+        {
+            if(areaRequest == matchingAreaRequest)
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     protected override void ThreadFunction()
@@ -238,7 +368,6 @@ public class LoadAreaJob: ThreadedJob
         foreach (AreaRequest request in _areaRequests)
         {
             string filename = string.Format(_worldIndex.AreaFilenameFormatSource, request.areaX, request.areaY, _worldIndex.FileDataExtension);
-
             AreaIndex areaIndex = null;
             if (_areaCache.ContainsKey(filename))
             {
@@ -248,17 +377,27 @@ public class LoadAreaJob: ThreadedJob
             { 
                 if(File.Exists(_areaDataDirectoryPath + filename))
                 {
-                    FileStream areaFileStream = File.Open(_areaDataDirectoryPath + filename, FileMode.OpenOrCreate);
-                    areaIndex = (AreaIndex)bf.Deserialize(areaFileStream);
-                    areaFileStream.Close();
+                    try
+                    {
+                        string allfilesString = string.Empty;
+                        FileStream areaFileStream = File.Open(_areaDataDirectoryPath + filename, FileMode.Open);
+                        areaIndex = (AreaIndex)bf.Deserialize(areaFileStream);
+                        areaFileStream.Close();
+                        allfilesString = string.Empty;
+                    }
+                    catch(Exception e)
+                    {
+                        Debug.LogError("Error while loading area files: \n"+e);
+                    }
                 }
                 else
                 {
                     Debug.LogErrorFormat("File does not exist {0}", _areaDataDirectoryPath + filename);
-                }       
+                } 
             }
-
-            OutData.Add(new AreaRequestResult(request, areaIndex, _areaDataDirectoryPath + filename));
+            AreaRequestResult areaRequestResult = new AreaRequestResult(request, areaIndex, _areaDataDirectoryPath + filename);
+            OutDataTable.Add(request.areaX.ToString() + request.areaY.ToString(), areaRequestResult);
+            OutData.Add(areaRequestResult);
         }
     }
     protected override void OnFinished()

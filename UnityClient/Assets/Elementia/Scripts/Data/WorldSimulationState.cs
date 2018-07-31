@@ -106,7 +106,7 @@ public class WorldSimulationState {
         TimeSpan span = DateTime.UtcNow - _lastStep;
         _total += (uint)span.Milliseconds;
         uint totalStepsForWorld = (uint)((WorldDimensions.Width / Dimensions.Width) * (WorldDimensions.Height / Dimensions.Height));
-        Debug.LogFormat("Stepping simulation state from {0} to {1} totalStepsForWorld : {2} timeTakenForStep {3}, timeAverage{4}", SimulationStep, SimulationStep + 1, totalStepsForWorld, span.Milliseconds, (int)(_total / _steps));
+        Debug.Log("totalStepsForWorld: "+ totalStepsForWorld);
         SimulationStep++;
         _steps++;
         _lastStep = DateTime.UtcNow;
@@ -132,5 +132,10 @@ public struct SimulationArea
         _dimensions = dimensions;
         _position = position;
         _positionStep = positionStep;
+    }
+
+    public override string ToString()
+    {
+        return base.ToString();
     }
 }

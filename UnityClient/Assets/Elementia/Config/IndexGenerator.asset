@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3e83c49f323dc84aa40504c3b006911, type: 3}
   m_Name: IndexGenerator
   m_EditorClassIdentifier: 
-  _version: 0.15.0
+  _version: 0.16.0
   _dataFileExtensions: dat
   _indexFileName: index
   _areaFilenameFormatSource: area_{0}_{1}.{2}

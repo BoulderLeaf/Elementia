@@ -16,6 +16,11 @@ public struct WorldPosition
 
     public int X { get { return _x; } set { _x = value; } }
     public int Y { get { return _y; } set { _y = value; } }
+
+    public override string ToString()
+    {
+        return string.Format("[x:{0}, y:{1}]", _x, _y);
+    }
 }
 
 [Serializable]
@@ -164,6 +169,7 @@ public class WorldIndexGenerator : ScriptableObject {
                         {
                             serializer.Serialize(area, areaFileStream);
                         }
+                        
                         break;
                 }
 

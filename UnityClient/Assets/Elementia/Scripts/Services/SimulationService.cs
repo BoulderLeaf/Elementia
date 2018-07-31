@@ -23,7 +23,6 @@ public class SimulationService : Service
     private void OnSimulationStateLoaded(WorldSimulationState simulationState)
     {
         _state = simulationState;
-        Debug.Log("WorldIndex recieved for simulation service. Starting simulation.");
         StartCoroutine(SimulationCoroutine());
     }
 
@@ -37,8 +36,9 @@ public class SimulationService : Service
         {
             uint totalDevisions = _state.SimulationDevisions;
             uint stepsCompleted = 0;
+            Debug.Log("Step Simulation" + _state.SimulationStep);
 
-            for(uint i = 0; i<totalDevisions;i++)
+            for (uint i = 0; i<totalDevisions;i++)
             {
                 StartCoroutine(SimulateStep(i, totalDevisions, () => stepsCompleted++));
             }
@@ -49,28 +49,37 @@ public class SimulationService : Service
             _worldSimulationStateService.SaveState();
         }
     }
-
+    int tokenRequests = 0;
     private IEnumerator SimulateStep(uint offset, uint totalDevisions,Action onComplete)
     {
         SimulationArea simulationArea = _state.GetCurrentSimulationArea(offset, totalDevisions);
-
         TokenRequest tokenRequest = new TokenRequest(simulationArea.Left, simulationArea.Right, simulationArea.Bottom, simulationArea.Top);
         WorldDataToken token = null;
-
+        int myTokenRequest = tokenRequests++;
+        Debug.Log("Step 1`: loading "+ (myTokenRequest));
         _worldDataAccessService.GetToken(tokenRequest, (recievedToken) => {
             token = recievedToken;
-        }, () => { });
+        }, () => {
+            Debug.LogError("There was an error attempthing to recieve a data token while simulating a step.");
+        });
+        DateTime startWorldIndexLoad = DateTime.UtcNow;
+        yield return new WaitUntil(() => {
+            return token != null || (DateTime.UtcNow - startWorldIndexLoad).TotalMilliseconds > 10000;
+        });
+        Debug.Log("Step 2");
+        if ((DateTime.UtcNow - startWorldIndexLoad).Milliseconds > 10000)
+        {
+            Debug.Log("TIMEOUT ERROR LOADING WORLD INDEX");
+        }
+        //SimulateAreaJob simulateAreaJob = new SimulateAreaJob(token, _state);
+        //simulateAreaJob.Start();
 
-        yield return new WaitUntil(() => token != null);
+        //yield return new WaitUntil(() => simulateAreaJob.IsDone);
 
-        SimulateAreaJob simulateAreaJob = new SimulateAreaJob(token, _state);
-        simulateAreaJob.Start();
-
-        yield return new WaitUntil(() => simulateAreaJob.IsDone);
-
-        bool tokenSaved = false;
-        _worldDataAccessService.SaveAndReturnToken(token, () => tokenSaved = true);
-        yield return new WaitUntil(() => tokenSaved == true);
+        //bool tokenSaved = false;
+        //_worldDataAccessService.SaveAndReturnToken(token, () => tokenSaved = true);
+        //yield return new WaitUntil(() => tokenSaved == true);
+        Debug.Log("Step 3: Done loading: "+ myTokenRequest);
         onComplete();
     }
 }

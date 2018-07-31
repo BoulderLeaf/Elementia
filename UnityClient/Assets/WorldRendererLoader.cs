@@ -43,17 +43,19 @@ public class WorldRendererLoader : MonoBehaviour {
     private void DrawGround()
     {
         Vector3 targetPosition = _target.position;
+        Debug.Log("WorldRendererloader: DrawGround");
         _worldDataAccessService.GetToken(new TokenRequest((int)targetPosition.x - _radius, (int)targetPosition.x + _radius, (int)targetPosition.z + _radius, (int)targetPosition.z - _radius), OnGetTokenComplete, () => { });
     }
 
     private void OnGetTokenComplete(WorldDataToken token)
     {
-        int testValue = token.GetInt(50, 50, IntDataID.NoiseLayerData);
+        Debug.Log("WorldRendererloader.OnGetTokenComplete: token: " + token);
         StartCoroutine(RenderGround(token));
     }
 
     private IEnumerator RenderGround(WorldDataToken token)
     {
+        Debug.Log("WorldRendererloader.OnGetTokenComplete: token: " + token);
         MeshCollider collider = null;
 
         if(_renderingPlane == null)
