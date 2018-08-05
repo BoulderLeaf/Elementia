@@ -67,7 +67,7 @@ public class WorldSimulationStateService : Service
             _indexGenerator = indexGenerator;
             _getRequest = getRequest;
         }
-
+ 
         protected override IEnumerator MakeRequestCoroutine(Action<WorldSimulationState> onComplete, Action onError)
         {
             yield return 0;

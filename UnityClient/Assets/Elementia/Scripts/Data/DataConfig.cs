@@ -74,4 +74,9 @@ public class DataConfig : ScriptableObject
             uid
         });
     }
+    
+    public string GetRelativeWorldIndexPath(IWorldIndexGenerator generator)
+    {
+        return GetRelativeWorldIndexPath(generator.uid);
+    }
 }

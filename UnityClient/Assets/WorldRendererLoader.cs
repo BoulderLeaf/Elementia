@@ -42,9 +42,30 @@ public class WorldRendererLoader : MonoBehaviour {
 
     private void DrawGround()
     {
+        _worldDataAccessService.RequestAccess((worldDataAccess) =>
+            {
+                StartCoroutine(DrawGroundCoroutine(worldDataAccess));
+            }, () => { });
+    }
+
+    private IEnumerator DrawGroundCoroutine(WorldDataAccess worldDataAccess)
+    {
         Vector3 targetPosition = _target.position;
         Debug.Log("WorldRendererloader: DrawGround");
-        _worldDataAccessService.GetToken(new TokenRequest((int)targetPosition.x - _radius, (int)targetPosition.x + _radius, (int)targetPosition.z + _radius, (int)targetPosition.z - _radius), OnGetTokenComplete, () => { });
+
+        LoadTokenJob loadTokenJob =
+            new LoadTokenJob(worldDataAccess, targetPosition, _radius, Application.persistentDataPath);
+
+        loadTokenJob.Start();
+
+        while (!loadTokenJob.IsDone)
+        {
+            yield return 0;
+        }
+
+
+        OnGetTokenComplete(loadTokenJob.Output);
+        Debug.Log("DRAW DONE");
     }
 
     private void OnGetTokenComplete(WorldDataToken token)
@@ -144,6 +165,27 @@ public class WorldRendererLoader : MonoBehaviour {
 
         RedrawCountdown = 100;
         plane.SetActive(true);
-        _worldDataAccessService.ReturnToken(token);
+        //_worldDataAccessService.ReturnToken(token);
+    }
+}
+
+public class LoadTokenJob : ThreadedJob
+{
+    public WorldDataToken Output;
+    private WorldDataAccess _worldDataAccess;
+    private Vector3 _position;
+    private int _radius;
+    private string _persistentDataPath;
+    public LoadTokenJob(WorldDataAccess worldDataAccess, Vector3 position, int raduis, string persistentDataPath)
+    {
+        _worldDataAccess = worldDataAccess;
+        _position = position;
+        _radius = raduis;
+        _persistentDataPath = persistentDataPath;
+    }
+
+    protected override void ThreadFunction()
+    {
+        Output =  _worldDataAccess.GetToken(new TokenRequest((int)_position.x - _radius, (int)_position.x + _radius, (int)_position.z + _radius, (int)_position.z - _radius), _persistentDataPath);
     }
 }

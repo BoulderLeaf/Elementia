@@ -119,6 +119,8 @@ public class WorldAsset : ScriptableObject, IWorldIndexGenerator
             index = serializer.Deserialize(stream) as WorldIndex;
         }
 
+        index.SetGenerator(this);
+
         return index;
     }
     

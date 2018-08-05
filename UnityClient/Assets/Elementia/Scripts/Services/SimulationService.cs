@@ -10,6 +10,7 @@ public class SimulationService : Service
     private WorldSimulationState _state;
     private SharpSerializer _serializer;
     private WorldSimulationStateService _worldSimulationStateService;
+    private WorldDataAccess _worldDataAccess;
 
     public override void StartService(ServiceManager serviceManager)
     {
@@ -23,18 +24,34 @@ public class SimulationService : Service
     private void OnSimulationStateLoaded(WorldSimulationState simulationState)
     {
         _state = simulationState;
-        //StartCoroutine(SimulationCoroutine());
+        _worldDataAccessService.RequestAccess(OnDataAccessRequested, ()=>{
+        });
+    }
+    
+    private void OnDataAccessRequested(WorldDataAccess worldDataAccess)
+    {
+        _worldDataAccess = worldDataAccess;
+        StartCoroutine(SimulationCoroutine());
     }
 
     private IEnumerator SimulationCoroutine()
     {
         yield return 0;
-
+        
         bool simulating = true;
-
+        SimulationJob job = new SimulationJob(_worldDataAccess, _state);
+        job.Start();
+        
         while(simulating)
         {
-            uint totalDevisions = _state.SimulationDevisions;
+            if (job.IsDone)
+            {
+                simulating = false;
+            }
+            
+            yield return 0;
+            
+            /*uint totalDevisions = _state.SimulationDevisions;
             uint stepsCompleted = 0;
             Debug.Log("Step Simulation" + _state.SimulationStep);
 
@@ -46,13 +63,13 @@ public class SimulationService : Service
             yield return new WaitUntil(() => stepsCompleted >= totalDevisions);
 
             _state.StepSimulationState();
-            _worldSimulationStateService.SaveState();
+            _worldSimulationStateService.SaveState();*/
         }
     }
     int tokenRequests = 0;
     private IEnumerator SimulateStep(uint offset, uint totalDevisions,Action onComplete)
     {
-        SimulationArea simulationArea = _state.GetCurrentSimulationArea(offset, totalDevisions);
+        /*SimulationArea simulationArea = _state.GetCurrentSimulationArea(offset, totalDevisions);
         TokenRequest tokenRequest = new TokenRequest(simulationArea.Left, simulationArea.Right, simulationArea.Bottom, simulationArea.Top);
         WorldDataToken token = null;
         int myTokenRequest = tokenRequests++;
@@ -80,7 +97,9 @@ public class SimulationService : Service
         //_worldDataAccessService.SaveAndReturnToken(token, () => tokenSaved = true);
         //yield return new WaitUntil(() => tokenSaved == true);
         Debug.Log("Step 3: Done loading: "+ myTokenRequest);
-        onComplete();
+        onComplete();*/
+
+        yield return 0;
     }
 }
 
@@ -173,5 +192,18 @@ public class SimulateAreaJob:ThreadedJob
             waterValues[otherX, otherY] += waterValue;
             waterValues[1, 1] = 0;
         }
+    }
+}
+
+public class SimulationJob : ThreadedJob
+{
+    public SimulationJob(WorldDataAccess worldDataAccess, WorldSimulationState worldSimulationState)
+    {
+        
+    }
+
+    protected override void ThreadFunction()
+    {
+        
     }
 }

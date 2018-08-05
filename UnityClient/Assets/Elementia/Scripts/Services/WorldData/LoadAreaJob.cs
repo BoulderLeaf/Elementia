@@ -34,6 +34,11 @@ public class LoadAreaJob: ThreadedJob
         {
             return string.Format("[areaX:{0}, areaY:{1}]", _areaX, _areaY);
         }
+
+        public string GetAreaKey()
+        {
+            return String.Join("_", new string[]{areaX.ToString(), areaY.ToString()});
+        }
     }
 
     public struct AreaRequestResult
@@ -54,77 +59,65 @@ public class LoadAreaJob: ThreadedJob
         }
     }
 
-    private Dictionary<string, AreaIndex> _areaCache;
-    private List<AreaRequest> _areaRequests;  // arbitary job data
+    private AreaRequest _areaRequest;  // arbitary job data
     private WorldIndex _worldIndex;
-    public List<AreaRequestResult> OutData; // arbitary job data
-    public Dictionary<string, AreaRequestResult> OutDataTable; // arbitary job data
+    public AreaRequestResult OutData; // arbitary job data
     public WorldDataToken token;
+    private DataConfig _dataConfig;
     private string _areaDataDirectoryPath;
     BinaryFormatter bf = new BinaryFormatter();
 
-    public LoadAreaJob(List<AreaRequest> areaRequests, WorldIndex index, Dictionary<string, AreaIndex> areaCache, string areaDataDirectoryPath)
+    public LoadAreaJob(AreaRequest areaRequest, WorldIndex index, DataConfig dataConfig, string areaDataDirectoryPath)
     {
-        _areaRequests = areaRequests;
+        _areaRequest = areaRequest;
         _worldIndex = index;
-        _areaCache = areaCache;
         _areaDataDirectoryPath = areaDataDirectoryPath;
-        OutData = new List<AreaRequestResult>();
-        OutDataTable = new Dictionary<string, AreaRequestResult>();
-    }
-
-    public bool ContainsMatchingAreaRequest(AreaRequest areaRequest)
-    {
-        foreach(AreaRequest matchingAreaRequest in _areaRequests)
-        {
-            if(areaRequest == matchingAreaRequest)
-            {
-                return true;
-            }
-        }
-
-        return false;
+        _dataConfig = dataConfig;
     }
 
     protected override void ThreadFunction()
     {
-        foreach (AreaRequest request in _areaRequests)
+        AreaIndex areaIndex = null;
+        Debug.Log("LoadAreaJob: "+GetFilePath());
+        if(File.Exists(GetFilePath()))
         {
-            string filename = string.Format(_worldIndex.AreaFilenameFormatSource, request.areaX, request.areaY, _worldIndex.FileDataExtension);
-            AreaIndex areaIndex = null;
-            if (_areaCache.ContainsKey(filename))
+            try
             {
-                _areaCache.TryGetValue(filename, out areaIndex);
+                string allfilesString = string.Empty;
+                FileStream areaFileStream = File.Open(GetFilePath(), FileMode.OpenOrCreate);
+                areaIndex = (AreaIndex)bf.Deserialize(areaFileStream);
+                areaFileStream.Close();
+                allfilesString = string.Empty;
+                Debug.Log("LoadAreaJob DONE: "+GetFilePath());
             }
-            else
-            { 
-                if(File.Exists(_areaDataDirectoryPath + filename))
-                {
-                    try
-                    {
-                        string allfilesString = string.Empty;
-                        FileStream areaFileStream = File.Open(_areaDataDirectoryPath + filename, FileMode.Open);
-                        areaIndex = (AreaIndex)bf.Deserialize(areaFileStream);
-                        areaFileStream.Close();
-                        allfilesString = string.Empty;
-                    }
-                    catch(Exception e)
-                    {
-                        Debug.LogError("Error while loading area files: \n"+e);
-                    }
-                }
-                else
-                {
-                    Debug.LogErrorFormat("File does not exist {0}", _areaDataDirectoryPath + filename);
-                } 
+            catch(Exception e)
+            {
+                Debug.LogError("Error while loading area files: \n"+e);
             }
-            AreaRequestResult areaRequestResult = new AreaRequestResult(request, areaIndex, _areaDataDirectoryPath + filename);
-            OutDataTable.Add(request.areaX.ToString() + request.areaY.ToString(), areaRequestResult);
-            OutData.Add(areaRequestResult);
         }
-    }
-    protected override void OnFinished()
-    {
+        else
+        {
+            Debug.LogErrorFormat("File does not exist {0}", GetFilePath());
+        }
         
+        OutData = new AreaRequestResult(_areaRequest, areaIndex, GetFilePath());
+    }
+    
+    public string GetFilePath()
+    {
+        return String.Join(DataConfig.DirectoryDelimiter,
+            new string[]
+            {
+                _areaDataDirectoryPath,
+                _dataConfig.GetRelativeWorldIndexPath(_worldIndex.GetGenerator()),
+                _dataConfig.AreaDataRelativeDirectory,
+                string.Format(_worldIndex.AreaFilenameFormatSource, _areaRequest.areaX, _areaRequest.areaY,
+                    _worldIndex.FileDataExtension)
+            });
+    }
+
+    public string GetAreaKey()
+    {
+        return _areaRequest.GetAreaKey();
     }
 }

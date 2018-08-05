@@ -29,22 +29,22 @@ public class ForestAgentPuppet : InputPuppet
 
     public void AddWater()
     {
-        _worldDataAccessService.GetToken(new TokenRequest((int)transform.position.x - _waterRadius, (int)transform.position.x + _waterRadius, (int)transform.position.z + _waterRadius, (int)transform.position.z - _waterRadius), AddWaterTokenRecievedComplete, () => { });
+        //_worldDataAccessService.GetToken(new TokenRequest((int)transform.position.x - _waterRadius, (int)transform.position.x + _waterRadius, (int)transform.position.z + _waterRadius, (int)transform.position.z - _waterRadius), AddWaterTokenRecievedComplete, () => { });
     }
 
     public void MakeFlatEarth()
     {
-        _worldDataAccessService.GetToken(new TokenRequest((int)transform.position.x - _radius, (int)transform.position.x + _radius, (int)transform.position.z + _radius, (int)transform.position.z - _radius), LowerEarthTokenRecievedComplete, () => { });
+       // _worldDataAccessService.GetToken(new TokenRequest((int)transform.position.x - _radius, (int)transform.position.x + _radius, (int)transform.position.z + _radius, (int)transform.position.z - _radius), LowerEarthTokenRecievedComplete, () => { });
     }
 
     public void LowerEarth()
     {
-        _worldDataAccessService.GetToken(new TokenRequest((int)transform.position.x - _radius, (int)transform.position.x + _radius, (int)transform.position.z + _radius, (int)transform.position.z - _radius), LowerEarthTokenRecievedComplete, () => { });
+       // _worldDataAccessService.GetToken(new TokenRequest((int)transform.position.x - _radius, (int)transform.position.x + _radius, (int)transform.position.z + _radius, (int)transform.position.z - _radius), LowerEarthTokenRecievedComplete, () => { });
     }
 
     public void RaiseEarth()
     {
-        _worldDataAccessService.GetToken(new TokenRequest((int)transform.position.x - _radius, (int)transform.position.x + _radius, (int)transform.position.z + _radius, (int)transform.position.z - _radius), RaiseEarthTokenRecievedComplete, () => { });
+       // _worldDataAccessService.GetToken(new TokenRequest((int)transform.position.x - _radius, (int)transform.position.x + _radius, (int)transform.position.z + _radius, (int)transform.position.z - _radius), RaiseEarthTokenRecievedComplete, () => { });
     }
 
     private void MakeFlatTokenRecievedComplete(WorldDataToken token)
@@ -58,7 +58,7 @@ public class ForestAgentPuppet : InputPuppet
             }
         }
 
-        _worldDataAccessService.SaveToken(token, (WorldDataToken returnToken) => { });
+       // _worldDataAccessService.SaveToken(token, (WorldDataToken returnToken) => { });
     }
 
     private void AddWaterTokenRecievedComplete(WorldDataToken token)
@@ -71,7 +71,7 @@ public class ForestAgentPuppet : InputPuppet
             }
         }
 
-        _worldDataAccessService.SaveToken(token, (WorldDataToken returnToken) => { });
+      //  _worldDataAccessService.SaveToken(token, (WorldDataToken returnToken) => { });
     }
 
     private void RaiseEarthTokenRecievedComplete(WorldDataToken token)
@@ -84,7 +84,7 @@ public class ForestAgentPuppet : InputPuppet
             }
         }
 
-        _worldDataAccessService.SaveToken(token, (WorldDataToken returnToken) => { });
+        //_worldDataAccessService.SaveToken(token, (WorldDataToken returnToken) => { });
     }
 
     private void LowerEarthTokenRecievedComplete(WorldDataToken token)
@@ -97,6 +97,6 @@ public class ForestAgentPuppet : InputPuppet
             }
         }
 
-        _worldDataAccessService.SaveToken(token, (WorldDataToken returnToken) => { });
+       // _worldDataAccessService.SaveToken(token, (WorldDataToken returnToken) => { });
     }
 }

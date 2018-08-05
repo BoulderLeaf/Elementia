@@ -4,30 +4,107 @@ using System;
 using System.Collections.Generic;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
+using System.Threading;
 using Polenter.Serialization;
+
 
 public class WorldDataAccessService : Service
 {
-    private WorldPersistanceService _worldPersistanceService;
+    private class WorldDataAccessRequest:ServiceRequest<WorldDataAccess>
+    {
+        private WorldPersistanceService _worldPersistanceService;
+        private DataConfig _dataConfig;
+        
+        public WorldDataAccessRequest(WorldDataAccessService worldDataAccessService, WorldPersistanceService worldPersistanceService, DataConfig dataConfig) : base(worldDataAccessService)
+        {
+            _dataConfig = dataConfig;
+            _worldPersistanceService = worldPersistanceService;
+        }
+        
+        protected override IEnumerator MakeRequestCoroutine(Action<WorldDataAccess> onComplete, Action onError)
+        {
+            WorldIndex index = null;
+            bool hasError = false;
+            
+            _worldPersistanceService.Load((worldIndex) => { index = worldIndex; }, () => { hasError = true; });
 
-    private List<WorldDataToken> _tokens;
-    private Dictionary<string, AreaIndex> _areaCache;
+            while (index == null && !hasError)
+            {
+                yield return null;
+            }
+
+            if (hasError)
+            {
+                onError();
+            }
+            else
+            {
+                onComplete(new WorldDataAccess(index, _dataConfig));
+            }
+        }
+    }
+    
+    private WorldPersistanceService _worldPersistanceService;
     private WorldSimulationState _worldSimulationState;
-    private List<LoadAreaJob> _jobCache = new List<LoadAreaJob>();
+    private WorldDataAccessRequest _worldDataAccessRequest;
+
+    [SerializeField] private DataConfig _dataConfig;
 
     public override void StartService(ServiceManager serviceManager)
     {
         base.StartService(serviceManager);
-
-        _areaCache = new Dictionary<string, AreaIndex>();
-        _tokens = new List<WorldDataToken>();
         _worldPersistanceService = serviceManager.GetService<WorldPersistanceService>();
-        _jobCache.Clear();
+        _worldDataAccessRequest = new WorldDataAccessRequest(this, _worldPersistanceService, _dataConfig);
+    }
+
+    public void RequestAccess(Action<WorldDataAccess> onComplete, Action onError)
+    {
+        _worldDataAccessRequest.AddRequest(onComplete, onError);
+    }
+}
+
+public struct TokenRequest
+{
+    private int _left;
+    private int _right;
+    private int _bottom;
+    private int _top;
+
+    public int left { get { return _left; } }
+    public int right { get { return _right; } }
+    public int bottom { get { return _bottom; } }
+    public int top { get { return _top; } }
+    public int width { get { return _right - _left; } }
+    public int height { get { return _bottom - top; } }
+
+    public TokenRequest(int left, int right, int bottom, int top)
+    {
+        _left = left;
+        _right = right;
+        _bottom = bottom;
+        _top = top;
+    }
+}
+
+public class WorldDataAccess
+{
+    private Dictionary<string, LoadAreaJob> _cache;
+    private Dictionary<string, SaveAreaJob> _saveCache;
+    private WorldIndex _worldIndex;
+    private DataConfig _dataConfig;
+    
+    public WorldDataAccess(WorldIndex worldIndex, DataConfig dataConfig)
+    {
+        _cache = new Dictionary<string, LoadAreaJob>();
+        _saveCache = new Dictionary<string, SaveAreaJob>();
+        _worldIndex = worldIndex;
+        _dataConfig = dataConfig;
     }
 
     public void ReturnToken(WorldDataToken token)
     {
         return;
+        /*
         if (_tokens.Contains(token))
         {
             _tokens.Remove(token);
@@ -58,25 +135,20 @@ public class WorldDataAccessService : Service
                 _areaCache[removeCache].Destroy();
                 _areaCache.Remove(removeCache);
             }
-        }
+        }*/
     }
 
     public void SaveAndReturnToken(WorldDataToken token, Action onComplete)
     {
-        SaveToken(token, (savedToken) => {
+        /*SaveToken(token, (savedToken) => {
             ReturnToken(savedToken);
             onComplete();
-        });
+        });*/
     }
 
-    public void SaveToken(WorldDataToken token, Action<WorldDataToken> onComplete)
+    public void SaveToken(WorldDataToken token)
     {
-        StartCoroutine(SaveTokenCoroutine(token, onComplete));
-    }
-    private HashSet<string> savingAreas = new HashSet<string>();
-    public IEnumerator SaveTokenCoroutine(WorldDataToken token, Action<WorldDataToken> onComplete)
-    {
-        List<SaveAreaJob.SaveAreaRequest> saveRequests = new List<SaveAreaJob.SaveAreaRequest>();
+       /* List<SaveAreaJob.SaveAreaRequest> saveRequests = new List<SaveAreaJob.SaveAreaRequest>();
         foreach (KeyValuePair<AreaIndex, string> tokenFile in token.Filepaths)
         {
             if(!savingAreas.Contains(tokenFile.Value))
@@ -87,169 +159,56 @@ public class WorldDataAccessService : Service
         }
 
         SaveAreaJob job = new SaveAreaJob(saveRequests, token.WorldIndex);
-        job.Start();
-        yield return new WaitUntil(() => job.IsDone);
-        onComplete(token);
-        saveRequests.ForEach((request) => savingAreas.Remove(request.filename));
+        job.Start();*/
     }
 
-    public void GetToken(TokenRequest request, Action<WorldDataToken> onComplete, Action onError)
+    public WorldDataToken GetToken(TokenRequest request, string persistentDataPath)
     {
-        StartCoroutine(GetTokenCoroutine(request, onComplete, onError));
-    }
+        int leftArea = request.left / _worldIndex.AreaDimensions;
+        int rightArea = (request.right - 1) / _worldIndex.AreaDimensions;
+        int topArea = request.top / _worldIndex.AreaDimensions;
+        int bottomArea = (request.bottom - 1) / _worldIndex.AreaDimensions;
 
-    private int testInt = 0;
-    private int remainingJobs = 0;
-    private IEnumerator GetTokenCoroutine(TokenRequest request, Action<WorldDataToken> onComplete, Action onError)
-    {
-        DateTime timeCheck = DateTime.UtcNow;
-        
-        WorldIndex index = null;
-        bool hasError = false;
-        _worldPersistanceService.Load((worldIndex) => { index = worldIndex; }, () => { hasError = true; });
-        DateTime startWorldIndexLoad = DateTime.UtcNow;
-        yield return new WaitUntil(() => index != null || hasError || (DateTime.UtcNow - startWorldIndexLoad).TotalMilliseconds > 10000);
-        timeCheck = DateTime.UtcNow;
+        int horizontalAreaCount = (rightArea - leftArea) + 1;
+        int verticalAreaCount = (bottomArea - topArea) + 1;
 
-        if ((DateTime.UtcNow - startWorldIndexLoad).TotalMilliseconds > 10000)
+        LoadAreaJob[,] jobsResult = new LoadAreaJob[horizontalAreaCount, verticalAreaCount];
+        Dictionary<AreaIndex, string> filepaths = new Dictionary<AreaIndex, string>();
+
+        List<LoadAreaJob> jobs = new List<LoadAreaJob>();
+
+        for (int i = 0; i < horizontalAreaCount; i++)
         {
-            Debug.Log("TIMEOUT ERROR LOADING WORLD INDEX");
-        }
-
-        if (!hasError)
-        {
-            int leftArea = request.left / index.AreaDimensions;
-            int rightArea = (request.right - 1) / index.AreaDimensions;
-            int topArea = request.top / index.AreaDimensions;
-            int bottomArea = (request.bottom - 1) / index.AreaDimensions;
-
-            int horizontalAreaCount = (rightArea - leftArea) + 1;
-            int verticalAreaCount = (bottomArea - topArea) + 1;
-
-            AreaIndex[,] areas = new AreaIndex[horizontalAreaCount, verticalAreaCount];
-            Dictionary<AreaIndex, string> filepaths = new Dictionary<AreaIndex, string>();
-
-            List<LoadAreaJob.AreaRequest> requests = new List<LoadAreaJob.AreaRequest>();
-            List<LoadAreaJob.AreaRequest> loadRequests = new List<LoadAreaJob.AreaRequest>();
-            //List<string> 
-
-            List<LoadAreaJob> collaborators = new List<LoadAreaJob>();
-
-            for (int i = 0; i < horizontalAreaCount; i++)
+            for (int j = 0; j < verticalAreaCount; j++)
             {
-                for (int j = 0; j < verticalAreaCount; j++)
+                int areaX = i + leftArea;
+                int areaY = j + topArea;
+                string areaKey = String.Join("_", new string[]{areaX.ToString(), areaY.ToString()});
+                LoadAreaJob loadAreaJob = null;
+                _cache.TryGetValue(areaKey, out loadAreaJob);
+
+                if (loadAreaJob == null)
                 {
-                    int areaX = i + leftArea;
-                    int areaY = j + topArea;
-                    LoadAreaJob.AreaRequest newRequest = new LoadAreaJob.AreaRequest(areaX, areaY);
-                    bool hasMatching = false;
-                    foreach (LoadAreaJob job in _jobCache)
-                    {
-                        if(job.ContainsMatchingAreaRequest(newRequest))
-                        {
-                            hasMatching = true;
-                            collaborators.Add(job);
-                            continue;
-                        }
-                    }
-                    
-                    if (!hasMatching)
-                    {
-                        requests.Add(newRequest);
-                        loadRequests.Add(newRequest);
-                    }
-                    else
-                    {
-                        requests.Add(newRequest);
-                    }
+                    loadAreaJob = new LoadAreaJob(new LoadAreaJob.AreaRequest(areaX, areaY), _worldIndex, _dataConfig, persistentDataPath);
+                    _cache[loadAreaJob.GetAreaKey()] = loadAreaJob;
+                    loadAreaJob.Start();
                 }
-            }
-
-            LoadAreaJob loadAreaJob = new LoadAreaJob(loadRequests, index, _areaCache, "FILL IN LATER");
-            _jobCache.Add(loadAreaJob);
-            loadAreaJob.Start();
-            int jobNumber = testInt++;
-            DateTime startLoad = DateTime.UtcNow;
-            bool timeout = false;
-
-            yield return new WaitUntil(() =>
-            {
-                bool isDone = true;
-                isDone &= loadAreaJob.IsDone;
-                collaborators.ForEach((collaborator) => isDone &= collaborator.IsDone);
-                timeout = (DateTime.UtcNow - startLoad).TotalMilliseconds > 10000;
-                isDone |= timeout;
-                return isDone;
-            });
-            
-            timeCheck = DateTime.UtcNow;
-            if (!timeout)
-            {
-                requests.ForEach((loadedRequest) =>
-                {
-                    LoadAreaJob.AreaRequestResult areaResult = default(LoadAreaJob.AreaRequestResult);
-                    loadAreaJob.OutDataTable.TryGetValue(loadedRequest.areaX.ToString() + loadedRequest.areaY.ToString(), out areaResult);
-
-                    if(areaResult.Result != null)
-                    {
-                        filepaths[areaResult.Result] = areaResult.Filepath;
-                        _areaCache[areaResult.Filepath] = areaResult.Result;
-                        areas[areaResult.Request.areaX - leftArea, areaResult.Request.areaY - topArea] = areaResult.Result;
-                    }
-
-                    collaborators.ForEach((collaborator) =>
-                    {
-                        areaResult = default(LoadAreaJob.AreaRequestResult);
-                        loadAreaJob.OutDataTable.TryGetValue(loadedRequest.areaX.ToString() + loadedRequest.areaY.ToString(), out areaResult);
-
-                        if (areaResult.Result != null)
-                        {
-                            filepaths[areaResult.Result] = areaResult.Filepath;
-                            areas[areaResult.Request.areaX - leftArea, areaResult.Request.areaY - topArea] = areaResult.Result;
-                        }
-                    });
-                });
-
-                _jobCache.Remove(loadAreaJob);
-
-                WorldDataToken token = new WorldDataToken(request, index, areas, filepaths);
-                _tokens.Add(token);
-                Debug.Log("timeCheck3: " + (DateTime.UtcNow - timeCheck).TotalMilliseconds);
-                onComplete(token);
-            }
-            else
-            {
-                Debug.LogError("Timeout error occured attempting to load area files.");
-                onError();
+                
+                jobs.Add(loadAreaJob);
             }
         }
-        else
+
+        while (jobs.Find((job) => !job.IsDone) != null)
         {
-            Debug.LogError("There was an error loading the World Index");
-            onError();
+            Thread.Sleep(100);
         }
-    }
-}
-
-public struct TokenRequest
-{
-    private int _left;
-    private int _right;
-    private int _bottom;
-    private int _top;
-
-    public int left { get { return _left; } }
-    public int right { get { return _right; } }
-    public int bottom { get { return _bottom; } }
-    public int top { get { return _top; } }
-    public int width { get { return _right - _left; } }
-    public int height { get { return _bottom - top; } }
-
-    public TokenRequest(int left, int right, int bottom, int top)
-    {
-        _left = left;
-        _right = right;
-        _bottom = bottom;
-        _top = top;
+ 
+        jobs.ForEach((job) =>
+        {
+            
+            jobsResult[job.OutData.Request.areaX - leftArea, job.OutData.Request.areaY - topArea] = job;
+        });
+        WorldDataToken token = new WorldDataToken(request, _worldIndex, jobsResult);
+        return token;
     }
 }
