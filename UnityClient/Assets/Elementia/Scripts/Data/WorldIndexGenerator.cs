@@ -42,65 +42,54 @@ public enum SerializationType
     Binary
 }
 
+public interface IWorldIndexGenerator
+{
+    string uid { get; }
+    bool Exists(string persistentDataPath);
+    WorldIndex Generate(string persistentDataPath);
+    void Generate(string persistentDataPath, Action<WorldIndex> onComplete, Action onError);
+    WorldIndex Load(string persistentDataPath);
+}
+
 [CreateAssetMenu]
-public class WorldIndexGenerator : ScriptableObject {
+public class WorldAsset : ScriptableObject, IWorldIndexGenerator
+{
+    [Header("Config")]
 
     [SerializeField]
-    private string _version;
-
-    [SerializeField]
-    private string _dataFileExtensions;
-
-    [SerializeField]
-    private string _indexFileName;
-
-    [SerializeField]
-    private string _areaFilenameFormatSource;
-
-    [SerializeField]
-    private string _areaDataRelativeDirectory;
-
-    [SerializeField]
-    private SerializationType _serializationType;
-
-    [SerializeField]
-    private int _seed;
-
-    public string DataFileExtensions { get { return _dataFileExtensions; } }
-    public string IndexFileName { get { return _indexFileName; } }
-
-    public string dataRootDirectory
-    {
-        get
-        {
-            return Application.persistentDataPath + "/" + _version + "/";
-        }
-    }
-
-    public string areaDataDirectoryPath
-    {
-        get
-        {
-            return dataRootDirectory + _areaDataRelativeDirectory;
-        }
-    }
-
-    public string indexFilePath
-    {
-        get
-        {
-            return dataRootDirectory + IndexFileName + "." + DataFileExtensions;
-        }
-    }
-
+    private DataConfig _dataConfig;
+    
     [Header("World")]
 
     [SerializeField]
     private WorldDimensions _dimensions;
-
+    
     [SerializeField]
-    private int _areaDimensions;
-
+    private int _seed;
+    
+    [SerializeField]
+    private string _uid;
+    
+    public string RootPath(string persistentDataPath)
+    {
+        return string.Join(DataConfig.DirectoryDelimiter,
+            new string[] {persistentDataPath, _dataConfig.GetRelativeWorldIndexPath(_uid)});
+    }
+    
+    public string uid
+    {
+        get { return _uid; }
+    }
+    
+    public bool Exists(string persistentDataPath)
+    {
+        string worldDirectory = RootPath(persistentDataPath);
+        string areaDirectory = string.Join(DataConfig.DirectoryDelimiter, new string[]{worldDirectory, _dataConfig.AreaDataRelativeDirectory});
+        string indexFilePath = string.Join(DataConfig.DirectoryDelimiter, new string[]{worldDirectory, _dataConfig.IndexFilename});
+        
+        return File.Exists(indexFilePath);
+    }
+    
     [Header("Layers")]
 
     [SerializeField]
@@ -112,35 +101,60 @@ public class WorldIndexGenerator : ScriptableObject {
     [SerializeField]
     private HeightLayer _heightLayer;
 
-    public WorldIndex GenerateIndex()
+    public WorldIndex Load(string persistentDataPath)
     {
-        Debug.Log("Saving World to " + indexFilePath);
+        SharpSerializer serializer = new SharpSerializer();
+        WorldIndex index = null;
+        
+        string worldDirectory = string.Join(DataConfig.DirectoryDelimiter, new string[]{persistentDataPath, _dataConfig.GetRelativeWorldIndexPath(_uid)});
+        string areaDirectory = string.Join(DataConfig.DirectoryDelimiter, new string[]{worldDirectory, _dataConfig.AreaDataRelativeDirectory});
+        string indexFilePath = string.Join(DataConfig.DirectoryDelimiter, new string[]{worldDirectory, _dataConfig.IndexFilename});
+        
+        FileStream fileStream = File.Open(indexFilePath, FileMode.Open);
 
+        Debug.Log("Loading World from " + indexFilePath);
+
+        using (var stream = fileStream)
+        {
+            index = serializer.Deserialize(stream) as WorldIndex;
+        }
+
+        return index;
+    }
+    
+    public WorldIndex Generate(string persistentDataPath)
+    {
         SharpSerializer serializer = new SharpSerializer();
 
         WorldIndex index = new WorldIndex();
 
         index.Dimensions = _dimensions;
-        index.AreaFilenameFormatSource = _areaFilenameFormatSource;
-        index.AreaRelativeDirectory = _areaDataRelativeDirectory;
-        index.FileDataExtension = _dataFileExtensions;
-        index.Version = _version;
-        index.SerializationType = _serializationType;
-        index.AreaDimensions = _areaDimensions;
+        index.AreaFilenameFormatSource = _dataConfig.AreaFilenameFormatSource;
+        index.AreaRelativeDirectory = _dataConfig.AreaDataRelativeDirectory;
+        index.FileDataExtension = _dataConfig.DataFileExtensions;
+        index.Version = _dataConfig.Version;
+        index.SerializationType = _dataConfig.AreaSerializationType;
+        index.AreaDimensions = _dataConfig.AreaDimensions;
 
-        Directory.CreateDirectory(dataRootDirectory);
-        Directory.CreateDirectory(areaDataDirectoryPath);
-        FileStream fileStream = File.Open(indexFilePath, FileMode.OpenOrCreate);
+        string worldDirectory = string.Join(DataConfig.DirectoryDelimiter, new string[]{persistentDataPath, _dataConfig.GetRelativeWorldIndexPath(_uid)});
+        string areaDirectory = string.Join(DataConfig.DirectoryDelimiter, new string[]{worldDirectory, _dataConfig.AreaDataRelativeDirectory});
+        string indexFilePath = string.Join(DataConfig.DirectoryDelimiter, new string[]{worldDirectory, _dataConfig.IndexFilename});
 
+        int areaDimensions = _dataConfig.AreaDimensions;
+        
         Debug.Log("Saving World to " + indexFilePath);
+        
+        Directory.CreateDirectory(worldDirectory);
+        Directory.CreateDirectory(areaDirectory);
+        FileStream fileStream = File.Open(indexFilePath, FileMode.CreateNew);
 
         using (var stream = fileStream)
         {
             serializer.Serialize(index, fileStream);
         }
 
-        int horizontalAreaCount = _dimensions.Width / _areaDimensions;
-        int verticalAreaCount = _dimensions.Width / _areaDimensions;
+        int horizontalAreaCount = _dimensions.Width / areaDimensions;
+        int verticalAreaCount = _dimensions.Width / areaDimensions;
 
         for (int i = 0; i< horizontalAreaCount; i++)
         {
@@ -149,16 +163,16 @@ public class WorldIndexGenerator : ScriptableObject {
                 AreaIndex area = new AreaIndex();
 
                 area.AlphaDataLayer = new DataLayer();
-                area.AlphaDataLayer.NoiseLayerData = _cloudLayer.GenerateData(_dimensions, _areaDimensions, i, j);
-                area.AlphaDataLayer.WaterLayerData = _waterLayer.GenerateData(_dimensions, _areaDimensions, i, j);
-                area.AlphaDataLayer.HeightLayerData = _heightLayer.GenerateData(_dimensions, _areaDimensions, i, j);
+                area.AlphaDataLayer.NoiseLayerData = _cloudLayer.GenerateData(_dimensions, areaDimensions, i, j);
+                area.AlphaDataLayer.WaterLayerData = _waterLayer.GenerateData(_dimensions, areaDimensions, i, j);
+                area.AlphaDataLayer.HeightLayerData = _heightLayer.GenerateData(_dimensions, areaDimensions, i, j);
 
                 area.BetaDataLayer = area.AlphaDataLayer.Clone();
 
-                string filename = string.Format(_areaFilenameFormatSource, i, j, _dataFileExtensions);
-                FileStream areaFileStream = File.Open(areaDataDirectoryPath + filename, FileMode.OpenOrCreate);
+                string filename = string.Format(_dataConfig.AreaFilenameFormatSource, i, j, _dataConfig.DataFileExtensions);
+                FileStream areaFileStream = File.Open(String.Join(DataConfig.DirectoryDelimiter, new string[]{areaDirectory, filename}), FileMode.CreateNew);
                 
-                switch(_serializationType)
+                switch(_dataConfig.AreaSerializationType)
                 {
                     case SerializationType.Binary:
                         BinaryFormatter bf = new BinaryFormatter();
@@ -166,7 +180,7 @@ public class WorldIndexGenerator : ScriptableObject {
                         break;
                     case SerializationType.SharpSerializer:
                         using (var stream = areaFileStream)
-                        {
+                        {  
                             serializer.Serialize(area, areaFileStream);
                         }
                         
@@ -178,6 +192,11 @@ public class WorldIndexGenerator : ScriptableObject {
         }
 
         return index;
+    }
+
+    public void Generate(string persistentDataPath, Action<WorldIndex> onComplete, Action onError)
+    {
+        
     }
 }
 

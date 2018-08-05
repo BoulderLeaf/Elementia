@@ -23,7 +23,7 @@ public class SimulationService : Service
     private void OnSimulationStateLoaded(WorldSimulationState simulationState)
     {
         _state = simulationState;
-        StartCoroutine(SimulationCoroutine());
+        //StartCoroutine(SimulationCoroutine());
     }
 
     private IEnumerator SimulationCoroutine()

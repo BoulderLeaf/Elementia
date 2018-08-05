@@ -9,43 +9,32 @@ public class WorldPersistanceService : Service {
 
     private class WorldIndexRequest : ServiceRequest<WorldIndex>
     {
-        private WorldIndexGenerator _indexGenerator;
-        private SharpSerializer _serializer;
+        private IWorldIndexGenerator _indexGenerator;
+        private string _persistentDataPath;
 
-        public WorldIndexRequest(WorldPersistanceService worldPersistanceService, WorldIndexGenerator indexGenerator) : base(worldPersistanceService)
+        public WorldIndexRequest(WorldPersistanceService worldPersistanceService, IWorldIndexGenerator indexGenerator, string persistentDataPath) : base(worldPersistanceService)
         {
             _indexGenerator = indexGenerator;
-            _serializer = new SharpSerializer();
+            _persistentDataPath = persistentDataPath;
         }
 
         protected override IEnumerator MakeRequestCoroutine(Action<WorldIndex> onComplete, Action onError)
         {
             yield return 0;
 
-            WorldIndex worldIndex = null;
-
-            if (File.Exists(_indexGenerator.indexFilePath))
+            if (_indexGenerator.Exists((_persistentDataPath)))
             {
-                FileStream fileStream = File.Open(_indexGenerator.indexFilePath, FileMode.Open);
-
-                Debug.Log("Loading World from " + _indexGenerator.indexFilePath);
-
-                using (var stream = fileStream)
-                {
-                    worldIndex = _serializer.Deserialize(stream) as WorldIndex;
-                }
-
-                onComplete(worldIndex);
+                onComplete(_indexGenerator.Load(_persistentDataPath));
             }
             else
             {
-                onComplete(_indexGenerator.GenerateIndex());
+                onComplete(_indexGenerator.Generate(_persistentDataPath));
             }
         }
     }
 
     [SerializeField]
-    private WorldIndexGenerator _indexGenerator;
+    private WorldAsset _indexGenerator;
 
     private WorldIndex _index;
     private Coroutine _loadCoroutine;
@@ -53,17 +42,14 @@ public class WorldPersistanceService : Service {
     private SharpSerializer _serializer;
     private WorldIndexRequest _worldIndexRequest;
 
-    public string areaDataDirectoryPath
+    public WorldAsset IndexGenerator
     {
-        get
-        {
-            return _indexGenerator.areaDataDirectoryPath;
-        }
+        get { return _indexGenerator; }
     }
 
     public override void StartService(ServiceManager serviceManager)
     {
-        _worldIndexRequest = new WorldIndexRequest(this, _indexGenerator);
+        _worldIndexRequest = new WorldIndexRequest(this, _indexGenerator, Application.persistentDataPath);
     }
 
     public void Load(Action<WorldIndex> onComplete, Action onError)

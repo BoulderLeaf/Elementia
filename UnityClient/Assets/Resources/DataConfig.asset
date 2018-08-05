@@ -8,20 +8,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3e83c49f323dc84aa40504c3b006911, type: 3}
-  m_Name: IndexGenerator
+  m_Script: {fileID: 11500000, guid: c03da7c44fb1489b9a1479ea2658b55c, type: 3}
+  m_Name: DataConfig
   m_EditorClassIdentifier: 
   _version: 0.16.0
   _dataFileExtensions: dat
-  _indexFileName: index
   _areaFilenameFormatSource: area_{0}_{1}.{2}
-  _areaDataRelativeDirectory: areaData/
-  _serializationType: 1
-  _seed: 2147483647
-  _dimensions:
-    _width: 4000
-    _height: 4000
+  _indexFilename: index
+  _areaDataRelativeDirectory: areaData
+  _worldIndexRelativeDirectory: worlds
+  _areaSerializationType: 1
   _areaDimensions: 200
-  _cloudLayer:
-    _depth: 0.455
-    _noiseImageSource: {fileID: 0}

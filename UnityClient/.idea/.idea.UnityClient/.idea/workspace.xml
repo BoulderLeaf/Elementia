@@ -1,0 +1,941 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="268f338c-f4da-44ee-9bad-41f9b094add9" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.UnityClient/.idea/contentModel.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.UnityClient/.idea/indexLayout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.UnityClient/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.UnityClient/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.UnityClient/riderModule.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Elementia/Config/IndexGenerator.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Elementia/Config/IndexGenerator.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Elementia/Scenes/World.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Elementia/Scenes/World.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Elementia/Scripts/Data/WorldIndexGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Elementia/Scripts/Data/WorldIndexGenerator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Elementia/Scripts/Services/SimulationService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Elementia/Scripts/Services/SimulationService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Elementia/Scripts/Services/WorldDataAccessService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Elementia/Scripts/Services/WorldData/WorldDataAccessService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Elementia/Scripts/Services/WorldDataAccessService.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Elementia/Scripts/Services/WorldData/WorldDataAccessService.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Elementia/Scripts/Services/WorldPersistanceService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Elementia/Scripts/Services/WorldPersistanceService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Elementia/Scripts/Services/WorldSimulationStateService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Elementia/Scripts/Services/WorldSimulationStateService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="WorldDataToken.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/WorldData/WorldDataToken.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="368">
+              <caret line="43" selection-start-line="43" selection-end-line="43" />
+              <folding>
+                <marker date="1533427759631" expanded="true" signature="6:66" ph="..." />
+                <marker date="1533427759631" expanded="true" signature="95:5338" ph="{...}" />
+                <marker date="1533427759631" expanded="true" signature="133:452" ph="{...}" />
+                <marker date="1533427759631" expanded="true" signature="296:446" ph="{...}" />
+                <marker date="1533427759631" expanded="true" signature="841:912" ph="{...}" />
+                <marker date="1533427759631" expanded="true" signature="859:906" ph="{...}" />
+                <marker date="1533427759631" expanded="true" signature="1040:1160" ph="{...}" />
+                <marker date="1533427759631" expanded="true" signature="1224:1819" ph="{...}" />
+                <marker date="1533427759631" expanded="true" signature="1873:1961" ph="{...}" />
+                <marker date="1533427759631" expanded="true" signature="2028:2125" ph="{...}" />
+                <marker date="1533427759631" expanded="true" signature="2185:2727" ph="{...}" />
+                <marker date="1533427759631" expanded="true" signature="2232:2274" ph="{...}" />
+                <marker date="1533427759631" expanded="true" signature="2380:2457" ph="{...}" />
+                <marker date="1533427759631" expanded="true" signature="2536:2702" ph="{...}" />
+                <marker date="1533427759631" expanded="true" signature="2799:3138" ph="{...}" />
+                <marker date="1533427759631" expanded="true" signature="2942:3132" ph="{...}" />
+                <marker date="1533427759631" expanded="true" signature="3189:3930" ph="{...}" />
+                <marker date="1533427759631" expanded="true" signature="3236:3278" ph="{...}" />
+                <marker date="1533427759631" expanded="true" signature="3384:3460" ph="{...}" />
+                <marker date="1533427759631" expanded="true" signature="3505:3576" ph="{...}" />
+                <marker date="1533427759631" expanded="true" signature="3604:3724" ph="{...}" />
+                <marker date="1533427759631" expanded="true" signature="3744:3905" ph="{...}" />
+                <marker date="1533427759631" expanded="true" signature="3993:4327" ph="{...}" />
+                <marker date="1533427759631" expanded="true" signature="4136:4321" ph="{...}" />
+                <marker date="1533427759631" expanded="true" signature="4385:4927" ph="{...}" />
+                <marker date="1533427759631" expanded="true" signature="4432:4474" ph="{...}" />
+                <marker date="1533427759631" expanded="true" signature="4580:4657" ph="{...}" />
+                <marker date="1533427759631" expanded="true" signature="4736:4902" ph="{...}" />
+                <marker date="1533427759631" expanded="true" signature="4997:5336" ph="{...}" />
+                <marker date="1533427759631" expanded="true" signature="5140:5330" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WorldDataAccessService.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/WorldData/WorldDataAccessService.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="17" column="68" selection-start-line="17" selection-start-column="68" selection-end-line="17" selection-end-column="68" />
+              <folding>
+                <marker date="1533434008161" expanded="false" signature="6:193" ph="..." />
+                <marker date="1533434008161" expanded="true" signature="240:9008" ph="{...}" />
+                <marker date="1533434008161" expanded="true" signature="594:870" ph="{...}" />
+                <marker date="1533434008161" expanded="true" signature="921:2011" ph="{...}" />
+                <marker date="1533434008161" expanded="true" signature="980:2005" ph="{...}" />
+                <marker date="1533434008161" expanded="true" signature="1185:1273" ph="{...}" />
+                <marker date="1533434008161" expanded="true" signature="1334:1682" ph="{...}" />
+                <marker date="1533434008161" expanded="true" signature="1444:1668" ph="{...}" />
+                <marker date="1533434008161" expanded="true" signature="1535:1650" ph="{...}" />
+                <marker date="1533434008161" expanded="true" signature="1868:1995" ph="{...}" />
+                <marker date="1533434008161" expanded="true" signature="2088:2218" ph="{...}" />
+                <marker date="1533434008161" expanded="true" signature="2136:2210" ph="{...}" />
+                <marker date="1533434008161" expanded="true" signature="2302:2377" ph="{...}" />
+                <marker date="1533434008161" expanded="true" signature="2541:3241" ph="{...}" />
+                <marker date="1533434008161" expanded="true" signature="2724:2976" ph="{...}" />
+                <marker date="1533434008161" expanded="true" signature="2789:2966" ph="{...}" />
+                <marker date="1533434008161" expanded="true" signature="3340:3425" ph="{...}" />
+                <marker date="1533434008161" expanded="true" signature="3605:9006" ph="{...}" />
+                <marker date="1533434008161" expanded="true" signature="4149:4229" ph="{...}" />
+                <marker date="1533434008161" expanded="true" signature="4253:8870" ph="{...}" />
+                <marker date="1533434008161" expanded="true" signature="5190:6242" ph="{...}" />
+                <marker date="1533434008161" expanded="true" signature="5264:6228" ph="{...}" />
+                <marker date="1533434008161" expanded="true" signature="5578:5884" ph="{...}" />
+                <marker date="1533434008161" expanded="true" signature="5672:5862" ph="{...}" />
+                <marker date="1533434008161" expanded="true" signature="5943:6091" ph="{...}" />
+                <marker date="1533434008161" expanded="true" signature="6116:6210" ph="{...}" />
+                <marker date="1533434008161" expanded="true" signature="6590:6937" ph="{...}" />
+                <marker date="1533434008161" expanded="true" signature="7019:8700" ph="{...}" />
+                <marker date="1533434008161" expanded="true" signature="7085:8378" ph="{...}" />
+                <marker date="1533434008161" expanded="true" signature="7396:7717" ph="{...}" />
+                <marker date="1533434008161" expanded="true" signature="7778:8358" ph="{...}" />
+                <marker date="1533434008161" expanded="true" signature="8076:8336" ph="{...}" />
+                <marker date="1533434008161" expanded="true" signature="8717:8860" ph="{...}" />
+                <marker date="1533434008161" expanded="true" signature="8883:9000" ph="{...}" />
+                <marker date="1533434008161" expanded="true" signature="9036:9606" ph="{...}" />
+                <marker date="1533434008161" expanded="true" signature="9500:9604" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WorldSimulationStateService.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/WorldSimulationStateService.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="23" column="63" lean-forward="true" selection-start-line="23" selection-start-column="63" selection-end-line="23" selection-end-column="63" />
+              <folding>
+                <marker date="1533434394767" expanded="false" signature="6:105" ph="..." />
+                <marker date="1533434394767" expanded="true" signature="157:7574" ph="{...}" />
+                <marker date="1533434394767" expanded="true" signature="242:2123" ph="{...}" />
+                <marker date="1533434394767" expanded="true" signature="781:1024" ph="{...}" />
+                <marker date="1533434394767" expanded="true" signature="1142:2117" ph="{...}" />
+                <marker date="1533434394767" expanded="true" signature="1876:1990" ph="{...}" />
+                <marker date="1533434394767" expanded="true" signature="2007:2075" ph="{...}" />
+                <marker date="1533434394767" expanded="true" signature="2206:3646" ph="{...}" />
+                <marker date="1533434394767" expanded="true" signature="2555:2708" ph="{...}" />
+                <marker date="1533434394767" expanded="true" signature="2826:3640" ph="{...}" />
+                <marker date="1533434394767" expanded="true" signature="2974:3048" ph="{...}" />
+                <marker date="1533434394767" expanded="true" signature="3993:4511" ph="{...}" />
+                <marker date="1533434394767" expanded="true" signature="4590:4670" ph="{...}" />
+                <marker date="1533434394767" expanded="true" signature="4713:4823" ph="{...}" />
+                <marker date="1533434394767" expanded="true" signature="4852:4951" ph="{...}" />
+                <marker date="1533434394767" expanded="true" signature="5007:6208" ph="{...}" />
+                <marker date="1533434394767" expanded="true" signature="5064:5371" ph="{...}" />
+                <marker date="1533434394767" expanded="true" signature="5148:5229" ph="{...}" />
+                <marker date="1533434394767" expanded="true" signature="5153:5227" ph="{...}" />
+                <marker date="1533434394767" expanded="true" signature="5295:5361" ph="{...}" />
+                <marker date="1533434394767" expanded="true" signature="5595:5696" ph="{...}" />
+                <marker date="1533434394767" expanded="true" signature="5746:6202" ph="{...}" />
+                <marker date="1533434394767" expanded="true" signature="5844:6192" ph="{...}" />
+                <marker date="1533434394767" expanded="true" signature="6056:6178" ph="{...}" />
+                <marker date="1533434394767" expanded="true" signature="6264:7572" ph="{...}" />
+                <marker date="1533434394767" expanded="true" signature="6321:6942" ph="{...}" />
+                <marker date="1533434394767" expanded="true" signature="6426:6545" ph="{...}" />
+                <marker date="1533434394767" expanded="true" signature="6460:6531" ph="{...}" />
+                <marker date="1533434394767" expanded="true" signature="6618:6740" ph="{...}" />
+                <marker date="1533434394767" expanded="true" signature="6652:6726" ph="{...}" />
+                <marker date="1533434394767" expanded="true" signature="6834:6932" ph="{...}" />
+                <marker date="1533434394767" expanded="true" signature="7166:7267" ph="{...}" />
+                <marker date="1533434394767" expanded="true" signature="7317:7566" ph="{...}" />
+                <marker date="1533434394767" expanded="true" signature="7461:7556" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SimulationService.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/SimulationService.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="19" column="36" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="36" />
+              <folding>
+                <marker date="1533434457458" expanded="false" signature="6:105" ph="..." />
+                <marker date="1533434457458" expanded="true" signature="147:3255" ph="{...}" />
+                <marker date="1533434457458" expanded="true" signature="431:794" ph="{...}" />
+                <marker date="1533434457458" expanded="true" signature="874:969" ph="{...}" />
+                <marker date="1533434457458" expanded="true" signature="1016:1644" ph="{...}" />
+                <marker date="1533434457458" expanded="true" signature="1106:1638" ph="{...}" />
+                <marker date="1533434457458" expanded="true" signature="1333:1450" ph="{...}" />
+                <marker date="1533434457458" expanded="true" signature="1760:3253" ph="{...}" />
+                <marker date="1533434457458" expanded="true" signature="2219:2265" ph="{...}" />
+                <marker date="1533434457458" expanded="true" signature="2273:2395" ph="{...}" />
+                <marker date="1533434457458" expanded="true" signature="2495:2609" ph="{...}" />
+                <marker date="1533434457458" expanded="true" signature="2714:2794" ph="{...}" />
+                <marker date="1533434457458" expanded="true" signature="2803:3164" ph="/* SimulateAreaJob simulateAreaJob = new SimulateAreaJob(token, _state); ... */" />
+                <marker date="1533434457458" expanded="true" signature="3297:6204" ph="{...}" />
+                <marker date="1533434457458" expanded="true" signature="3453:3513" ph="{...}" />
+                <marker date="1533434457458" expanded="true" signature="3559:3844" ph="{...}" />
+                <marker date="1533434457458" expanded="true" signature="3648:3838" ph="{...}" />
+                <marker date="1533434457458" expanded="true" signature="3746:3828" ph="{...}" />
+                <marker date="1533434457458" expanded="true" signature="3921:5382" ph="{...}" />
+                <marker date="1533434457458" expanded="true" signature="4099:4483" ph="{...}" />
+                <marker date="1533434457458" expanded="true" signature="4157:4473" ph="{...}" />
+                <marker date="1533434457458" expanded="true" signature="5094:5376" ph="{...}" />
+                <marker date="1533434457458" expanded="true" signature="5152:5366" ph="{...}" />
+                <marker date="1533434457458" expanded="true" signature="5485:6202" ph="{...}" />
+                <marker date="1533434457458" expanded="true" signature="5740:5911" ph="{...}" />
+                <marker date="1533434457458" expanded="true" signature="5958:6073" ph="{...}" />
+                <marker date="1533434457458" expanded="true" signature="6086:6196" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WorldPersistanceService.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/WorldPersistanceService.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="525">
+              <caret line="40" column="37" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="37" />
+              <folding>
+                <marker date="1533434351648" expanded="false" signature="6:139" ph="..." />
+                <marker date="1533434351648" expanded="true" signature="188:1931" ph="{...}" />
+                <marker date="1533434351648" expanded="true" signature="255:1103" ph="{...}" />
+                <marker date="1533434351648" expanded="true" signature="538:658" ph="{...}" />
+                <marker date="1533434351648" expanded="true" signature="766:1097" ph="{...}" />
+                <marker date="1533434351648" expanded="true" signature="868:967" ph="{...}" />
+                <marker date="1533434351648" expanded="true" signature="984:1087" ph="{...}" />
+                <marker date="1533434351648" expanded="true" signature="1402:1454" ph="{...}" />
+                <marker date="1533434351648" expanded="true" signature="1524:1643" ph="{...}" />
+                <marker date="1533434351648" expanded="true" signature="1712:1784" ph="{...}" />
+                <marker date="1533434351648" expanded="true" signature="1827:1929" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ExecuteInternalMono.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/ThirdParty/AssetBundleManager/Editor/ExecuteInternalMono.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="675">
+              <caret line="52" column="8" selection-start-line="52" selection-start-column="8" selection-end-line="52" selection-end-column="8" />
+              <folding>
+                <marker date="1528349283171" expanded="false" signature="6:192" ph="..." />
+                <marker date="1528349283171" expanded="true" signature="216:3639" ph="{...}" />
+                <marker date="1528349283171" expanded="true" signature="248:1273" ph="{...}" />
+                <marker date="1528349283171" expanded="true" signature="296:730" ph="{...}" />
+                <marker date="1528349283171" expanded="true" signature="813:952" ph="{...}" />
+                <marker date="1528349283171" expanded="true" signature="1000:1142" ph="{...}" />
+                <marker date="1528349283171" expanded="true" signature="1205:1270" ph="{...}" />
+                <marker date="1528349283171" expanded="true" signature="1302:3637" ph="{...}" />
+                <marker date="1528349283171" expanded="true" signature="1690:1839" ph="{...}" />
+                <marker date="1528349283171" expanded="true" signature="1752:1798" ph="{...}" />
+                <marker date="1528349283171" expanded="true" signature="1896:2069" ph="{...}" />
+                <marker date="1528349283171" expanded="true" signature="1934:1974" ph="{...}" />
+                <marker date="1528349283171" expanded="true" signature="2007:2049" ph="{...}" />
+                <marker date="1528349283171" expanded="true" signature="2128:2466" ph="{...}" />
+                <marker date="1528349283171" expanded="true" signature="2158:2187" ph="{...}" />
+                <marker date="1528349283171" expanded="true" signature="2228:2337" ph="{...}" />
+                <marker date="1528349283171" expanded="true" signature="2379:2445" ph="{...}" />
+                <marker date="1528349283171" expanded="true" signature="2641:3449" ph="{...}" />
+                <marker date="1528349283171" expanded="true" signature="2946:3216" ph="{...}" />
+                <marker date="1528349283171" expanded="true" signature="3257:3424" ph="{...}" />
+                <marker date="1528349283171" expanded="true" signature="3503:3634" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WorldIndexGenerator.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Data/WorldIndexGenerator.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="29" column="19" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
+              <folding>
+                <marker date="1533433814994" expanded="false" signature="6:193" ph="..." />
+                <marker date="1533433814994" expanded="true" signature="237:551" ph="{...}" />
+                <marker date="1533433814994" expanded="true" signature="481:549" ph="{...}" />
+                <marker date="1533433814994" expanded="true" signature="597:840" ph="{...}" />
+                <marker date="1533433814994" expanded="true" signature="967:1003" ph="{...}" />
+                <marker date="1533433814994" expanded="true" signature="1042:1307" ph="{...}" />
+                <marker date="1533433814994" expanded="true" signature="1391:6889" ph="{...}" />
+                <marker date="1533433814994" expanded="true" signature="1723:1886" ph="{...}" />
+                <marker date="1533433814994" expanded="true" signature="1913:1954" ph="{...}" />
+                <marker date="1533433814994" expanded="true" signature="2009:2411" ph="{...}" />
+                <marker date="1533433814994" expanded="true" signature="2670:3506" ph="{...}" />
+                <marker date="1533433814994" expanded="true" signature="3391:3477" ph="{...}" />
+                <marker date="1533433814994" expanded="true" signature="3569:6766" ph="{...}" />
+                <marker date="1533433814994" expanded="true" signature="4900:4973" ph="{...}" />
+                <marker date="1533433814994" expanded="true" signature="5166:6737" ph="{...}" />
+                <marker date="1533433814994" expanded="true" signature="5234:6727" ph="{...}" />
+                <marker date="1533433814994" expanded="true" signature="6124:6672" ph="{...}" />
+                <marker date="1533433814994" expanded="true" signature="6472:6598" ph="{...}" />
+                <marker date="1533433814994" expanded="true" signature="6866:6887" ph="{...}" />
+                <marker date="1533433814994" expanded="true" signature="6914:6919" ph="{...}" />
+                <marker date="1533433814994" expanded="true" signature="6972:7420" ph="{...}" />
+                <marker date="1533433814994" expanded="true" signature="7079:7418" ph="{...}" />
+                <marker date="1533433814994" expanded="true" signature="7250:7389" ph="{...}" />
+                <marker date="1533433814994" expanded="true" signature="7313:7379" ph="{...}" />
+                <marker date="1533433814994" expanded="true" signature="7474:7970" ph="{...}" />
+                <marker date="1533433814994" expanded="true" signature="7583:7968" ph="{...}" />
+                <marker date="1533433814994" expanded="true" signature="7760:7939" ph="{...}" />
+                <marker date="1533433814994" expanded="true" signature="7823:7929" ph="{...}" />
+                <marker date="1533433814994" expanded="true" signature="8023:8614" ph="{...}" />
+                <marker date="1533433814994" expanded="true" signature="8249:8612" ph="{...}" />
+                <marker date="1533433814994" expanded="true" signature="8413:8583" ph="{...}" />
+                <marker date="1533433814994" expanded="true" signature="8476:8573" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DataConfig.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Data/DataConfig.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="218">
+              <caret line="37" column="4" selection-start-line="37" selection-start-column="4" selection-end-line="37" selection-end-column="4" />
+              <folding>
+                <marker date="1533432209835" expanded="true" signature="6:32" ph="..." />
+                <marker date="1533432209835" expanded="true" signature="95:1631" ph="{...}" />
+                <marker date="1533432209835" expanded="true" signature="711:756" ph="{...}" />
+                <marker date="1533432209835" expanded="true" signature="798:854" ph="{...}" />
+                <marker date="1533432209835" expanded="true" signature="902:964" ph="{...}" />
+                <marker date="1533432209835" expanded="true" signature="1001:1106" ph="{...}" />
+                <marker date="1533432209835" expanded="true" signature="1155:1218" ph="{...}" />
+                <marker date="1533432209835" expanded="true" signature="1274:1333" ph="{...}" />
+                <marker date="1533432209835" expanded="true" signature="1368:1420" ph="{...}" />
+                <marker date="1533432209835" expanded="true" signature="1477:1629" ph="{...}" />
+                <marker date="1533432209835" expanded="true" signature="1552:1621" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SaveAreaJob.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/WorldData/SaveAreaJob.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="13" selection-start-column="13" selection-end-column="13" />
+              <folding>
+                <marker date="1533427939986" expanded="true" signature="6:148" ph="..." />
+                <marker date="1533427939986" expanded="true" signature="188:1589" ph="{...}" />
+                <marker date="1533427939986" expanded="true" signature="223:450" ph="{...}" />
+                <marker date="1533427939986" expanded="true" signature="356:444" ph="{...}" />
+                <marker date="1533427939986" expanded="true" signature="610:686" ph="{...}" />
+                <marker date="1533427939986" expanded="true" signature="732:1587" ph="{...}" />
+                <marker date="1533427939986" expanded="true" signature="801:1581" ph="{...}" />
+                <marker date="1533427939986" expanded="true" signature="957:1534" ph="{...}" />
+                <marker date="1533427939986" expanded="true" signature="1365:1493" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoadAreaJob.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/WorldData/LoadAreaJob.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
+              <folding>
+                <marker date="1533427904160" expanded="true" signature="6:47" ph="..." />
+                <marker date="1533427904160" expanded="true" signature="176:4364" ph="{...}" />
+                <marker date="1533427904160" expanded="true" signature="208:960" ph="{...}" />
+                <marker date="1533427904160" expanded="true" signature="425:501" ph="{...}" />
+                <marker date="1533427904160" expanded="true" signature="573:658" ph="{...}" />
+                <marker date="1533427904160" expanded="true" signature="730:815" ph="{...}" />
+                <marker date="1533427904160" expanded="true" signature="858:954" ph="{...}" />
+                <marker date="1533427904160" expanded="true" signature="997:1508" ph="{...}" />
+                <marker date="1533427904160" expanded="true" signature="1386:1502" ph="{...}" />
+                <marker date="1533427904160" expanded="true" signature="2084:2368" ph="{...}" />
+                <marker date="1533427904160" expanded="true" signature="2438:2667" ph="{...}" />
+                <marker date="1533427904160" expanded="true" signature="2510:2638" ph="{...}" />
+                <marker date="1533427904160" expanded="true" signature="2571:2628" ph="{...}" />
+                <marker date="1533427904160" expanded="true" signature="2713:4300" ph="{...}" />
+                <marker date="1533427904160" expanded="true" signature="2774:4294" ph="{...}" />
+                <marker date="1533427904160" expanded="true" signature="3018:3111" ph="{...}" />
+                <marker date="1533427904160" expanded="true" signature="3128:4010" ph="{...}" />
+                <marker date="1533427904160" expanded="true" signature="3210:3834" ph="{...}" />
+                <marker date="1533427904160" expanded="true" signature="3252:3653" ph="{...}" />
+                <marker date="1533427904160" expanded="true" signature="3692:3816" ph="{...}" />
+                <marker date="1533427904160" expanded="true" signature="3855:3995" ph="{...}" />
+                <marker date="1533427904160" expanded="true" signature="4341:4362" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>_worldSimulationStateService</find>
+      <find>_worldPersistanceService</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/WorldData/WorldDataToken.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/WorldSimulationStateService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/WorldPersistanceService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/WorldData/WorldDataAccessService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/WorldData/SaveAreaJob.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ThirdParty/AssetBundleManager/Editor/ExecuteInternalMono.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Data/WorldIndexGenerator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/WorldData/LoadAreaJob.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Data/DataConfig.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/SimulationService.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/Elementia/Scripts/Services/Jobs.cs" />
+        <option value="$PROJECT_DIR$/Assets/Elementia/Scripts/Services/WorldData/WorldDataToken.cs" />
+        <option value="$PROJECT_DIR$/Assets/Elementia/Scripts/Services/WorldData/LoadAreaJob.cs" />
+        <option value="$PROJECT_DIR$/Assets/Elementia/Scripts/Services/WorldData/SaveAreaJob.cs" />
+        <option value="$PROJECT_DIR$/Assets/Elementia/Scripts/Data/DataConfig.cs" />
+        <option value="$PROJECT_DIR$/Assets/Elementia/Scripts/Data/WorldIndexGenerator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Elementia/Scripts/Services/WorldData/WorldDataAccessService.cs" />
+        <option value="$PROJECT_DIR$/Assets/Elementia/Scripts/Services/WorldPersistanceService.cs" />
+        <option value="$PROJECT_DIR$/Assets/Elementia/Scripts/Services/WorldSimulationStateService.cs" />
+        <option value="$PROJECT_DIR$/Assets/Elementia/Scripts/Services/SimulationService.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="260" />
+    <option name="y" value="20" />
+    <option name="width" value="1400" />
+    <option name="height" value="1000" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="SolutionExplorer" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="SolutionExplorer">
+        <subPane>
+          <expand>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="UnityClient (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="UnityClient (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="UnityClient (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Elementia" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="UnityClient (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Elementia" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Scripts" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="UnityClient (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Elementia" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Scripts" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Data" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="UnityClient (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Elementia" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Scripts" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Services" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="UnityClient (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Elementia" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Scripts" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Services" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="WorldData" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+        <option name="show-file-system" value="false" />
+        <option name="show-all-items" value="false" />
+      </pane>
+      <pane id="Scratches" />
+      <pane id="UnityExplorer">
+        <subPane>
+          <expand>
+            <path>
+              <item name="" type="ad4990d8:FileSystemViewPaneBase$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="UnityClient" type="483dac07:UnityExplorerNode$Root" />
+            </path>
+            <path>
+              <item name="" type="ad4990d8:FileSystemViewPaneBase$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="UnityClient" type="483dac07:UnityExplorerNode$Root" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+            </path>
+            <path>
+              <item name="" type="ad4990d8:FileSystemViewPaneBase$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="UnityClient" type="483dac07:UnityExplorerNode$Root" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+            </path>
+            <path>
+              <item name="" type="ad4990d8:FileSystemViewPaneBase$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="UnityClient" type="483dac07:UnityExplorerNode$Root" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+        <option name="show-hidden-items" value="false" />
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
+    <property name="SearchEverywhereHistoryKey" value="WorldDataAcc&#9;null&#9;null" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="268f338c-f4da-44ee-9bad-41f9b094add9" name="Default" comment="" />
+      <created>1533427366979</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1533427366979</updated>
+      <workItem from="1533427368794" duration="7733000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="7733000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Errors In Solution" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Unit Tests" />
+      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Unity" />
+      <window_info anchor="right" id="Database" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="NuGet" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/Jobs.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/WorldData/LoadAreaJob.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
+          <folding>
+            <marker date="1533427904160" expanded="true" signature="6:47" ph="..." />
+            <marker date="1533427904160" expanded="true" signature="176:4364" ph="{...}" />
+            <marker date="1533427904160" expanded="true" signature="208:960" ph="{...}" />
+            <marker date="1533427904160" expanded="true" signature="425:501" ph="{...}" />
+            <marker date="1533427904160" expanded="true" signature="573:658" ph="{...}" />
+            <marker date="1533427904160" expanded="true" signature="730:815" ph="{...}" />
+            <marker date="1533427904160" expanded="true" signature="858:954" ph="{...}" />
+            <marker date="1533427904160" expanded="true" signature="997:1508" ph="{...}" />
+            <marker date="1533427904160" expanded="true" signature="1386:1502" ph="{...}" />
+            <marker date="1533427904160" expanded="true" signature="2084:2368" ph="{...}" />
+            <marker date="1533427904160" expanded="true" signature="2438:2667" ph="{...}" />
+            <marker date="1533427904160" expanded="true" signature="2510:2638" ph="{...}" />
+            <marker date="1533427904160" expanded="true" signature="2571:2628" ph="{...}" />
+            <marker date="1533427904160" expanded="true" signature="2713:4300" ph="{...}" />
+            <marker date="1533427904160" expanded="true" signature="2774:4294" ph="{...}" />
+            <marker date="1533427904160" expanded="true" signature="3018:3111" ph="{...}" />
+            <marker date="1533427904160" expanded="true" signature="3128:4010" ph="{...}" />
+            <marker date="1533427904160" expanded="true" signature="3210:3834" ph="{...}" />
+            <marker date="1533427904160" expanded="true" signature="3252:3653" ph="{...}" />
+            <marker date="1533427904160" expanded="true" signature="3692:3816" ph="{...}" />
+            <marker date="1533427904160" expanded="true" signature="3855:3995" ph="{...}" />
+            <marker date="1533427904160" expanded="true" signature="4341:4362" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Data/DataConfig.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="37" column="4" selection-start-line="37" selection-start-column="4" selection-end-line="37" selection-end-column="4" />
+          <folding>
+            <marker date="1533432209835" expanded="true" signature="6:32" ph="..." />
+            <marker date="1533432209835" expanded="true" signature="95:1631" ph="{...}" />
+            <marker date="1533432209835" expanded="true" signature="711:756" ph="{...}" />
+            <marker date="1533432209835" expanded="true" signature="798:854" ph="{...}" />
+            <marker date="1533432209835" expanded="true" signature="902:964" ph="{...}" />
+            <marker date="1533432209835" expanded="true" signature="1001:1106" ph="{...}" />
+            <marker date="1533432209835" expanded="true" signature="1155:1218" ph="{...}" />
+            <marker date="1533432209835" expanded="true" signature="1274:1333" ph="{...}" />
+            <marker date="1533432209835" expanded="true" signature="1368:1420" ph="{...}" />
+            <marker date="1533432209835" expanded="true" signature="1477:1629" ph="{...}" />
+            <marker date="1533432209835" expanded="true" signature="1552:1621" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/WorldData/SaveAreaJob.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="13" selection-start-column="13" selection-end-column="13" />
+          <folding>
+            <marker date="1533427939986" expanded="true" signature="6:148" ph="..." />
+            <marker date="1533427939986" expanded="true" signature="188:1589" ph="{...}" />
+            <marker date="1533427939986" expanded="true" signature="223:450" ph="{...}" />
+            <marker date="1533427939986" expanded="true" signature="356:444" ph="{...}" />
+            <marker date="1533427939986" expanded="true" signature="610:686" ph="{...}" />
+            <marker date="1533427939986" expanded="true" signature="732:1587" ph="{...}" />
+            <marker date="1533427939986" expanded="true" signature="801:1581" ph="{...}" />
+            <marker date="1533427939986" expanded="true" signature="957:1534" ph="{...}" />
+            <marker date="1533427939986" expanded="true" signature="1365:1493" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/WorldData/WorldDataToken.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
+          <folding>
+            <marker date="1533427759631" expanded="true" signature="6:66" ph="..." />
+            <marker date="1533427759631" expanded="true" signature="95:5338" ph="{...}" />
+            <marker date="1533427759631" expanded="true" signature="133:452" ph="{...}" />
+            <marker date="1533427759631" expanded="true" signature="296:446" ph="{...}" />
+            <marker date="1533427759631" expanded="true" signature="841:912" ph="{...}" />
+            <marker date="1533427759631" expanded="true" signature="859:906" ph="{...}" />
+            <marker date="1533427759631" expanded="true" signature="1040:1160" ph="{...}" />
+            <marker date="1533427759631" expanded="true" signature="1224:1819" ph="{...}" />
+            <marker date="1533427759631" expanded="true" signature="1873:1961" ph="{...}" />
+            <marker date="1533427759631" expanded="true" signature="2028:2125" ph="{...}" />
+            <marker date="1533427759631" expanded="true" signature="2185:2727" ph="{...}" />
+            <marker date="1533427759631" expanded="true" signature="2232:2274" ph="{...}" />
+            <marker date="1533427759631" expanded="true" signature="2380:2457" ph="{...}" />
+            <marker date="1533427759631" expanded="true" signature="2536:2702" ph="{...}" />
+            <marker date="1533427759631" expanded="true" signature="2799:3138" ph="{...}" />
+            <marker date="1533427759631" expanded="true" signature="2942:3132" ph="{...}" />
+            <marker date="1533427759631" expanded="true" signature="3189:3930" ph="{...}" />
+            <marker date="1533427759631" expanded="true" signature="3236:3278" ph="{...}" />
+            <marker date="1533427759631" expanded="true" signature="3384:3460" ph="{...}" />
+            <marker date="1533427759631" expanded="true" signature="3505:3576" ph="{...}" />
+            <marker date="1533427759631" expanded="true" signature="3604:3724" ph="{...}" />
+            <marker date="1533427759631" expanded="true" signature="3744:3905" ph="{...}" />
+            <marker date="1533427759631" expanded="true" signature="3993:4327" ph="{...}" />
+            <marker date="1533427759631" expanded="true" signature="4136:4321" ph="{...}" />
+            <marker date="1533427759631" expanded="true" signature="4385:4927" ph="{...}" />
+            <marker date="1533427759631" expanded="true" signature="4432:4474" ph="{...}" />
+            <marker date="1533427759631" expanded="true" signature="4580:4657" ph="{...}" />
+            <marker date="1533427759631" expanded="true" signature="4736:4902" ph="{...}" />
+            <marker date="1533427759631" expanded="true" signature="4997:5336" ph="{...}" />
+            <marker date="1533427759631" expanded="true" signature="5140:5330" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/WorldData/WorldDataAccessService.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="17" column="68" selection-start-line="17" selection-start-column="68" selection-end-line="17" selection-end-column="68" />
+          <folding>
+            <marker date="1533434008161" expanded="false" signature="6:193" ph="..." />
+            <marker date="1533434008161" expanded="true" signature="240:9008" ph="{...}" />
+            <marker date="1533434008161" expanded="true" signature="594:870" ph="{...}" />
+            <marker date="1533434008161" expanded="true" signature="921:2011" ph="{...}" />
+            <marker date="1533434008161" expanded="true" signature="980:2005" ph="{...}" />
+            <marker date="1533434008161" expanded="true" signature="1185:1273" ph="{...}" />
+            <marker date="1533434008161" expanded="true" signature="1334:1682" ph="{...}" />
+            <marker date="1533434008161" expanded="true" signature="1444:1668" ph="{...}" />
+            <marker date="1533434008161" expanded="true" signature="1535:1650" ph="{...}" />
+            <marker date="1533434008161" expanded="true" signature="1868:1995" ph="{...}" />
+            <marker date="1533434008161" expanded="true" signature="2088:2218" ph="{...}" />
+            <marker date="1533434008161" expanded="true" signature="2136:2210" ph="{...}" />
+            <marker date="1533434008161" expanded="true" signature="2302:2377" ph="{...}" />
+            <marker date="1533434008161" expanded="true" signature="2541:3241" ph="{...}" />
+            <marker date="1533434008161" expanded="true" signature="2724:2976" ph="{...}" />
+            <marker date="1533434008161" expanded="true" signature="2789:2966" ph="{...}" />
+            <marker date="1533434008161" expanded="true" signature="3340:3425" ph="{...}" />
+            <marker date="1533434008161" expanded="true" signature="3605:9006" ph="{...}" />
+            <marker date="1533434008161" expanded="true" signature="4149:4229" ph="{...}" />
+            <marker date="1533434008161" expanded="true" signature="4253:8870" ph="{...}" />
+            <marker date="1533434008161" expanded="true" signature="5190:6242" ph="{...}" />
+            <marker date="1533434008161" expanded="true" signature="5264:6228" ph="{...}" />
+            <marker date="1533434008161" expanded="true" signature="5578:5884" ph="{...}" />
+            <marker date="1533434008161" expanded="true" signature="5672:5862" ph="{...}" />
+            <marker date="1533434008161" expanded="true" signature="5943:6091" ph="{...}" />
+            <marker date="1533434008161" expanded="true" signature="6116:6210" ph="{...}" />
+            <marker date="1533434008161" expanded="true" signature="6590:6937" ph="{...}" />
+            <marker date="1533434008161" expanded="true" signature="7019:8700" ph="{...}" />
+            <marker date="1533434008161" expanded="true" signature="7085:8378" ph="{...}" />
+            <marker date="1533434008161" expanded="true" signature="7396:7717" ph="{...}" />
+            <marker date="1533434008161" expanded="true" signature="7778:8358" ph="{...}" />
+            <marker date="1533434008161" expanded="true" signature="8076:8336" ph="{...}" />
+            <marker date="1533434008161" expanded="true" signature="8717:8860" ph="{...}" />
+            <marker date="1533434008161" expanded="true" signature="8883:9000" ph="{...}" />
+            <marker date="1533434008161" expanded="true" signature="9036:9606" ph="{...}" />
+            <marker date="1533434008161" expanded="true" signature="9500:9604" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/ThirdParty/AssetBundleManager/Editor/ExecuteInternalMono.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="52" column="8" selection-start-line="52" selection-start-column="8" selection-end-line="52" selection-end-column="8" />
+          <folding>
+            <marker date="1528349283171" expanded="false" signature="6:192" ph="..." />
+            <marker date="1528349283171" expanded="true" signature="216:3639" ph="{...}" />
+            <marker date="1528349283171" expanded="true" signature="248:1273" ph="{...}" />
+            <marker date="1528349283171" expanded="true" signature="296:730" ph="{...}" />
+            <marker date="1528349283171" expanded="true" signature="813:952" ph="{...}" />
+            <marker date="1528349283171" expanded="true" signature="1000:1142" ph="{...}" />
+            <marker date="1528349283171" expanded="true" signature="1205:1270" ph="{...}" />
+            <marker date="1528349283171" expanded="true" signature="1302:3637" ph="{...}" />
+            <marker date="1528349283171" expanded="true" signature="1690:1839" ph="{...}" />
+            <marker date="1528349283171" expanded="true" signature="1752:1798" ph="{...}" />
+            <marker date="1528349283171" expanded="true" signature="1896:2069" ph="{...}" />
+            <marker date="1528349283171" expanded="true" signature="1934:1974" ph="{...}" />
+            <marker date="1528349283171" expanded="true" signature="2007:2049" ph="{...}" />
+            <marker date="1528349283171" expanded="true" signature="2128:2466" ph="{...}" />
+            <marker date="1528349283171" expanded="true" signature="2158:2187" ph="{...}" />
+            <marker date="1528349283171" expanded="true" signature="2228:2337" ph="{...}" />
+            <marker date="1528349283171" expanded="true" signature="2379:2445" ph="{...}" />
+            <marker date="1528349283171" expanded="true" signature="2641:3449" ph="{...}" />
+            <marker date="1528349283171" expanded="true" signature="2946:3216" ph="{...}" />
+            <marker date="1528349283171" expanded="true" signature="3257:3424" ph="{...}" />
+            <marker date="1528349283171" expanded="true" signature="3503:3634" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/WorldPersistanceService.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="40" column="37" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="37" />
+          <folding>
+            <marker date="1533434351648" expanded="false" signature="6:139" ph="..." />
+            <marker date="1533434351648" expanded="true" signature="188:1931" ph="{...}" />
+            <marker date="1533434351648" expanded="true" signature="255:1103" ph="{...}" />
+            <marker date="1533434351648" expanded="true" signature="538:658" ph="{...}" />
+            <marker date="1533434351648" expanded="true" signature="766:1097" ph="{...}" />
+            <marker date="1533434351648" expanded="true" signature="868:967" ph="{...}" />
+            <marker date="1533434351648" expanded="true" signature="984:1087" ph="{...}" />
+            <marker date="1533434351648" expanded="true" signature="1402:1454" ph="{...}" />
+            <marker date="1533434351648" expanded="true" signature="1524:1643" ph="{...}" />
+            <marker date="1533434351648" expanded="true" signature="1712:1784" ph="{...}" />
+            <marker date="1533434351648" expanded="true" signature="1827:1929" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Data/WorldIndexGenerator.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="29" column="19" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
+          <folding>
+            <marker date="1533433814994" expanded="false" signature="6:193" ph="..." />
+            <marker date="1533433814994" expanded="true" signature="237:551" ph="{...}" />
+            <marker date="1533433814994" expanded="true" signature="481:549" ph="{...}" />
+            <marker date="1533433814994" expanded="true" signature="597:840" ph="{...}" />
+            <marker date="1533433814994" expanded="true" signature="967:1003" ph="{...}" />
+            <marker date="1533433814994" expanded="true" signature="1042:1307" ph="{...}" />
+            <marker date="1533433814994" expanded="true" signature="1391:6889" ph="{...}" />
+            <marker date="1533433814994" expanded="true" signature="1723:1886" ph="{...}" />
+            <marker date="1533433814994" expanded="true" signature="1913:1954" ph="{...}" />
+            <marker date="1533433814994" expanded="true" signature="2009:2411" ph="{...}" />
+            <marker date="1533433814994" expanded="true" signature="2670:3506" ph="{...}" />
+            <marker date="1533433814994" expanded="true" signature="3391:3477" ph="{...}" />
+            <marker date="1533433814994" expanded="true" signature="3569:6766" ph="{...}" />
+            <marker date="1533433814994" expanded="true" signature="4900:4973" ph="{...}" />
+            <marker date="1533433814994" expanded="true" signature="5166:6737" ph="{...}" />
+            <marker date="1533433814994" expanded="true" signature="5234:6727" ph="{...}" />
+            <marker date="1533433814994" expanded="true" signature="6124:6672" ph="{...}" />
+            <marker date="1533433814994" expanded="true" signature="6472:6598" ph="{...}" />
+            <marker date="1533433814994" expanded="true" signature="6866:6887" ph="{...}" />
+            <marker date="1533433814994" expanded="true" signature="6914:6919" ph="{...}" />
+            <marker date="1533433814994" expanded="true" signature="6972:7420" ph="{...}" />
+            <marker date="1533433814994" expanded="true" signature="7079:7418" ph="{...}" />
+            <marker date="1533433814994" expanded="true" signature="7250:7389" ph="{...}" />
+            <marker date="1533433814994" expanded="true" signature="7313:7379" ph="{...}" />
+            <marker date="1533433814994" expanded="true" signature="7474:7970" ph="{...}" />
+            <marker date="1533433814994" expanded="true" signature="7583:7968" ph="{...}" />
+            <marker date="1533433814994" expanded="true" signature="7760:7939" ph="{...}" />
+            <marker date="1533433814994" expanded="true" signature="7823:7929" ph="{...}" />
+            <marker date="1533433814994" expanded="true" signature="8023:8614" ph="{...}" />
+            <marker date="1533433814994" expanded="true" signature="8249:8612" ph="{...}" />
+            <marker date="1533433814994" expanded="true" signature="8413:8583" ph="{...}" />
+            <marker date="1533433814994" expanded="true" signature="8476:8573" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/SimulationService.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="19" column="36" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="36" />
+          <folding>
+            <marker date="1533434457458" expanded="false" signature="6:105" ph="..." />
+            <marker date="1533434457458" expanded="true" signature="147:3255" ph="{...}" />
+            <marker date="1533434457458" expanded="true" signature="431:794" ph="{...}" />
+            <marker date="1533434457458" expanded="true" signature="874:969" ph="{...}" />
+            <marker date="1533434457458" expanded="true" signature="1016:1644" ph="{...}" />
+            <marker date="1533434457458" expanded="true" signature="1106:1638" ph="{...}" />
+            <marker date="1533434457458" expanded="true" signature="1333:1450" ph="{...}" />
+            <marker date="1533434457458" expanded="true" signature="1760:3253" ph="{...}" />
+            <marker date="1533434457458" expanded="true" signature="2219:2265" ph="{...}" />
+            <marker date="1533434457458" expanded="true" signature="2273:2395" ph="{...}" />
+            <marker date="1533434457458" expanded="true" signature="2495:2609" ph="{...}" />
+            <marker date="1533434457458" expanded="true" signature="2714:2794" ph="{...}" />
+            <marker date="1533434457458" expanded="true" signature="2803:3164" ph="/* SimulateAreaJob simulateAreaJob = new SimulateAreaJob(token, _state); ... */" />
+            <marker date="1533434457458" expanded="true" signature="3297:6204" ph="{...}" />
+            <marker date="1533434457458" expanded="true" signature="3453:3513" ph="{...}" />
+            <marker date="1533434457458" expanded="true" signature="3559:3844" ph="{...}" />
+            <marker date="1533434457458" expanded="true" signature="3648:3838" ph="{...}" />
+            <marker date="1533434457458" expanded="true" signature="3746:3828" ph="{...}" />
+            <marker date="1533434457458" expanded="true" signature="3921:5382" ph="{...}" />
+            <marker date="1533434457458" expanded="true" signature="4099:4483" ph="{...}" />
+            <marker date="1533434457458" expanded="true" signature="4157:4473" ph="{...}" />
+            <marker date="1533434457458" expanded="true" signature="5094:5376" ph="{...}" />
+            <marker date="1533434457458" expanded="true" signature="5152:5366" ph="{...}" />
+            <marker date="1533434457458" expanded="true" signature="5485:6202" ph="{...}" />
+            <marker date="1533434457458" expanded="true" signature="5740:5911" ph="{...}" />
+            <marker date="1533434457458" expanded="true" signature="5958:6073" ph="{...}" />
+            <marker date="1533434457458" expanded="true" signature="6086:6196" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/WorldSimulationStateService.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="23" column="63" lean-forward="true" selection-start-line="23" selection-start-column="63" selection-end-line="23" selection-end-column="63" />
+          <folding>
+            <marker date="1533434394767" expanded="false" signature="6:105" ph="..." />
+            <marker date="1533434394767" expanded="true" signature="157:7574" ph="{...}" />
+            <marker date="1533434394767" expanded="true" signature="242:2123" ph="{...}" />
+            <marker date="1533434394767" expanded="true" signature="781:1024" ph="{...}" />
+            <marker date="1533434394767" expanded="true" signature="1142:2117" ph="{...}" />
+            <marker date="1533434394767" expanded="true" signature="1876:1990" ph="{...}" />
+            <marker date="1533434394767" expanded="true" signature="2007:2075" ph="{...}" />
+            <marker date="1533434394767" expanded="true" signature="2206:3646" ph="{...}" />
+            <marker date="1533434394767" expanded="true" signature="2555:2708" ph="{...}" />
+            <marker date="1533434394767" expanded="true" signature="2826:3640" ph="{...}" />
+            <marker date="1533434394767" expanded="true" signature="2974:3048" ph="{...}" />
+            <marker date="1533434394767" expanded="true" signature="3993:4511" ph="{...}" />
+            <marker date="1533434394767" expanded="true" signature="4590:4670" ph="{...}" />
+            <marker date="1533434394767" expanded="true" signature="4713:4823" ph="{...}" />
+            <marker date="1533434394767" expanded="true" signature="4852:4951" ph="{...}" />
+            <marker date="1533434394767" expanded="true" signature="5007:6208" ph="{...}" />
+            <marker date="1533434394767" expanded="true" signature="5064:5371" ph="{...}" />
+            <marker date="1533434394767" expanded="true" signature="5148:5229" ph="{...}" />
+            <marker date="1533434394767" expanded="true" signature="5153:5227" ph="{...}" />
+            <marker date="1533434394767" expanded="true" signature="5295:5361" ph="{...}" />
+            <marker date="1533434394767" expanded="true" signature="5595:5696" ph="{...}" />
+            <marker date="1533434394767" expanded="true" signature="5746:6202" ph="{...}" />
+            <marker date="1533434394767" expanded="true" signature="5844:6192" ph="{...}" />
+            <marker date="1533434394767" expanded="true" signature="6056:6178" ph="{...}" />
+            <marker date="1533434394767" expanded="true" signature="6264:7572" ph="{...}" />
+            <marker date="1533434394767" expanded="true" signature="6321:6942" ph="{...}" />
+            <marker date="1533434394767" expanded="true" signature="6426:6545" ph="{...}" />
+            <marker date="1533434394767" expanded="true" signature="6460:6531" ph="{...}" />
+            <marker date="1533434394767" expanded="true" signature="6618:6740" ph="{...}" />
+            <marker date="1533434394767" expanded="true" signature="6652:6726" ph="{...}" />
+            <marker date="1533434394767" expanded="true" signature="6834:6932" ph="{...}" />
+            <marker date="1533434394767" expanded="true" signature="7166:7267" ph="{...}" />
+            <marker date="1533434394767" expanded="true" signature="7317:7566" ph="{...}" />
+            <marker date="1533434394767" expanded="true" signature="7461:7556" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

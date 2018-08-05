@@ -790,7 +790,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _isRunning: 0
-  _indexGenerator: {fileID: 11400000, guid: 50b65fdab838ab343949b17d3208e4a4, type: 2}
+  _indexGenerator: {fileID: 11400000, guid: a80a3c07621d0dd4f9e3113bffa6d5b9, type: 2}
 --- !u!4 &1701965049
 Transform:
   m_ObjectHideFlags: 0
@@ -819,4 +819,3 @@ MonoBehaviour:
   _isRunning: 0
   _simulationConfiguration: {fileID: 11400000, guid: b34c8552f2130a546a4156641cf4240e,
     type: 2}
-  _indexGenerator: {fileID: 11400000, guid: 50b65fdab838ab343949b17d3208e4a4, type: 2}

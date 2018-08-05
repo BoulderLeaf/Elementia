@@ -8,12 +8,16 @@ public class WorldSimulationStateService : Service
 {
     private class WorldSimulateStateRequest : ServiceRequest<WorldSimulationState>
     {
-        private WorldIndexGenerator _indexGenerator;
+        private WorldAsset _indexGenerator;
         private SharpSerializer _serializer;
         private WorldPersistanceService _worldPersistanceService;
         private SimulationConfiguration _simulationConfiguration;
 
-        public WorldSimulateStateRequest(WorldSimulationStateService worldSimulationStateService, WorldPersistanceService worldPersistanceService, SimulationConfiguration simulationConfiguration, WorldIndexGenerator indexGenerator) : base(worldSimulationStateService)
+        public WorldSimulateStateRequest(
+            WorldSimulationStateService worldSimulationStateService, 
+            WorldPersistanceService worldPersistanceService, 
+            SimulationConfiguration simulationConfiguration, 
+            WorldAsset indexGenerator) : base(worldSimulationStateService)
         {
             _serializer = new SharpSerializer();
             _worldPersistanceService = worldPersistanceService;
@@ -30,7 +34,7 @@ public class WorldSimulationStateService : Service
 
             yield return new WaitUntil(() => worldIndex != null);
 
-            string filepath = _indexGenerator.dataRootDirectory + SimulationConfiguration.IndexFilename;
+            string filepath = String.Join(DataConfig.DirectoryDelimiter, _indexGenerator.RootPath(Application.persistentDataPath), SimulationConfiguration.IndexFilename);
 
             var request = new LoadSimulationStateJob.LoadSimulationStateJobRequest(filepath);
             LoadSimulationStateJob loadJob = new LoadSimulationStateJob(request);
@@ -53,11 +57,11 @@ public class WorldSimulationStateService : Service
 
     private class WorldSimulateSaveRequest : ServiceRequest<WorldSimulationState>
     {
-        private WorldIndexGenerator _indexGenerator;
+        private WorldAsset _indexGenerator;
         private SharpSerializer _serializer;
         private WorldSimulateStateRequest _getRequest;
 
-        public WorldSimulateSaveRequest(WorldSimulationStateService worldSimulationStateService, WorldSimulateStateRequest getRequest, WorldIndexGenerator indexGenerator) : base(worldSimulationStateService)
+        public WorldSimulateSaveRequest(WorldSimulationStateService worldSimulationStateService, WorldSimulateStateRequest getRequest, WorldAsset indexGenerator) : base(worldSimulationStateService)
         {
             _serializer = new SharpSerializer();
             _indexGenerator = indexGenerator;
@@ -77,7 +81,7 @@ public class WorldSimulationStateService : Service
 
             yield return new WaitUntil(() => state != null);
 
-            string filepath = _indexGenerator.dataRootDirectory + SimulationConfiguration.IndexFilename;
+            string filepath = String.Join(DataConfig.DirectoryDelimiter, _indexGenerator.RootPath(Application.persistentDataPath), SimulationConfiguration.IndexFilename);
 
             var request = new SaveSimulationStateJob.SaveSimulationStateJobRequest(filepath, state);
             SaveSimulationStateJob savejob = new SaveSimulationStateJob(request);
@@ -94,9 +98,6 @@ public class WorldSimulationStateService : Service
     [SerializeField]
     private SimulationConfiguration _simulationConfiguration;
 
-    [SerializeField]
-    private WorldIndexGenerator _indexGenerator;
-
     private WorldSimulateStateRequest _worldSimulateStateRequest;
     private WorldSimulateSaveRequest _worldSimulateSaveRequest;
     private WorldPersistanceService _worldPersistanceService;
@@ -104,8 +105,17 @@ public class WorldSimulationStateService : Service
     public override void StartService(ServiceManager serviceManager)
     {
         _worldPersistanceService = serviceManager.GetService<WorldPersistanceService>();
-        _worldSimulateStateRequest = new WorldSimulateStateRequest(this, _worldPersistanceService, _simulationConfiguration, _indexGenerator);
-        _worldSimulateSaveRequest = new WorldSimulateSaveRequest(this, _worldSimulateStateRequest, _indexGenerator);
+        
+        _worldSimulateStateRequest = new WorldSimulateStateRequest(
+            this, 
+            _worldPersistanceService, 
+            _simulationConfiguration, 
+            _worldPersistanceService.IndexGenerator);
+        
+        _worldSimulateSaveRequest = new WorldSimulateSaveRequest(
+            this, 
+            _worldSimulateStateRequest, 
+            _worldPersistanceService.IndexGenerator);
     }
 
     public void Load(Action<WorldSimulationState> onComplete, Action onError)
