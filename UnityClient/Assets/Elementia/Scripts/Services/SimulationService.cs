@@ -3,6 +3,8 @@ using System.Collections;
 using System.IO;
 using Polenter.Serialization;
 using System;
+using System.Threading;
+using System.Collections.Generic;
 
 public class SimulationService : Service
 {
@@ -11,6 +13,7 @@ public class SimulationService : Service
     private SharpSerializer _serializer;
     private WorldSimulationStateService _worldSimulationStateService;
     private WorldDataAccess _worldDataAccess;
+    private SimulationJob _job;
 
     public override void StartService(ServiceManager serviceManager)
     {
@@ -39,89 +42,59 @@ public class SimulationService : Service
         yield return 0;
         
         bool simulating = true;
-        SimulationJob job = new SimulationJob(_worldDataAccess, _state);
-        job.Start();
+        Debug.Log("START SIMULATION JOB");
+        _job = new SimulationJob(_worldDataAccess, _state, _worldSimulationStateService, Application.persistentDataPath);
+        _job.Start();
         
-        while(simulating)
+        while(!_job.IsDone)
         {
-            if (job.IsDone)
-            {
-                simulating = false;
-            }
-            
             yield return 0;
-            
-            /*uint totalDevisions = _state.SimulationDevisions;
-            uint stepsCompleted = 0;
-            Debug.Log("Step Simulation" + _state.SimulationStep);
-
-            for (uint i = 0; i<totalDevisions;i++)
-            {
-                StartCoroutine(SimulateStep(i, totalDevisions, () => stepsCompleted++));
-            }
-
-            yield return new WaitUntil(() => stepsCompleted >= totalDevisions);
-
-            _state.StepSimulationState();
-            _worldSimulationStateService.SaveState();*/
         }
     }
-    int tokenRequests = 0;
-    private IEnumerator SimulateStep(uint offset, uint totalDevisions,Action onComplete)
+
+    private void OnDestroy()
     {
-        /*SimulationArea simulationArea = _state.GetCurrentSimulationArea(offset, totalDevisions);
-        TokenRequest tokenRequest = new TokenRequest(simulationArea.Left, simulationArea.Right, simulationArea.Bottom, simulationArea.Top);
-        WorldDataToken token = null;
-        int myTokenRequest = tokenRequests++;
-        Debug.Log("Step 1`: loading "+ (myTokenRequest));
-        _worldDataAccessService.GetToken(tokenRequest, (recievedToken) => {
-            token = recievedToken;
-        }, () => {
-            Debug.LogError("There was an error attempthing to recieve a data token while simulating a step.");
-        });
-        DateTime startWorldIndexLoad = DateTime.UtcNow;
-        yield return new WaitUntil(() => {
-            return token != null || (DateTime.UtcNow - startWorldIndexLoad).TotalMilliseconds > 10000;
-        });
-        Debug.Log("Step 2");
-        if ((DateTime.UtcNow - startWorldIndexLoad).Milliseconds > 10000)
+        if (_job != null)
         {
-            Debug.Log("TIMEOUT ERROR LOADING WORLD INDEX");
+            _job.Abort();
+            _job = null;
         }
-        //SimulateAreaJob simulateAreaJob = new SimulateAreaJob(token, _state);
-        //simulateAreaJob.Start();
-
-        //yield return new WaitUntil(() => simulateAreaJob.IsDone);
-
-        //bool tokenSaved = false;
-        //_worldDataAccessService.SaveAndReturnToken(token, () => tokenSaved = true);
-        //yield return new WaitUntil(() => tokenSaved == true);
-        Debug.Log("Step 3: Done loading: "+ myTokenRequest);
-        onComplete();*/
-
-        yield return 0;
     }
 }
 
 public class SimulateAreaJob:ThreadedJob
 {
-    private WorldDataToken _token;
+    private TokenRequest _tokenRequest;
     private WorldSimulationState _state;
+    private WorldDataAccess _worldDataAccess;
+    private string _persistentDataPath;
 
-    public SimulateAreaJob(WorldDataToken token, WorldSimulationState state)
+    public SimulateAreaJob(WorldDataAccess worldDataAccess, TokenRequest tokenRequest, WorldSimulationState state, string persistentDataPath)
     {
-        _token = token;
+        _tokenRequest = tokenRequest;
         _state = state;
+        _worldDataAccess = worldDataAccess;
+        _persistentDataPath = persistentDataPath;
     }
 
     protected override void ThreadFunction()
     {
-        for (int x = _state.Radius; x < _token.Request.width - _state.Radius; x++)
+        try
         {
-            for (int y = _state.Radius; y < _token.Request.height - _state.Radius; y++)
+            WorldDataToken token = _worldDataAccess.GetToken(_tokenRequest, _persistentDataPath);
+
+            for (int x = _state.Radius; x < token.Request.width - _state.Radius; x++)
             {
-                SimulateAreaWithRadius(_token, x, y);
+                for (int y = _state.Radius; y < token.Request.height - _state.Radius; y++)
+                {
+                    SimulateAreaWithRadius(token, x, y);
+                }
             }
+        }
+        catch (Exception e)
+        {
+            Debug.LogError("SimulateAreaJob Error: \n"+e);
+            throw;
         }
     }
 
@@ -197,13 +170,62 @@ public class SimulateAreaJob:ThreadedJob
 
 public class SimulationJob : ThreadedJob
 {
-    public SimulationJob(WorldDataAccess worldDataAccess, WorldSimulationState worldSimulationState)
+    private WorldSimulationStateService _worldSimulationStateService;
+    private WorldSimulationState _worldSimulationState;
+    private WorldDataAccess _worldDataAccess;
+    private string _persistentDataPath;
+    
+    public SimulationJob(WorldDataAccess worldDataAccess, WorldSimulationState worldSimulationState, WorldSimulationStateService worldSimulationStateService, string persistentDataPath)
     {
-        
+        _worldSimulationState = worldSimulationState;
+        _worldSimulationStateService = worldSimulationStateService;
+        _worldDataAccess = worldDataAccess;
+        _persistentDataPath = persistentDataPath;
     }
 
     protected override void ThreadFunction()
     {
-        
+        try
+        {
+            bool running = true;
+    
+            List<SimulateAreaJob> jobs = new List<SimulateAreaJob>();
+            
+            while (running)
+            {
+                jobs.Clear();
+                
+                uint totalDevisions = _worldSimulationState.SimulationDevisions;
+                uint stepsCompleted = 0;
+    
+                for (uint i = 0; i<totalDevisions;i++)
+                {
+                    jobs.Add(SimulateStep(i, totalDevisions));
+                }
+    
+                while (jobs.Find((job) =>!job.IsDone) != null)
+                {
+                    Thread.Sleep(10);
+                }
+    
+                _worldSimulationState.StepSimulationState();
+                _worldSimulationStateService.SaveState(_worldSimulationState, _persistentDataPath);
+                
+                Thread.Sleep(10);
+            }
+        }
+        catch(Exception e)
+        {
+            Debug.LogError("There was an error running SimulationJob \n"+e);
+        }
+    }
+    
+    private SimulateAreaJob SimulateStep(uint offset, uint totalDevisions)
+    {
+        SimulationArea simulationArea = _worldSimulationState.GetCurrentSimulationArea(offset, totalDevisions);
+        TokenRequest tokenRequest = new TokenRequest(simulationArea.Left, simulationArea.Right, simulationArea.Bottom, simulationArea.Top);
+        SimulateAreaJob simulateAreaJob = new SimulateAreaJob(_worldDataAccess, tokenRequest, _worldSimulationState, _persistentDataPath);
+        simulateAreaJob.Start();
+        return simulateAreaJob;
     }
 }

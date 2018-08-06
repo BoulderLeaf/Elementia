@@ -77,30 +77,29 @@ public class LoadAreaJob: ThreadedJob
 
     protected override void ThreadFunction()
     {
-        AreaIndex areaIndex = null;
-        Debug.Log("LoadAreaJob: "+GetFilePath());
-        if(File.Exists(GetFilePath()))
+        try
         {
-            try
+            AreaIndex areaIndex = null;
+            if(File.Exists(GetFilePath()))
             {
                 string allfilesString = string.Empty;
                 FileStream areaFileStream = File.Open(GetFilePath(), FileMode.OpenOrCreate);
                 areaIndex = (AreaIndex)bf.Deserialize(areaFileStream);
                 areaFileStream.Close();
                 allfilesString = string.Empty;
-                Debug.Log("LoadAreaJob DONE: "+GetFilePath());
             }
-            catch(Exception e)
+            else
             {
-                Debug.LogError("Error while loading area files: \n"+e);
+                Debug.LogErrorFormat("File does not exist {0}", GetFilePath());
             }
+            
+            OutData = new AreaRequestResult(_areaRequest, areaIndex, GetFilePath());
         }
-        else
+        catch (Exception e)
         {
-            Debug.LogErrorFormat("File does not exist {0}", GetFilePath());
+            Debug.LogError("Error while loading area files: \n"+e);
+            throw;
         }
-        
-        OutData = new AreaRequestResult(_areaRequest, areaIndex, GetFilePath());
     }
     
     public string GetFilePath()

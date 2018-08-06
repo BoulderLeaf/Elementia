@@ -13,9 +13,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WorldAsset
   _dataConfig: {fileID: 11400000, guid: 71ced1d83709b04489b8193fb789ab61, type: 2}
   _dimensions:
-    _width: 4000
-    _height: 4000
-  _seed: 2147483647
+    _width: 10000
+    _height: 10000
+  _seed: 546546
   _uid: mainWorld
   _cloudLayer:
     _depth: 0

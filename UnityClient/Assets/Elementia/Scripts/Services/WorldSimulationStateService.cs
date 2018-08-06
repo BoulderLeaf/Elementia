@@ -67,7 +67,7 @@ public class WorldSimulationStateService : Service
             _indexGenerator = indexGenerator;
             _getRequest = getRequest;
         }
- 
+
         protected override IEnumerator MakeRequestCoroutine(Action<WorldSimulationState> onComplete, Action onError)
         {
             yield return 0;
@@ -105,17 +105,10 @@ public class WorldSimulationStateService : Service
     public override void StartService(ServiceManager serviceManager)
     {
         _worldPersistanceService = serviceManager.GetService<WorldPersistanceService>();
-        
         _worldSimulateStateRequest = new WorldSimulateStateRequest(
             this, 
-            _worldPersistanceService, 
-            _simulationConfiguration, 
-            _worldPersistanceService.IndexGenerator);
-        
-        _worldSimulateSaveRequest = new WorldSimulateSaveRequest(
-            this, 
-            _worldSimulateStateRequest, 
-            _worldPersistanceService.IndexGenerator);
+            _worldPersistanceService, _simulationConfiguration, _worldPersistanceService.IndexGenerator);
+        _worldSimulateSaveRequest = new WorldSimulateSaveRequest(this, _worldSimulateStateRequest, _worldPersistanceService.IndexGenerator);
     }
 
     public void Load(Action<WorldSimulationState> onComplete, Action onError)
@@ -129,9 +122,22 @@ public class WorldSimulationStateService : Service
         _worldSimulateStateRequest.AddRequest((index) => { }, () => { });
     }
 
-    public void SaveState()
+    public void SaveState(WorldSimulationState state, string persistentDataPath)
     {
-        _worldSimulateSaveRequest.AddRequest((worldSimulationState) => {}, () => { });
+        SharpSerializer serializer = new SharpSerializer();
+
+        string filePath = String.Join(DataConfig.DirectoryDelimiter, new string[]
+        {
+            _worldPersistanceService.IndexGenerator.RootPath(persistentDataPath),
+            SimulationConfiguration.IndexFilename
+        });
+        
+        FileStream fileStream = File.Open(filePath, FileMode.OpenOrCreate);
+
+        using (var stream = fileStream)
+        {
+            serializer.Serialize(state, fileStream);
+        }
     }
 
     private class LoadSimulationStateJob : ThreadedJob
@@ -165,8 +171,6 @@ public class WorldSimulationStateService : Service
             if (File.Exists(filepath))
             {
                 FileStream fileStream = File.Open(filepath, FileMode.Open);
-
-                Debug.Log("Loading Simulation State from " + filepath);
 
                 using (var stream = fileStream)
                 {

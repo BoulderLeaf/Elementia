@@ -51,7 +51,6 @@ public class WorldRendererLoader : MonoBehaviour {
     private IEnumerator DrawGroundCoroutine(WorldDataAccess worldDataAccess)
     {
         Vector3 targetPosition = _target.position;
-        Debug.Log("WorldRendererloader: DrawGround");
 
         LoadTokenJob loadTokenJob =
             new LoadTokenJob(worldDataAccess, targetPosition, _radius, Application.persistentDataPath);
@@ -65,18 +64,15 @@ public class WorldRendererLoader : MonoBehaviour {
 
 
         OnGetTokenComplete(loadTokenJob.Output);
-        Debug.Log("DRAW DONE");
     }
 
     private void OnGetTokenComplete(WorldDataToken token)
     {
-        Debug.Log("WorldRendererloader.OnGetTokenComplete: token: " + token);
         StartCoroutine(RenderGround(token));
     }
 
     private IEnumerator RenderGround(WorldDataToken token)
     {
-        Debug.Log("WorldRendererloader.OnGetTokenComplete: token: " + token);
         MeshCollider collider = null;
 
         if(_renderingPlane == null)

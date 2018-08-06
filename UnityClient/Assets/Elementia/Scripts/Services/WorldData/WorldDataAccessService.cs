@@ -190,9 +190,16 @@ public class WorldDataAccess
                 if (loadAreaJob == null)
                 {
                     loadAreaJob = new LoadAreaJob(new LoadAreaJob.AreaRequest(areaX, areaY), _worldIndex, _dataConfig, persistentDataPath);
-                    _cache[loadAreaJob.GetAreaKey()] = loadAreaJob;
+                    string key = loadAreaJob.GetAreaKey();
+
+                    if (loadAreaJob == null || key == null)
+                    {
+                        Debug.LogError("NULL: loadAreaJob: "+loadAreaJob + " key:"+key);
+                    }
+                    Debug.LogWarning("loadAreaJob: "+loadAreaJob + " key:"+key);
+                    _cache.Add(key, loadAreaJob);
                     loadAreaJob.Start();
-                }
+                 }
                 
                 jobs.Add(loadAreaJob);
             }
@@ -200,7 +207,7 @@ public class WorldDataAccess
 
         while (jobs.Find((job) => !job.IsDone) != null)
         {
-            Thread.Sleep(100);
+            Thread.Sleep(10);
         }
  
         jobs.ForEach((job) =>
