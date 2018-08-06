@@ -18,7 +18,7 @@ public class WorldDataToken
     }
 
     private AreaIndex[,] _areas;
-    private LoadAreaJob[,] _jobs;
+    private LoadedArea[,] _loadedAreas;
     private Dictionary<AreaIndex, string> _filepaths;
     private WorldIndex _index;
     private TokenRequest _request;
@@ -34,21 +34,21 @@ public class WorldDataToken
         }
     }
 
-    public WorldDataToken(TokenRequest request, WorldIndex index, LoadAreaJob[,] jobs)
+    public WorldDataToken(TokenRequest request, WorldIndex index, LoadedArea[,] loadedAreas)
     {
-        _areas = new AreaIndex[jobs.GetLength(0),jobs.GetLength(1)];
+        _areas = new AreaIndex[loadedAreas.GetLength(0),loadedAreas.GetLength(1)];
 
-        for (int i=0; i< jobs.GetLength(0); i++)
+        for (int i=0; i< loadedAreas.GetLength(0); i++)
         {
-            for (int j=0; j < jobs.GetLength(1); j++)
+            for (int j=0; j < loadedAreas.GetLength(1); j++)
             {
-                _areas[i, j] = jobs[i, j].OutData.Result;
+                _areas[i, j] = loadedAreas[i, j].Result.Result;
             }
         }
         
         _request = request;
         _index = index;
-        _jobs = jobs;
+        _loadedAreas = loadedAreas;
     }
 
     private PixelInformation GetPixelInformation(int x, int y)

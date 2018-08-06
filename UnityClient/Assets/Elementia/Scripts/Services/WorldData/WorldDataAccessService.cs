@@ -88,15 +88,17 @@ public struct TokenRequest
 
 public class WorldDataAccess
 {
-    private Dictionary<string, LoadAreaJob> _cache;
+    private Dictionary<string, LoadedArea> _cache;
     private Dictionary<string, SaveAreaJob> _saveCache;
     private WorldIndex _worldIndex;
     private DataConfig _dataConfig;
+    private List<LoadAreaJob> _loadJobPool;
     
     public WorldDataAccess(WorldIndex worldIndex, DataConfig dataConfig)
     {
-        _cache = new Dictionary<string, LoadAreaJob>();
+        _cache = new Dictionary<string, LoadedArea>();
         _saveCache = new Dictionary<string, SaveAreaJob>();
+        _loadJobPool = new List<LoadAreaJob>();
         _worldIndex = worldIndex;
         _dataConfig = dataConfig;
     }
@@ -172,10 +174,11 @@ public class WorldDataAccess
         int horizontalAreaCount = (rightArea - leftArea) + 1;
         int verticalAreaCount = (bottomArea - topArea) + 1;
 
-        LoadAreaJob[,] jobsResult = new LoadAreaJob[horizontalAreaCount, verticalAreaCount];
+        LoadedArea[,] jobsResult = new LoadedArea[horizontalAreaCount, verticalAreaCount];
         Dictionary<AreaIndex, string> filepaths = new Dictionary<AreaIndex, string>();
 
         List<LoadAreaJob> jobs = new List<LoadAreaJob>();
+        List<LoadedArea> loadedAreas = new List<LoadedArea>();
 
         for (int i = 0; i < horizontalAreaCount; i++)
         {
@@ -184,38 +187,83 @@ public class WorldDataAccess
                 int areaX = i + leftArea;
                 int areaY = j + topArea;
                 string areaKey = String.Join("_", new string[]{areaX.ToString(), areaY.ToString()});
-                LoadAreaJob loadAreaJob = null;
-                _cache.TryGetValue(areaKey, out loadAreaJob);
+                LoadedArea loadedArea = null;
+                _cache.TryGetValue(areaKey, out loadedArea);
 
-                if (loadAreaJob == null)
+                if (loadedArea == null)
                 {
-                    loadAreaJob = new LoadAreaJob(new LoadAreaJob.AreaRequest(areaX, areaY), _worldIndex, _dataConfig, persistentDataPath);
-                    string key = loadAreaJob.GetAreaKey();
+                    LoadAreaJob.AreaRequest loadRequest = new LoadAreaJob.AreaRequest(areaX, areaY);
+                    LoadAreaJob loadAreaJob = null;
 
-                    if (loadAreaJob == null || key == null)
+                    if (_loadJobPool.Count == 0)
                     {
-                        Debug.LogError("NULL: loadAreaJob: "+loadAreaJob + " key:"+key);
+                        loadAreaJob = new LoadAreaJob(_worldIndex, _dataConfig, persistentDataPath);
+                        Debug.Log("New Load Thread");
+                        loadAreaJob.Start();
                     }
-                    Debug.LogWarning("loadAreaJob: "+loadAreaJob + " key:"+key);
-                    _cache.Add(key, loadAreaJob);
-                    loadAreaJob.Start();
-                 }
+                    else
+                    {
+                        loadAreaJob = _loadJobPool[0];
+                        _loadJobPool.RemoveAt(0);
+                    }
+                    
+                    loadedArea = new LoadedArea(loadRequest);
+                    loadAreaJob.SetJob(loadedArea);
+                    string key = loadRequest.GetAreaKey();
+                   // Debug.Log("key: "+key + " loadedArea: "+loadedArea);
+                    _cache.Add(key, loadedArea);
+                    jobs.Add(loadAreaJob);
+                }
                 
-                jobs.Add(loadAreaJob);
+                loadedAreas.Add(loadedArea);
+                
             }
         }
-
-        while (jobs.Find((job) => !job.IsDone) != null)
+        
+        //wait until all areas loaded
+        while (loadedAreas.Find((loadedArea) => loadedArea.Result == null) != null)
         {
             Thread.Sleep(10);
         }
  
         jobs.ForEach((job) =>
         {
-            
-            jobsResult[job.OutData.Request.areaX - leftArea, job.OutData.Request.areaY - topArea] = job;
+            _loadJobPool.Add(job);
         });
+        
+        loadedAreas.ForEach((loadedArea) =>
+        {
+            jobsResult[loadedArea.Request.areaX - leftArea, loadedArea.Request.areaY - topArea] = loadedArea;
+        });
+        
         WorldDataToken token = new WorldDataToken(request, _worldIndex, jobsResult);
         return token;
+    }
+}
+
+
+public class LoadedArea
+{
+    private LoadAreaJob.AreaRequest _request;
+    private LoadAreaJob.AreaRequestResult _result;
+
+    public LoadAreaJob.AreaRequest Request
+    {
+        get { return _request; }
+    }
+    
+    public LoadAreaJob.AreaRequestResult Result
+    {
+        get { return _result; }
+    }
+    
+    public LoadedArea(LoadAreaJob.AreaRequest request)
+    {
+        _request = request;
+    }
+
+    public void SetResult(LoadAreaJob.AreaRequestResult result)
+    {
+        _result = result;
     }
 }

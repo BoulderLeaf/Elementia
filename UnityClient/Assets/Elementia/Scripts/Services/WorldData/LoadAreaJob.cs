@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Threading;
 using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
 
 public class LoadAreaJob: ThreadedJob
 {
-    public struct AreaRequest
+    public class AreaRequest
     {
         private int _areaX;
         private int _areaY;
@@ -20,16 +21,6 @@ public class LoadAreaJob: ThreadedJob
             _areaY = areaY;
         }
 
-        public static bool operator ==(AreaRequest a1, AreaRequest a2)
-        {
-            return a1.areaX == a2.areaX && a1.areaY == a2.areaY;
-        }
-
-        public static bool operator !=(AreaRequest a1, AreaRequest a2)
-        {
-            return a1.areaX != a2.areaX || a1.areaY != a2.areaY;
-        }
-
         public override string ToString()
         {
             return string.Format("[areaX:{0}, areaY:{1}]", _areaX, _areaY);
@@ -41,7 +32,7 @@ public class LoadAreaJob: ThreadedJob
         }
     }
 
-    public struct AreaRequestResult
+    public class AreaRequestResult
     {
         private AreaRequest _request;
         private AreaIndex _result;
@@ -62,43 +53,61 @@ public class LoadAreaJob: ThreadedJob
     private AreaRequest _areaRequest;  // arbitary job data
     private WorldIndex _worldIndex;
     public AreaRequestResult OutData; // arbitary job data
+    public bool IsRunning;
     public WorldDataToken token;
     private DataConfig _dataConfig;
+    private LoadedArea _loadedArea;
     private string _areaDataDirectoryPath;
     BinaryFormatter bf = new BinaryFormatter();
 
-    public LoadAreaJob(AreaRequest areaRequest, WorldIndex index, DataConfig dataConfig, string areaDataDirectoryPath)
+    public LoadAreaJob(WorldIndex index, DataConfig dataConfig, string areaDataDirectoryPath)
     {
-        _areaRequest = areaRequest;
         _worldIndex = index;
         _areaDataDirectoryPath = areaDataDirectoryPath;
         _dataConfig = dataConfig;
     }
 
+    public void SetJob(LoadedArea loadedArea)
+    {
+        _areaRequest = loadedArea.Request;
+        _loadedArea = loadedArea;
+    }
+
     protected override void ThreadFunction()
     {
-        try
+        IsRunning = true;
+        while (IsRunning)
         {
-            AreaIndex areaIndex = null;
-            if(File.Exists(GetFilePath()))
+            try
             {
-                string allfilesString = string.Empty;
-                FileStream areaFileStream = File.Open(GetFilePath(), FileMode.OpenOrCreate);
-                areaIndex = (AreaIndex)bf.Deserialize(areaFileStream);
-                areaFileStream.Close();
-                allfilesString = string.Empty;
+                if (_areaRequest != null)
+                {
+                    AreaIndex areaIndex = null;
+                    if(File.Exists(GetFilePath()))
+                    {
+                        string allfilesString = string.Empty;
+                        FileStream areaFileStream = File.Open(GetFilePath(), FileMode.OpenOrCreate);
+                        areaIndex = (AreaIndex)bf.Deserialize(areaFileStream);
+                        areaFileStream.Close();
+                        allfilesString = string.Empty;
+                    }
+                    else
+                    {
+                        Debug.LogErrorFormat("File does not exist {0}", GetFilePath());
+                    }
+                
+                    OutData = new AreaRequestResult(_areaRequest, areaIndex, GetFilePath());
+                    _loadedArea.SetResult(OutData);
+                }
             }
-            else
+            catch (Exception e)
             {
-                Debug.LogErrorFormat("File does not exist {0}", GetFilePath());
+                Debug.LogError("Error while loading area files: \n"+e);
+                throw;
             }
-            
-            OutData = new AreaRequestResult(_areaRequest, areaIndex, GetFilePath());
-        }
-        catch (Exception e)
-        {
-            Debug.LogError("Error while loading area files: \n"+e);
-            throw;
+
+            _areaRequest = null;
+            Thread.Sleep(100);
         }
     }
     
