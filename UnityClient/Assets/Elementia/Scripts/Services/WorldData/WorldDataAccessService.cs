@@ -177,8 +177,8 @@ public class WorldDataAccess
         LoadedArea[,] jobsResult = new LoadedArea[horizontalAreaCount, verticalAreaCount];
         Dictionary<AreaIndex, string> filepaths = new Dictionary<AreaIndex, string>();
 
-        List<LoadAreaJob> jobs = new List<LoadAreaJob>();
         List<LoadedArea> loadedAreas = new List<LoadedArea>();
+        List<LoadedArea> newLoadedAreaRequests = new List<LoadedArea>();
 
         for (int i = 0; i < horizontalAreaCount; i++)
         {
@@ -193,32 +193,30 @@ public class WorldDataAccess
                 if (loadedArea == null)
                 {
                     LoadAreaJob.AreaRequest loadRequest = new LoadAreaJob.AreaRequest(areaX, areaY);
-                    LoadAreaJob loadAreaJob = null;
-
-                    if (_loadJobPool.Count == 0)
-                    {
-                        loadAreaJob = new LoadAreaJob(_worldIndex, _dataConfig, persistentDataPath);
-                        Debug.Log("New Load Thread");
-                        loadAreaJob.Start();
-                    }
-                    else
-                    {
-                        loadAreaJob = _loadJobPool[0];
-                        _loadJobPool.RemoveAt(0);
-                    }
-                    
                     loadedArea = new LoadedArea(loadRequest);
-                    loadAreaJob.SetJob(loadedArea);
+                    newLoadedAreaRequests.Add(loadedArea);
                     string key = loadRequest.GetAreaKey();
-                   // Debug.Log("key: "+key + " loadedArea: "+loadedArea);
                     _cache.Add(key, loadedArea);
-                    jobs.Add(loadAreaJob);
                 }
                 
                 loadedAreas.Add(loadedArea);
-                
             }
         }
+        
+        LoadAreaJob loadAreaJob = null;
+        
+        if (_loadJobPool.Count == 0)
+        {
+            loadAreaJob = new LoadAreaJob(_worldIndex, _dataConfig, persistentDataPath);
+            loadAreaJob.Start();
+        }
+        else
+        {
+            loadAreaJob = _loadJobPool[0];
+            _loadJobPool.RemoveAt(0);
+        }
+        
+        loadAreaJob.SetJob(newLoadedAreaRequests);
         
         //wait until all areas loaded
         while (loadedAreas.Find((loadedArea) => loadedArea.Result == null) != null)
@@ -226,10 +224,7 @@ public class WorldDataAccess
             Thread.Sleep(10);
         }
  
-        jobs.ForEach((job) =>
-        {
-            _loadJobPool.Add(job);
-        });
+        _loadJobPool.Add(loadAreaJob);
         
         loadedAreas.ForEach((loadedArea) =>
         {
