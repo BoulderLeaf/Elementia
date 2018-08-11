@@ -182,6 +182,6 @@ public class LoadTokenJob : ThreadedJob
 
     protected override void ThreadFunction()
     {
-        Output =  _worldDataAccess.GetToken(new TokenRequest((int)_position.x - _radius, (int)_position.x + _radius, (int)_position.z + _radius, (int)_position.z - _radius), _persistentDataPath);
+        //Output =  _worldDataAccess.GetToken(new TokenRequest((int)_position.x - _radius, (int)_position.x + _radius, (int)_position.z + _radius, (int)_position.z - _radius), _persistentDataPath);
     }
 }

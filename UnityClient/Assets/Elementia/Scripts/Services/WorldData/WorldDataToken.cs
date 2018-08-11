@@ -17,6 +17,7 @@ public class WorldDataToken
         }
     }
 
+    public bool Loaded = false;
     private AreaIndex[,] _areas;
     private LoadedArea[,] _loadedAreas;
     private Dictionary<AreaIndex, string> _filepaths;
@@ -32,6 +33,7 @@ public class WorldDataToken
         {
             return _areas;
         }
+        set { _areas = value; }
     }
 
     public WorldDataToken(TokenRequest request, WorldIndex index, LoadedArea[,] loadedAreas)

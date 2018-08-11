@@ -56,14 +56,15 @@ public class LoadAreaJob: ThreadedJob
     private List<LoadedArea> _loadedAreasRequests;
     private string _areaDataDirectoryPath;
     BinaryFormatter bf = new BinaryFormatter();
+    public event Action<LoadAreaJob> OnComplete;
 
-    public LoadAreaJob(WorldIndex index, DataConfig dataConfig, string areaDataDirectoryPath)
+    public LoadAreaJob(WorldIndex index, DataConfig dataConfig, List<LoadedArea> loadedAreas, string areaDataDirectoryPath)
     {
-        Debug.Log("NEW LOAD AREA THREADED JOB");
         _worldIndex = index;
         _areaDataDirectoryPath = areaDataDirectoryPath;
         _dataConfig = dataConfig;
         _loadedAreasRequests = new List<LoadedArea>();
+        SetJob(loadedAreas);
     }
 
     public void SetJob(LoadedArea loadedArea)
@@ -79,8 +80,8 @@ public class LoadAreaJob: ThreadedJob
     protected override void ThreadFunction()
     {
         IsRunning = true;
-        while (IsRunning)
-        {
+        //while (IsRunning)
+        //{
             try
             {
                 bool hasRequest = _loadedAreasRequests.Count != 0;
@@ -114,8 +115,9 @@ public class LoadAreaJob: ThreadedJob
             }
 
             _loadedAreasRequests.Clear();
-            Thread.Sleep(100);
-        }
+            if (OnComplete != null)
+                OnComplete(this);
+        //}
     }
     
     public string GetFilePath(LoadedArea loadedArea)
