@@ -5,6 +5,7 @@
     <e p="D:\Elementia\UnityClient" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="AssetBundleManager.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Elementia" t="Include">
           <e p="Scripts" t="Include">
@@ -49,6 +50,9 @@
           <e p="Shaders" t="Include">
             <e p="ElementiaShader.shader" t="Include" />
             <e p="FlatColor.shader" t="Include" />
+          </e>
+          <e p="ViewModels" t="Include">
+            <e p="NewBehaviourScript.cs" t="Include" />
           </e>
         </e>
         <e p="Grass.cs" t="Include" />
@@ -479,6 +483,10 @@
           </e>
         </e>
         <e p="Terra" t="Include">
+          <e p="Entities" t="Include">
+            <e p="TerraEntity.cs" t="Include" />
+            <e p="TerraGlobalEntity.cs" t="Include" />
+          </e>
           <e p="ITerraShape.cs" t="Include" />
           <e p="ITerraWorld.cs" t="Include" />
           <e p="TerraController.cs" t="Include" />
@@ -486,6 +494,10 @@
           <e p="TerraShapeSO.cs" t="Include" />
           <e p="ViewModels" t="Include">
             <e p="AbstractGridDataModel.cs" t="Include" />
+            <e p="AbstractTerraEntityViewModel.cs" t="Include" />
+            <e p="ITerraEntityViewModel.cs" t="Include" />
+            <e p="TerraEntitiesViewModel.cs" t="Include" />
+            <e p="TerraGlobalEntityViewModel.cs" t="Include" />
           </e>
         </e>
         <e p="ThirdParty" t="Include">
@@ -729,94 +741,19 @@
             <e p="Readme.txt" t="Include" />
           </e>
         </e>
-        <e p="WaterShaderPackage" t="Include">
-          <e p="Readme.txt" t="Include" />
-          <e p="Scripts" t="Include">
-            <e p="BaseWaterScript.cs" t="Include" />
-            <e p="ConnectHeightMap.cs" t="Include" />
-            <e p="Demo" t="Include">
-              <e p="App" t="Include">
-                <e p="AppControls.cs" t="Include" />
-              </e>
-              <e p="Code" t="Include">
-                <e p="CodeDemo1.cs" t="Include" />
-                <e p="CodeDemo10.cs" t="Include" />
-                <e p="CodeDemo11.cs" t="Include" />
-                <e p="CodeDemo12.cs" t="Include" />
-                <e p="CodeDemo13.cs" t="Include" />
-                <e p="CodeDemo14.cs" t="Include" />
-                <e p="CodeDemo15.cs" t="Include" />
-                <e p="CodeDemo16.cs" t="Include" />
-                <e p="CodeDemo17.cs" t="Include" />
-                <e p="CodeDemo18.cs" t="Include" />
-                <e p="CodeDemo19.cs" t="Include" />
-                <e p="CodeDemo2.cs" t="Include" />
-                <e p="CodeDemo20.cs" t="Include" />
-                <e p="CodeDemo21.cs" t="Include" />
-                <e p="CodeDemo3.cs" t="Include" />
-                <e p="CodeDemo4.cs" t="Include" />
-                <e p="CodeDemo5.cs" t="Include" />
-                <e p="CodeDemo6.cs" t="Include" />
-                <e p="CodeDemo7.cs" t="Include" />
-                <e p="CodeDemo8.cs" t="Include" />
-                <e p="CodeDemo9.cs" t="Include" />
-                <e p="CodeDemoHelper.cs" t="Include" />
-              </e>
-              <e p="Custom" t="Include">
-                <e p="CustomSettingsDemo.cs" t="Include" />
-              </e>
-            </e>
-            <e p="Editor" t="Include">
-              <e p="BaseWaterScriptEditor.cs" t="Include" />
-              <e p="MultiCameraWaterScriptEditor.cs" t="Include" />
-              <e p="WaterScriptEditor.cs" t="Include" />
-            </e>
-            <e p="MultiCameraWaterScript.cs" t="Include" />
-            <e p="Utils" t="Include">
-              <e p="FPSCounter.cs" t="Include" />
-              <e p="LoadRenderTexture.cs" t="Include" />
-              <e p="LookAt.cs" t="Include" />
-              <e p="MoveBetween.cs" t="Include" />
-              <e p="Rotate.cs" t="Include" />
-            </e>
-            <e p="WaterScript.cs" t="Include" />
-          </e>
-          <e p="Shader" t="Include">
-            <e p="WaterShader" t="Include">
-              <e p="Debug" t="Include">
-                <e p="Water-Debug_Depth.shader" t="Include" />
-                <e p="Water-Debug_DepthAlpha.shader" t="Include" />
-                <e p="Water-Debug_HeightMap.shader" t="Include" />
-                <e p="Water-Debug_NormalDir.shader" t="Include" />
-                <e p="Water-Debug_Reflection.shader" t="Include" />
-                <e p="Water-Debug_Refraction.shader" t="Include" />
-                <e p="Water-Debug_ScreenPos.shader" t="Include" />
-                <e p="Water-Debug_SinglePassTest.shader" t="Include" />
-                <e p="Water-Debug_SinglePassTestFails.shader" t="Include" />
-                <e p="Water-Debug_Specular.shader" t="Include" />
-                <e p="Water-Debug_ViewDir.shader" t="Include" />
-                <e p="Water-DebugLit_Specular.shader" t="Include" />
-                <e p="WaterShaderHelper.cginc" t="Include" />
-              </e>
-              <e p="DirectionalLitFog" t="Include">
-                <e p="WaterLite.shader" t="Include" />
-                <e p="WaterPro.shader" t="Include" />
-                <e p="WaterPro_Heightmap.shader" t="Include" />
-                <e p="WaterPro_Heightmap_Iso.shader" t="Include" />
-                <e p="WaterPro_Iso.shader" t="Include" />
-                <e p="WaterShaderHelper.cginc" t="Include" />
-              </e>
-            </e>
-          </e>
-        </e>
         <e p="WorldRendererLoader.cs" t="Include" />
       </e>
+      <e p="I2.csproj" t="IncludeRecursive" />
       <e p="Library" t="ExcludeRecursive" />
+      <e p="NaughtyAttributes.csproj" t="IncludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="packages" t="ExcludeRecursive" />
+      <e p="PandeaGames.csproj" t="IncludeRecursive" />
+      <e p="SharpSerializer.csproj" t="IncludeRecursive" />
       <e p="Temp" t="ExcludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
       </e>
+      <e p="Terra.csproj" t="IncludeRecursive" />
       <e p="UnityClient.sln" t="IncludeFlat" />
     </e>
   </component>

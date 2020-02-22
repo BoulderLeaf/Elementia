@@ -1,0 +1,15 @@
+{
+    "name": "Terra",
+    "references": [
+        "GUID:060608f069635714c9efd355579cfc21"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

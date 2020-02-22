@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 
-public class TerraController : MonoBehaviour, TerraShape.ITerraShapeConfig
+public class TerraController : MonoBehaviour/*, TerraShape.ITerraShapeConfig*/
 {
 
-    [SerializeField] 
+   /* [SerializeField] 
     private TerraShapeSO _terraShapeSo;
     
     [SerializeField] 
@@ -74,5 +74,5 @@ public class TerraController : MonoBehaviour, TerraShape.ITerraShapeConfig
         _terraShape = TerraShape.Generate(_terraShapeSo, _worldRendererLoader, this);
     }
 
-    public GameObject EditorCude => _editorCude;
+    public GameObject EditorCude => _editorCude;*/
 }
