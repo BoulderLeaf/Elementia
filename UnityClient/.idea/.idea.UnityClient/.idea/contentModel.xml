@@ -107,17 +107,22 @@
                   <e p="NGUI_LanguagePopup.cs" t="Include" />
                   <e p="RealTimeTranslation.cs" t="Include" />
                   <e p="RegisterBundlesManager.cs" t="Include" />
-                  <e p="SimpleButton.cs" t="Include" />
                   <e p="ToggleLanguage.cs" t="Include" />
                 </e>
               </e>
             </e>
-            <e p="Readme.txt" t="Include" />
+            <e p="I2 Localization - Readme.txt" t="Include" />
             <e p="Scripts" t="Include">
+              <e p="Configurables" t="Include">
+                <e p="PersistentStorage.cs" t="Include" />
+                <e p="SpecializationManager.cs" t="Include" />
+              </e>
               <e p="Editor" t="Include">
                 <e p="EditorTools.cs" t="Include" />
                 <e p="Inspectors" t="Include">
+                  <e p="LanguageSourceAssetInspector.cs" t="Include" />
                   <e p="LanguageSourceInspector.cs" t="Include" />
+                  <e p="LocalizationEditor.cs" t="Include" />
                   <e p="LocalizationParamsManagerInspector.cs" t="Include" />
                   <e p="LocalizeDropdownInspector.cs" t="Include" />
                   <e p="LocalizeInspector.cs" t="Include" />
@@ -155,33 +160,72 @@
                 <e p="GoogleLanguages.cs" t="Include" />
                 <e p="GoogleTranslation.cs" t="Include" />
                 <e p="GoogleTranslation_Post.cs" t="Include" />
-                <e p="LanguageSource_Export_CSV.cs" t="Include" />
-                <e p="LanguageSource_Export_Google.cs" t="Include" />
-                <e p="LanguageSource_Import_CSV.cs" t="Include" />
-                <e p="LanguageSource_Import_Google.cs" t="Include" />
-                <e p="LanguageSource_Misc.cs" t="Include" />
+                <e p="GoogleTranslation_Queries.cs" t="Include" />
                 <e p="SimpleJSON.cs" t="Include" />
+                <e p="TranslationJob.cs" t="Include" />
+                <e p="TranslationJob_GET.cs" t="Include" />
+                <e p="TranslationJob_Main.cs" t="Include" />
+                <e p="TranslationJob_POST.cs" t="Include" />
+                <e p="TranslationJob_WEB.cs" t="Include" />
               </e>
-              <e p="LanguageSource.cs" t="Include" />
-              <e p="LocalizationManager.cs" t="Include" />
+              <e p="LanguageData.cs" t="Include" />
+              <e p="LanguageSource" t="Include">
+                <e p="LanguageSource.cs" t="Include" />
+                <e p="LanguageSourceAsset.cs" t="Include" />
+                <e p="LanguageSourceData.cs" t="Include" />
+                <e p="LanguageSourceData_Assets.cs" t="Include" />
+                <e p="LanguageSourceData_Export_CSV.cs" t="Include" />
+                <e p="LanguageSourceData_Export_Google.cs" t="Include" />
+                <e p="LanguageSourceData_Import_CSV.cs" t="Include" />
+                <e p="LanguageSourceData_Import_Google.cs" t="Include" />
+                <e p="LanguageSourceData_Languages.cs" t="Include" />
+                <e p="LanguageSourceData_Misc.cs" t="Include" />
+                <e p="LanguageSourceData_Terms.cs" t="Include" />
+              </e>
               <e p="LocalizationReader.cs" t="Include" />
               <e p="Localize.cs" t="Include" />
               <e p="LocalizeDropdown.cs" t="Include" />
+              <e p="Manager" t="Include">
+                <e p="LocalizationManager.cs" t="Include" />
+                <e p="LocalizationManager_Language.cs" t="Include" />
+                <e p="LocalizationManager_Parameters.cs" t="Include" />
+                <e p="LocalizationManager_RTL.cs" t="Include" />
+                <e p="LocalizationManager_Sources.cs" t="Include" />
+                <e p="LocalizationManager_SystemLanguage.cs" t="Include" />
+                <e p="LocalizationManager_Targets.cs" t="Include" />
+                <e p="LocalizationManager_Translation.cs" t="Include" />
+              </e>
               <e p="Targets" t="Include">
                 <e p="ILocalizeTarget.cs" t="Include" />
-                <e p="LocalizeTarget_2DToolKit.cs" t="Include" />
-                <e p="LocalizeTarget_NGUI.cs" t="Include" />
-                <e p="LocalizeTarget_SVG.cs" t="Include" />
-                <e p="LocalizeTarget_TextMeshPro.cs" t="Include" />
-                <e p="LocalizeTarget_UnityStandard.cs" t="Include" />
-                <e p="LocalizeTarget_UnityUI.cs" t="Include" />
+                <e p="ILocalizeTargetDesc.cs" t="Include" />
+                <e p="LocalizeTarget_2DToolKit_Label.cs" t="Include" />
+                <e p="LocalizeTarget_2DToolKit_Sprite.cs" t="Include" />
+                <e p="LocalizeTarget_NGUI_Label.cs" t="Include" />
+                <e p="LocalizeTarget_NGUI_Sprite.cs" t="Include" />
+                <e p="LocalizeTarget_NGUI_Texture.cs" t="Include" />
+                <e p="LocalizeTarget_SVGImporter_Image.cs" t="Include" />
+                <e p="LocalizeTarget_SVGImporter_Renderer.cs" t="Include" />
+                <e p="LocalizeTarget_TextMeshPro_Label.cs" t="Include" />
+                <e p="LocalizeTarget_TextMeshPro_UGUI.cs" t="Include" />
+                <e p="LocalizeTarget_UnityStandard_AudioSource.cs" t="Include" />
+                <e p="LocalizeTarget_UnityStandard_Child.cs" t="Include" />
+                <e p="LocalizeTarget_UnityStandard_MeshRenderer.cs" t="Include" />
+                <e p="LocalizeTarget_UnityStandard_Prefab.cs" t="Include" />
+                <e p="LocalizeTarget_UnityStandard_SpriteRenderer.cs" t="Include" />
+                <e p="LocalizeTarget_UnityStandard_TextMesh.cs" t="Include" />
+                <e p="LocalizeTarget_UnityUI_Image.cs" t="Include" />
+                <e p="LocalizeTarget_UnityUI_RawImage.cs" t="Include" />
+                <e p="LocalizeTarget_UnityUI_Text.cs" t="Include" />
               </e>
+              <e p="TermData.cs" t="Include" />
               <e p="Utils" t="Include">
                 <e p="AutoChangeCultureInfo.cs" t="Include" />
                 <e p="CoroutineManager.cs" t="Include" />
+                <e p="CustomLocalizeCallback.cs" t="Include" />
+                <e p="HindiFixer.cs" t="Include" />
+                <e p="I2Utils.cs" t="Include" />
                 <e p="LocalizationParamsManager.cs" t="Include" />
                 <e p="LocalizedString.cs" t="Include" />
-                <e p="PersistentStorage.cs" t="Include" />
                 <e p="RegisterGlobalParameters.cs" t="Include" />
                 <e p="ResourceManager.cs" t="Include" />
                 <e p="RTLFixer.cs" t="Include" />
