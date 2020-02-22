@@ -3,8 +3,10 @@ using System.Collections;
 using Polenter.Serialization;
 using System;
 using System.IO;
+using PandeaGames;
+using PandeaGames.Services;
 
-public class WorldSimulationStateService : Service
+public class WorldSimulationStateService : AbstractService<WorldSimulationStateService>
 {
     private class WorldSimulateStateRequest : ServiceRequest<WorldSimulationState>
     {
@@ -17,7 +19,7 @@ public class WorldSimulationStateService : Service
             WorldSimulationStateService worldSimulationStateService, 
             WorldPersistanceService worldPersistanceService, 
             SimulationConfiguration simulationConfiguration, 
-            WorldAsset indexGenerator) : base(worldSimulationStateService)
+            WorldAsset indexGenerator) : base()
         {
             _serializer = new SharpSerializer();
             _worldPersistanceService = worldPersistanceService;
@@ -61,7 +63,7 @@ public class WorldSimulationStateService : Service
         private SharpSerializer _serializer;
         private WorldSimulateStateRequest _getRequest;
 
-        public WorldSimulateSaveRequest(WorldSimulationStateService worldSimulationStateService, WorldSimulateStateRequest getRequest, WorldAsset indexGenerator) : base(worldSimulationStateService)
+        public WorldSimulateSaveRequest(WorldSimulationStateService worldSimulationStateService, WorldSimulateStateRequest getRequest, WorldAsset indexGenerator) : base()
         {
             _serializer = new SharpSerializer();
             _indexGenerator = indexGenerator;
@@ -102,9 +104,9 @@ public class WorldSimulationStateService : Service
     private WorldSimulateSaveRequest _worldSimulateSaveRequest;
     private WorldPersistanceService _worldPersistanceService;
 
-    public override void StartService(ServiceManager serviceManager)
+    public WorldSimulationStateService()
     {
-        _worldPersistanceService = serviceManager.GetService<WorldPersistanceService>();
+        _worldPersistanceService = Game.Instance.GetService<WorldPersistanceService>();
         _worldSimulateStateRequest = new WorldSimulateStateRequest(
             this, 
             _worldPersistanceService, _simulationConfiguration, _worldPersistanceService.IndexGenerator);
@@ -114,12 +116,6 @@ public class WorldSimulationStateService : Service
     public void Load(Action<WorldSimulationState> onComplete, Action onError)
     {
         _worldSimulateStateRequest.AddRequest(onComplete, onError);
-    }
-
-    public override IEnumerator Preload()
-    {
-        yield return 0;
-        _worldSimulateStateRequest.AddRequest((index) => { }, () => { });
     }
 
     public void SaveState(WorldSimulationState state, string persistentDataPath)

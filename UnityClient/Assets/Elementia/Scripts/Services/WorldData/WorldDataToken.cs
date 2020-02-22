@@ -81,6 +81,11 @@ public class WorldDataToken
         return info.areaX >= _areas.Length || info.areaY >= _areas.GetLongLength(1);
     }
 
+    public TerraVector ToLocal(TerraVector worldVector)
+    {
+        return new TerraVector() { x = worldVector.x - _request.left, y = worldVector.y - _request.top };
+    }
+
     public ushort GetUshort(int x, int y, UshortDataID id)
     {
         if (AreCoordinatesInvalid(x, y))
@@ -100,7 +105,7 @@ public class WorldDataToken
         switch (id)
         {
             case UshortDataID.HeightLayerData:
-                return area.AlphaDataLayer.HeightLayerData.data[info.areaPixelX, info.areaPixelY];
+                return area.DataLayer.HeightLayerData.data[info.areaPixelX, info.areaPixelY];
         }
 
         return 0;
@@ -114,7 +119,7 @@ public class WorldDataToken
         switch (id)
         {
             case UshortDataID.HeightLayerData:
-                area.AlphaDataLayer.HeightLayerData.data[info.areaPixelX, info.areaPixelY] = value;
+                area.DataLayer.HeightLayerData.data[info.areaPixelX, info.areaPixelY] = value;
                 break;
         }
     }
@@ -148,7 +153,7 @@ public class WorldDataToken
         switch(id)
         {
             case IntDataID.NoiseLayerData:
-                return area.AlphaDataLayer.NoiseLayerData.data[info.areaPixelX, info.areaPixelY];
+                return area.DataLayer.NoiseLayerData.data[info.areaPixelX, info.areaPixelY];
         }
 
         return 0;
@@ -162,7 +167,7 @@ public class WorldDataToken
         switch (id)
         {
             case IntDataID.NoiseLayerData:
-                area.AlphaDataLayer.NoiseLayerData.data[info.areaPixelX, info.areaPixelY] = value;
+                area.DataLayer.NoiseLayerData.data[info.areaPixelX, info.areaPixelY] = value;
                 break;
         }
     }
@@ -186,7 +191,7 @@ public class WorldDataToken
         switch (id)
         {
             case ByteDataLyerID.WaterLayerData:
-                return area.AlphaDataLayer.WaterLayerData.data[info.areaPixelX, info.areaPixelY];
+                return area.DataLayer.WaterLayerData.data[info.areaPixelX, info.areaPixelY];
         }
 
         return 0;
@@ -200,7 +205,7 @@ public class WorldDataToken
         switch (id)
         {
             case ByteDataLyerID.WaterLayerData:
-                area.AlphaDataLayer.WaterLayerData.data[info.areaPixelX, info.areaPixelY] = value;
+                area.DataLayer.WaterLayerData.data[info.areaPixelX, info.areaPixelY] = value;
                 break;
         }
     }

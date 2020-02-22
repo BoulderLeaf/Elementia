@@ -105,6 +105,7 @@ public class LoadAreaJob: ThreadedJob
                         }
                 
                         loadedArea.SetResult(new AreaRequestResult(loadedArea.Request, areaIndex, GetFilePath(loadedArea)));
+                        Thread.Sleep(100);
                     });
                 }
             }

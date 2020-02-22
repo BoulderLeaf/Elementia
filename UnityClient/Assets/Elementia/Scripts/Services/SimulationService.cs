@@ -5,6 +5,7 @@ using Polenter.Serialization;
 using System;
 using System.Threading;
 using System.Collections.Generic;
+using PandeaGames;
 using UnityEditor;
 
 public class SimulationService : Service
@@ -16,14 +17,18 @@ public class SimulationService : Service
     private WorldDataAccess _worldDataAccess;
     private SimulationJob _job;
 
-    public override void StartService(ServiceManager serviceManager)
+    public SimulationService() : base()
     {
-        base.StartService(serviceManager);
         _serializer = new SharpSerializer();
-        _worldSimulationStateService = serviceManager.GetService<WorldSimulationStateService>();
-        _worldDataAccessService = serviceManager.GetService<WorldDataAccessService>();
+        _worldSimulationStateService = Game.Instance.GetService<WorldSimulationStateService>();
+        _worldDataAccessService =  Game.Instance.GetService<WorldDataAccessService>();
         _worldSimulationStateService.Load(OnSimulationStateLoaded, () => { });
         PlayerSettings.MTRendering = false;
+    }
+    
+    public override void StartService(ServiceManager serviceManager)
+    {
+        
     }
 
     private void OnSimulationStateLoaded(WorldSimulationState simulationState)
@@ -44,7 +49,6 @@ public class SimulationService : Service
         yield return 0;
         
         bool simulating = true;
-        Debug.Log("START SIMULATION JOB");
         _job = new SimulationJob(_worldDataAccess, _state, _worldSimulationStateService, Application.persistentDataPath);
         _job.Start();
         
@@ -156,6 +160,7 @@ public class SimulateAreaJob:ThreadedJob
                     }
                 }
 
+                //_worldDataAccess.SaveToken(_tokenRequest);
                 _onComplete();
             });
         }

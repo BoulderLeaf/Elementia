@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using PandeaGames;
 
 public class ForestAgentPuppet : InputPuppet
 {
@@ -13,7 +14,7 @@ public class ForestAgentPuppet : InputPuppet
 
     public void Start()
     {
-        _worldDataAccessService = _serviceManager.GetService<WorldDataAccessService>();
+        _worldDataAccessService = Game.Instance.GetService<WorldDataAccessService>();
         _rigidBody = GetComponent<Rigidbody>();
     }
 

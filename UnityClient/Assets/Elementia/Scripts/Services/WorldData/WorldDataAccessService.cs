@@ -2,20 +2,18 @@
 using System.Collections;
 using System;
 using System.Collections.Generic;
-using System.Runtime.Serialization.Formatters.Binary;
-using System.IO;
-using System.Threading;
-using Polenter.Serialization;
+using PandeaGames;
+using PandeaGames.Services;
 
 
-public class WorldDataAccessService : Service
+public class WorldDataAccessService : AbstractService<WorldDataAccessService>
 {
     private class WorldDataAccessRequest:ServiceRequest<WorldDataAccess>
     {
         private WorldPersistanceService _worldPersistanceService;
         private DataConfig _dataConfig;
         
-        public WorldDataAccessRequest(WorldDataAccessService worldDataAccessService, WorldPersistanceService worldPersistanceService, DataConfig dataConfig) : base(worldDataAccessService)
+        public WorldDataAccessRequest(WorldDataAccessService worldDataAccessService, WorldPersistanceService worldPersistanceService, DataConfig dataConfig) : base()
         {
             _dataConfig = dataConfig;
             _worldPersistanceService = worldPersistanceService;
@@ -50,10 +48,9 @@ public class WorldDataAccessService : Service
 
     [SerializeField] private DataConfig _dataConfig;
 
-    public override void StartService(ServiceManager serviceManager)
+    public WorldDataAccessService() : base()
     {
-        base.StartService(serviceManager);
-        _worldPersistanceService = serviceManager.GetService<WorldPersistanceService>();
+        _worldPersistanceService = Game.Instance.GetService<WorldPersistanceService>();
         _worldDataAccessRequest = new WorldDataAccessRequest(this, _worldPersistanceService, _dataConfig);
     }
 
@@ -203,6 +200,7 @@ public class WorldDataAccess
                 }
                 
                 loadedAreas.Add(loadedArea);
+                
             }
         }
         

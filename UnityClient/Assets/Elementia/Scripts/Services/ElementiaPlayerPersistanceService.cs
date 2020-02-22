@@ -2,5 +2,5 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ElementiaPlayerPersistanceService : UserService<ElementiaWorldState> {
+public class ElementiaPlayerPersistanceService : AbstractUserService<ElementiaWorldState, ElementiaPlayerPersistanceService> {
 }

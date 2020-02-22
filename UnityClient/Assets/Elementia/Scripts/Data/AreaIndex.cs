@@ -6,28 +6,24 @@ using UnityEngine;
 [Serializable]
 public class AreaIndex
 {
-    public DataLayer AlphaDataLayer { get; set; }
-    public DataLayer BetaDataLayer { get; set; }
+    public DataLayer DataLayer { get; set; }
     public List<Occupant> Occupant { get; set; }
 
     public AreaIndex()
     {
-        AlphaDataLayer = new DataLayer();
-        BetaDataLayer = new DataLayer();
+        DataLayer = new DataLayer();
         Occupant = new List<Occupant>();
     }
 
     public void Destroy()
     {
-        AlphaDataLayer.Destroy();
-        BetaDataLayer.Destroy();
+        DataLayer.Destroy();
 
         if(Occupant != null)
             Occupant.Clear();
 
         Occupant = null;
-        AlphaDataLayer = null;
-        BetaDataLayer = null;
+        DataLayer = null;
     }
 }
 
@@ -51,6 +47,7 @@ public class DataLayer
 {
     public IntDataLater NoiseLayerData { get; set; }
     public UshortDataLater HeightLayerData { get; set; }
+    public ByteDataLater UnnaturalDataLayer { get; set; }
     public ByteDataLater WaterLayerData { get; set; }
 
     public DataLayer()
@@ -58,6 +55,7 @@ public class DataLayer
         NoiseLayerData = new IntDataLater();
         HeightLayerData = new UshortDataLater();
         WaterLayerData = new ByteDataLater();
+        UnnaturalDataLayer = new ByteDataLater();
     }
 
     public DataLayer Clone()
@@ -65,6 +63,7 @@ public class DataLayer
         DataLayer data = new DataLayer();
 
         data.NoiseLayerData = NoiseLayerData.Clone();
+        data.HeightLayerData = HeightLayerData.Clone();
         data.WaterLayerData = WaterLayerData.Clone();
         data.HeightLayerData = HeightLayerData.Clone();
 
@@ -76,6 +75,7 @@ public class DataLayer
         NoiseLayerData = null;
         HeightLayerData = null;
         WaterLayerData = null;
+        HeightLayerData = null;
     }
 }
 
