@@ -25,7 +25,7 @@ namespace Terra.ViewModels
         
         private TerraChunksViewModel _chunksViewModel;
         private TerraWorldViewModel _worldViewModel;
-
+ 
         public TerraEntitiesViewModel()
         {
             _chunksViewModel = Game.Instance.GetViewModel<TerraChunksViewModel>(0);
@@ -42,7 +42,7 @@ namespace Terra.ViewModels
 
         private void WorldViewModelOnOnWorldSet(TerraWorld world)
         {
-            throw new NotImplementedException();
+            AddEntities(_worldViewModel.GetEntities());
         }
         
         private void ChunksViewModelOnOnChunkRemoved(TerraVector position, TerraWorldChunk chunk)

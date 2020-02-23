@@ -489,9 +489,17 @@
           </e>
           <e p="ITerraShape.cs" t="Include" />
           <e p="ITerraWorld.cs" t="Include" />
+          <e p="MonoViews" t="Include">
+            <e p="AbstractTerraMonoComponent.cs" t="Include" />
+            <e p="TerraEntityMonoView.cs" t="Include" />
+            <e p="TerraSerializedEntityPositionMonoView.cs" t="Include" />
+          </e>
           <e p="SerializedData" t="Include">
             <e p="Entities" t="Include">
+              <e p="TerraEntities.cs" t="Include" />
               <e p="TerraEntity.cs" t="Include" />
+              <e p="TerraPosition3D.cs" t="Include" />
+              <e p="TerraPosition3D.TerraEntities.cs" t="Include" />
             </e>
             <e p="World" t="Include">
               <e p="Entities.TerraWorldChunk.cs" t="Include" />
