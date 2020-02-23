@@ -484,12 +484,26 @@
           </e>
         </e>
         <e p="Terra" t="Include">
-          <e p="Entities" t="Include">
-            <e p="TerraEntity.cs" t="Include" />
-            <e p="TerraGlobalEntity.cs" t="Include" />
+          <e p="Controllers" t="Include">
+            <e p="TerraController.cs" t="Include" />
           </e>
           <e p="ITerraShape.cs" t="Include" />
           <e p="ITerraWorld.cs" t="Include" />
+          <e p="SerializedData" t="Include">
+            <e p="Entities" t="Include">
+              <e p="TerraEntity.cs" t="Include" />
+            </e>
+            <e p="World" t="Include">
+              <e p="Entities.TerraWorldChunk.cs" t="Include" />
+              <e p="Height.TerraWorldChunk.cs" t="Include" />
+              <e p="TerraWorld.cs" t="Include" />
+              <e p="TerraWorldChunk.cs" t="Include" />
+              <e p="Water.TerraWorldChunk.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Services" t="Include">
+            <e p="TerraChunkService.cs" t="Include" />
+          </e>
           <e p="TerraController.cs" t="Include" />
           <e p="TerraShape.cs" t="Include" />
           <e p="TerraShapeSO.cs" t="Include" />
@@ -497,8 +511,10 @@
             <e p="AbstractGridDataModel.cs" t="Include" />
             <e p="AbstractTerraEntityViewModel.cs" t="Include" />
             <e p="ITerraEntityViewModel.cs" t="Include" />
+            <e p="TerraChunksViewModel.cs" t="Include" />
             <e p="TerraEntitiesViewModel.cs" t="Include" />
-            <e p="TerraGlobalEntityViewModel.cs" t="Include" />
+            <e p="TerraViewModel.cs" t="Include" />
+            <e p="TerraWorldViewModel.cs" t="Include" />
           </e>
         </e>
         <e p="ThirdParty" t="Include">

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using PandeaGames.ViewModels;
-using Terra.Entities;
+using Terra.SerializedData.Entities;
 
 namespace Terra.ViewModels
 {

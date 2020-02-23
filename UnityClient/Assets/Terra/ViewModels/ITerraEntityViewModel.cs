@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using Terra.Entities;
+using Terra.SerializedData.Entities;
 
 namespace Terra.ViewModels
 {

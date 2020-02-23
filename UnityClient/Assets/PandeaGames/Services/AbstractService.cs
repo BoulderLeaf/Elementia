@@ -1,6 +1,6 @@
 ﻿namespace PandeaGames.Services
 {
-    public class AbstractService<TService> : IService where TService:AbstractService<TService>, new()
+    public abstract class AbstractService<TService> : IService where TService:AbstractService<TService>, new()
     {
         private static TService _instance;
         public static TService Instance

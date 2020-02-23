@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-namespace Terra.Entities
+namespace Terra.SerializedData.Entities
 {
     public class TerraEntity
     {
@@ -15,6 +15,7 @@ namespace Terra.Entities
         
         public int InstanceId { get; set; } = GUID.Generate().GetHashCode();
         public HashSet<string> Labels { get; set; } = new HashSet<string>();
+        public string Type { get; set; } = "";
 
         public override int GetHashCode()
         {
