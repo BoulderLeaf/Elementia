@@ -8,8 +8,13 @@ using UnityEngine;
 
 namespace Terra.ViewModels
 {
-    public class TerraEntitiesViewModel : IViewModel, ITerraEntityViewModel<TerraEntity>
+    public class TerraEntitiesViewModel : IParamaterizedViewModel<TerraEntitiesViewModel.Parameters>, ITerraEntityViewModel<TerraEntity>
     {
+        public struct Parameters
+        {
+            public string[] Labels;
+        }
+        
         public event Action<TerraEntity> OnAddEntity;
         public event Action<TerraEntity> OnRemoveEntity;
 
@@ -17,7 +22,7 @@ namespace Terra.ViewModels
 
         public TerraEntitiesViewModel()
         {
-
+            
         }
 
         public bool AddEntity(TerraEntity entity)
@@ -50,9 +55,24 @@ namespace Terra.ViewModels
             return true;
         }
 
+        public void SetParameters(Parameters parameters)
+        {
+            throw new NotImplementedException();
+        }
+
         void IViewModel.Reset()
         {
 
+        }
+
+        public IEnumerator<TerraEntity> GetEnumerator()
+        {
+            return _entities.GetEnumerator();
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
         }
     }
 }

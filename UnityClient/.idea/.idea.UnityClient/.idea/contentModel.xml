@@ -428,6 +428,7 @@
             <e p="AbstractViewModel.cs" t="Include" />
             <e p="CameraViewModel.cs" t="Include" />
             <e p="IListViewModel.cs" t="Include" />
+            <e p="IParamaterizedViewModel.cs" t="Include" />
             <e p="IViewModel.cs" t="Include" />
           </e>
           <e p="Views" t="Include">

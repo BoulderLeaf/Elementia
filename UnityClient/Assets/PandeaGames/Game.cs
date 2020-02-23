@@ -59,6 +59,13 @@ namespace PandeaGames
             return GetDependancy<TViewModel, IViewModel>(instanceId:instanceId, lookup:_viewModels);
         }
         
+        public TViewModel RegisterViewModelWithParameters<TViewModel, TParameters>(uint instanceId, TParameters parameters) where TViewModel : class, IParamaterizedViewModel<TParameters>, new()
+        {
+            TViewModel vm = GetDependancy<TViewModel, IViewModel>(instanceId:instanceId, lookup:_viewModels);
+            vm.SetParameters(parameters);
+            return vm;
+        }
+        
         public TViewModel GetViewModel<TViewModel>() where TViewModel : class, IViewModel, new()
         {
             return new TViewModel();
