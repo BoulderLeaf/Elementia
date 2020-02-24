@@ -7,12 +7,12 @@ namespace Terra.MonoViews
 {
     public class TerraEntityMonoView : MonoBehaviour
     {
-        public event Action<TerraEntity> OnInitialize;
+        public event Action<RuntimeTerraEntity> OnInitialize;
         private TerraEntitiesViewModel _viewModel;
         
-        public TerraEntity Entity { private set; get; }
+        public RuntimeTerraEntity Entity { private set; get; }
         
-        public void Initilize(TerraEntity entity)
+        public void Initilize(RuntimeTerraEntity entity)
         {
             Entity = entity;
             OnInitialize?.Invoke(entity);

@@ -24,7 +24,7 @@ namespace Terra.ViewModels
         {
             if (_world != null)
             {
-                foreach (TerraEntity entity in _world)
+                foreach (TerraEntity entity in _world.Entities)
                 {
                     yield return entity;
                 }
@@ -34,6 +34,21 @@ namespace Terra.ViewModels
                 yield break;
             }
         }
+        
+        public IEnumerable<RuntimeTerraEntity> GetRuntimeEntities()
+        {
+            if (_world != null)
+            {
+                foreach (RuntimeTerraEntity entity in _world)
+                {
+                    yield return entity;
+                }
+            }
+            else
+            {
+                yield break;
+            }
+        } 
 
         public void Reset()
         {

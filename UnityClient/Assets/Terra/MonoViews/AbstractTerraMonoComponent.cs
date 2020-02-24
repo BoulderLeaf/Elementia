@@ -9,7 +9,7 @@ namespace Terra.MonoViews
         protected TerraEntityMonoView _entityMonoView;
 
         protected bool Initialized { private set; get; }
-        protected TerraEntity Entity
+        protected RuntimeTerraEntity Entity
         {
             get { return _entityMonoView.Entity; }
         }
@@ -26,7 +26,7 @@ namespace Terra.MonoViews
             }
         }
 
-        protected virtual void Initialize(TerraEntity Entity)
+        protected virtual void Initialize(RuntimeTerraEntity Entity)
         {
             Initialized = true;
             _entityMonoView.OnInitialize -= Initialize;

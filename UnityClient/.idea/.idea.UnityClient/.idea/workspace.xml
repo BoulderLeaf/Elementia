@@ -3,210 +3,254 @@
   <component name="ChangeListManager">
     <list default="true" id="268f338c-f4da-44ee-9bad-41f9b094add9" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityClient/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityClient/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terra/SerializedData/World/Entities.TerraWorldChunk.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/SerializedData/World/Entities.TerraWorldChunk.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terra/SerializedData/World/TerraWorld.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/SerializedData/World/TerraWorld.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityClient/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityClient/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityClient/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityClient/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Elementia/Controllers.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Elementia/New folder.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Elementia/Scenes/World.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Elementia/Scenes/World.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Elementia/Services/ElementiaServices.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Elementia/Services/ElementiaServices.asmdef" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Elementia/Terra/ViewModels.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/I2/Localization/I2Localization_PlayMaker.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/I2/Localization/I2Localization_Tests.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PandeaGames/Data/GameResources.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PandeaGames/Data/GameResources.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PandeaGames/PandeaGames.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PandeaGames/PandeaGames.asmdef" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Terra/Controllers/TerraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/Controllers/TerraController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Terra/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Terra/MonoViews/AbstractTerraMonoComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/MonoViews/AbstractTerraMonoComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Terra/MonoViews/TerraEntityMonoView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/MonoViews/TerraEntityMonoView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Terra/MonoViews/TerraSerializedEntityPositionMonoView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/MonoViews/TerraSerializedEntityPositionMonoView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/TerraEntities.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/TerraEntities.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/TerraEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/TerraEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/TerraPosition3D.TerraEntities.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/TerraPosition3D.TerraEntities.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/TerraPosition3D.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/TerraPosition3D.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Terra/ViewModels/ITerraEntityViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/ViewModels/ITerraEntityViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Terra/ViewModels/TerraChunksViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/ViewModels/TerraChunksViewModel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Terra/ViewModels/TerraEntitiesViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/ViewModels/TerraEntitiesViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Terra/ViewModels/TerraWorldViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/ViewModels/TerraWorldViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/NaughtyAttributes.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/NaughtyAttributes.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/README.html" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/README.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/README.html.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/README.html.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/ConditionOperator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/ConditionOperator.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/DrawConditionAttributes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/DrawConditionAttributes/DrawConditionAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/DrawConditionAttributes/DrawConditionAttribute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/DrawConditionAttributes/HideIfAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/DrawConditionAttributes/HideIfAttribute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/DrawConditionAttributes/ShowIfAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/DrawConditionAttributes/ShowIfAttribute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/DrawerAttributes.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/DrawerAttributes.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/DrawerAttributes/ButtonAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/DrawerAttributes/ButtonAttribute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/DrawerAttributes/DisableIfAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/DrawerAttributes/DisableIfAttribute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/DrawerAttributes/DrawerAttribute.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/DrawerAttributes/DrawerAttribute.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/DrawerAttributes/DrawerAttribute.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/DrawerAttributes/DrawerAttribute.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/DrawerAttributes/DropdownAttribute.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/DrawerAttributes/DropdownAttribute.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/DrawerAttributes/DropdownAttribute.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/DrawerAttributes/DropdownAttribute.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/DrawerAttributes/EnableIfAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/DrawerAttributes/EnableIfAttribute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/DrawerAttributes/LabelAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/DrawerAttributes/LabelAttribute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/DrawerAttributes/MinMaxSliderAttribute.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/DrawerAttributes/MinMaxSliderAttribute.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/DrawerAttributes/MinMaxSliderAttribute.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/DrawerAttributes/MinMaxSliderAttribute.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/DrawerAttributes/ProgressBarAttribute.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/DrawerAttributes/ProgressBarAttribute.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/DrawerAttributes/ProgressBarAttribute.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/DrawerAttributes/ProgressBarAttribute.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/DrawerAttributes/ReadOnlyAttribute.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/DrawerAttributes/ReadOnlyAttribute.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/DrawerAttributes/ReadOnlyAttribute.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/DrawerAttributes/ReadOnlyAttribute.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/DrawerAttributes/ReorderableListAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/DrawerAttributes/ReorderableListAttribute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/DrawerAttributes/ResizableTextAreaAttribute.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/DrawerAttributes/ResizableTextAreaAttribute.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/DrawerAttributes/ResizableTextAreaAttribute.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/DrawerAttributes/ResizableTextAreaAttribute.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/DrawerAttributes/ShowAssetPreviewAttribute.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/DrawerAttributes/ShowAssetPreviewAttribute.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/DrawerAttributes/ShowAssetPreviewAttribute.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/DrawerAttributes/ShowAssetPreviewAttribute.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/DrawerAttributes/ShowNativePropertyAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/DrawerAttributes/ShowNativePropertyAttribute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/DrawerAttributes/ShowNonSerializedFieldAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/DrawerAttributes/ShowNonSerializedFieldAttribute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/DrawerAttributes/SliderAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/DrawerAttributes/SliderAttribute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/DrawerAttributes/TagAttribute.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/DrawerAttributes/TagAttribute.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/DrawerAttributes/TagAttribute.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/DrawerAttributes/TagAttribute.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/GroupAttributes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/GroupAttributes/BoxGroupAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/GroupAttributes/BoxGroupAttribute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/GroupAttributes/GroupAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/GroupAttributes/GroupAttribute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/MetaAttributes.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/MetaAttributes.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/MetaAttributes/InfoBoxAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/MetaAttributes/InfoBoxAttribute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/MetaAttributes/MetaAttribute.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/MetaAttributes/MetaAttribute.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/MetaAttributes/MetaAttribute.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/MetaAttributes/MetaAttribute.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/MetaAttributes/OnValueChangedAttribute.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/MetaAttributes/OnValueChangedAttribute.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/MetaAttributes/OnValueChangedAttribute.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/MetaAttributes/OnValueChangedAttribute.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/NaughtyAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/NaughtyAttribute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/ValidatorAttributes.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/ValidatorAttributes.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/ValidatorAttributes/MaxValueAttribute.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/ValidatorAttributes/MaxValueAttribute.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/ValidatorAttributes/MaxValueAttribute.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/ValidatorAttributes/MaxValueAttribute.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/ValidatorAttributes/MinValueAttribute.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/ValidatorAttributes/MinValueAttribute.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/ValidatorAttributes/MinValueAttribute.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/ValidatorAttributes/MinValueAttribute.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/ValidatorAttributes/RequiredAttribute.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/ValidatorAttributes/RequiredAttribute.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/ValidatorAttributes/RequiredAttribute.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/ValidatorAttributes/RequiredAttribute.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/ValidatorAttributes/ValidateInputAttribute.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/ValidatorAttributes/ValidateInputAttribute.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/ValidatorAttributes/ValidateInputAttribute.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/ValidatorAttributes/ValidateInputAttribute.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/ValidatorAttributes/ValidatorAttribute.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/ValidatorAttributes/ValidatorAttribute.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/ValidatorAttributes/ValidatorAttribute.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Core/ValidatorAttributes/ValidatorAttribute.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/Attributes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/Attributes/BaseAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/Attributes/BaseAttribute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/Attributes/FieldDrawerAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/Attributes/FieldDrawerAttribute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/Attributes/IAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/Attributes/IAttribute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/Attributes/MethodDrawerAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/Attributes/MethodDrawerAttribute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/Attributes/NativePropertyDrawerAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/Attributes/NativePropertyDrawerAttribute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/Attributes/PropertyDrawConditionAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/Attributes/PropertyDrawConditionAttribute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/Attributes/PropertyDrawerAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/Attributes/PropertyDrawerAttribute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/Attributes/PropertyGrouperAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/Attributes/PropertyGrouperAttribute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/Attributes/PropertyMetaAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/Attributes/PropertyMetaAttribute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/Attributes/PropertyValidatorAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/Attributes/PropertyValidatorAttribute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/CodeGeneration.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/CodeGeneration/CodeGenerator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/CodeGeneration/CodeGenerator.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/CodeGeneration/FieldDrawerDatabase.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/CodeGeneration/FieldDrawerDatabase.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/CodeGeneration/MethodDrawerDatabase.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/CodeGeneration/MethodDrawerDatabase.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/CodeGeneration/NativePropertyDrawerDatabase.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/CodeGeneration/NativePropertyDrawerDatabase.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/CodeGeneration/PropertyDrawConditionDatabase.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/CodeGeneration/PropertyDrawConditionDatabase.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/CodeGeneration/PropertyDrawerDatabase.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/CodeGeneration/PropertyDrawerDatabase.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/CodeGeneration/PropertyGrouperDatabase.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/CodeGeneration/PropertyGrouperDatabase.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/CodeGeneration/PropertyMetaDatabase.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/CodeGeneration/PropertyMetaDatabase.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/CodeGeneration/PropertyValidatorDatabase.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/CodeGeneration/PropertyValidatorDatabase.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/CodeGeneration/Templates.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/CodeGeneration/Templates/FieldDrawerDatabaseTemplate.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/CodeGeneration/Templates/FieldDrawerDatabaseTemplate.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/CodeGeneration/Templates/MethodDrawerDatabaseTemplate.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/CodeGeneration/Templates/MethodDrawerDatabaseTemplate.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/CodeGeneration/Templates/NativePropertyDrawerDbTemplate.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/CodeGeneration/Templates/NativePropertyDrawerDbTemplate.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/CodeGeneration/Templates/PropertyDrawConditionDatabaseTemplate.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/CodeGeneration/Templates/PropertyDrawConditionDatabaseTemplate.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/CodeGeneration/Templates/PropertyDrawerDatabaseTemplate.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/CodeGeneration/Templates/PropertyDrawerDatabaseTemplate.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/CodeGeneration/Templates/PropertyGrouperDatabaseTemplate.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/CodeGeneration/Templates/PropertyGrouperDatabaseTemplate.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/CodeGeneration/Templates/PropertyMetaDatabaseTemplate.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/CodeGeneration/Templates/PropertyMetaDatabaseTemplate.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/CodeGeneration/Templates/PropertyValidatorDatabaseTemplate.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/CodeGeneration/Templates/PropertyValidatorDatabaseTemplate.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/Editors.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/Editors/InspectorEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/Editors/InspectorEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/FieldDrawers.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/FieldDrawers/FieldDrawer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/FieldDrawers/FieldDrawer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/FieldDrawers/ShowNonSerializedFieldFieldDrawer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/FieldDrawers/ShowNonSerializedFieldFieldDrawer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/MethodDrawers.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/MethodDrawers/ButtonMethodDrawer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/MethodDrawers/ButtonMethodDrawer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/MethodDrawers/MethodDrawer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/MethodDrawers/MethodDrawer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/NativePropertyDrawers.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/NativePropertyDrawers/NativePropertyDrawer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/NativePropertyDrawers/NativePropertyDrawer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/NativePropertyDrawers/ShowNativePropertyNativePropertyDrawer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/NativePropertyDrawers/ShowNativePropertyNativePropertyDrawer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyDrawConditions.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyDrawConditions/HideIfPropertyDrawCondition.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyDrawConditions/HideIfPropertyDrawCondition.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyDrawConditions/PropertyDrawCondition.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyDrawConditions/PropertyDrawCondition.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyDrawConditions/ShowIfPropertyDrawCondition.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyDrawConditions/ShowIfPropertyDrawCondition.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyDrawers.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyDrawers.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyDrawers/DisableIfPropertyDrawer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyDrawers/DisableIfPropertyDrawer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyDrawers/DropdownPropertyDrawer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyDrawers/DropdownPropertyDrawer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyDrawers/DropdownPropertyDrawer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyDrawers/DropdownPropertyDrawer.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyDrawers/EnableIfPropertyDrawer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyDrawers/EnableIfPropertyDrawer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyDrawers/LabelPropertyDrawer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyDrawers/LabelPropertyDrawer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyDrawers/MinMaxSliderPropertyDrawer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyDrawers/MinMaxSliderPropertyDrawer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyDrawers/MinMaxSliderPropertyDrawer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyDrawers/MinMaxSliderPropertyDrawer.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyDrawers/ProgressBarPropertyDrawer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyDrawers/ProgressBarPropertyDrawer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyDrawers/ProgressBarPropertyDrawer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyDrawers/ProgressBarPropertyDrawer.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyDrawers/PropertyDrawer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyDrawers/PropertyDrawer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyDrawers/ReadOnlyPropertyDrawer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyDrawers/ReadOnlyPropertyDrawer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyDrawers/ReadOnlyPropertyDrawer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyDrawers/ReadOnlyPropertyDrawer.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyDrawers/ReorderableListPropertyDrawer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyDrawers/ReorderableListPropertyDrawer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyDrawers/ResizableTextAreaPropertyDrawer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyDrawers/ResizableTextAreaPropertyDrawer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyDrawers/ResizableTextAreaPropertyDrawer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyDrawers/ResizableTextAreaPropertyDrawer.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyDrawers/ShowAssetPreviewPropertyDrawer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyDrawers/ShowAssetPreviewPropertyDrawer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyDrawers/ShowAssetPreviewPropertyDrawer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyDrawers/ShowAssetPreviewPropertyDrawer.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyDrawers/SliderPropertyDrawer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyDrawers/SliderPropertyDrawer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyDrawers/TagPropertyDrawer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyDrawers/TagPropertyDrawer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyDrawers/TagPropertyDrawer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyDrawers/TagPropertyDrawer.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyGroupers.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyGroupers/BoxGroupPropertyGrouper.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyGroupers/BoxGroupPropertyGrouper.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyGroupers/PropertyGrouper.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyGroupers/PropertyGrouper.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyMetas.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyMetas/InfoBoxPropertyMeta.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyMetas/InfoBoxPropertyMeta.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyMetas/OnValueChangedPropertyMeta.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyMetas/OnValueChangedPropertyMeta.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyMetas/PropertyMeta.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyMetas/PropertyMeta.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyValidators.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyValidators.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyValidators/MaxValuePropertyValidator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyValidators/MaxValuePropertyValidator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyValidators/MaxValuePropertyValidator.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyValidators/MaxValuePropertyValidator.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyValidators/MinValuePropertyValidator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyValidators/MinValuePropertyValidator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyValidators/MinValuePropertyValidator.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyValidators/MinValuePropertyValidator.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyValidators/PropertyValidator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyValidators/PropertyValidator.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyValidators/RequiredPropertyValidator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyValidators/RequiredPropertyValidator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyValidators/RequiredPropertyValidator.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyValidators/RequiredPropertyValidator.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyValidators/ValidateInputPropertyValidator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyValidators/ValidateInputPropertyValidator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyValidators/ValidateInputPropertyValidator.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/PropertyValidators/ValidateInputPropertyValidator.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/Utility.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/Utility.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/Utility/EditorDrawUtility.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/Utility/EditorDrawUtility.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/Utility/IOUtility.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/Utility/IOUtility.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/Utility/PropertyUtility.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/Utility/PropertyUtility.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/Utility/PropertyUtility.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/Utility/PropertyUtility.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/Utility/ReflectionUtility.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/Utility/ReflectionUtility.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/Utility/ReflectionUtility.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/NaughtyAttributes/Scripts/Editor/Utility/ReflectionUtility.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WassabyPulse/SnowshadeExample/Models/rock_4/rock_4_cliff_opt.fbm.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WassabyPulse/SnowshadeExample/Models/rock_4/rock_4_cliff_opt.fbm.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TerraSerializedEntityPositionMonoView.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/TerraSerializedEntityPositionMonoView.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
-              <folding>
-                <marker date="1582497222427" expanded="true" signature="6:55" ph="..." />
-                <marker date="1582497222427" expanded="true" signature="82:490" ph="{...}" />
-                <marker date="1582497222427" expanded="true" signature="168:488" ph="{...}" />
-                <marker date="1582497222427" expanded="true" signature="204:298" ph="{...}" />
-                <marker date="1582497222427" expanded="true" signature="243:288" ph="{...}" />
-                <marker date="1582497222427" expanded="true" signature="362:482" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TerraEntitiesViewModel.cs" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/TerraEntitiesViewModel.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="27" column="1" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
-              <folding>
-                <marker date="1582500726396" expanded="false" signature="6:256" ph="..." />
-                <marker date="1582500726396" expanded="true" signature="284:5385" ph="{...}" />
-                <marker date="1582500726396" expanded="true" signature="423:5383" ph="{...}" />
-                <marker date="1582500726396" expanded="true" signature="462:518" ph="{...}" />
-                <marker date="1582500726396" expanded="true" signature="1018:1582" ph="{...}" />
-                <marker date="1582500726396" expanded="true" signature="1649:1725" ph="{...}" />
-                <marker date="1582500726396" expanded="true" signature="1832:1896" ph="{...}" />
-                <marker date="1582500726396" expanded="true" signature="2001:2062" ph="{...}" />
-                <marker date="1582500726396" expanded="true" signature="2134:2580" ph="{...}" />
-                <marker date="1582500726396" expanded="true" signature="2189:2267" ph="{...}" />
-                <marker date="1582500726396" expanded="true" signature="2284:2544" ph="{...}" />
-                <marker date="1582500726396" expanded="true" signature="2440:2530" ph="{...}" />
-                <marker date="1582500726396" expanded="true" signature="2648:2784" ph="{...}" />
-                <marker date="1582500726396" expanded="true" signature="2711:2774" ph="{...}" />
-                <marker date="1582500726396" expanded="true" signature="2835:3399" ph="{...}" />
-                <marker date="1582500726396" expanded="true" signature="2889:2947" ph="{...}" />
-                <marker date="1582500726396" expanded="true" signature="2964:3363" ph="{...}" />
-                <marker date="1582500726396" expanded="true" signature="3074:3165" ph="{...}" />
-                <marker date="1582500726396" expanded="true" signature="3470:3609" ph="{...}" />
-                <marker date="1582500726396" expanded="true" signature="3533:3599" ph="{...}" />
-                <marker date="1582500726396" expanded="true" signature="3663:4252" ph="{...}" />
-                <marker date="1582500726396" expanded="true" signature="3718:3776" ph="{...}" />
-                <marker date="1582500726396" expanded="true" signature="3793:4216" ph="{...}" />
-                <marker date="1582500726396" expanded="true" signature="3922:4015" ph="{...}" />
-                <marker date="1582500726396" expanded="true" signature="4329:4553" ph="{...}" />
-                <marker date="1582500726396" expanded="true" signature="4473:4543" ph="{...}" />
-                <marker date="1582500726396" expanded="true" signature="4636:4967" ph="{...}" />
-                <marker date="1582500726396" expanded="true" signature="4780:4921" ph="{...}" />
-                <marker date="1582500726396" expanded="true" signature="5026:5095" ph="{...}" />
-                <marker date="1582500726396" expanded="true" signature="5128:5149" ph="{...}" />
-                <marker date="1582500726396" expanded="true" signature="5206:5272" ph="{...}" />
-                <marker date="1582500726396" expanded="true" signature="5321:5377" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TerraChunksViewModel.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/TerraChunksViewModel.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="24" column="9" lean-forward="true" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
-              <folding>
-                <marker date="1582486969898" expanded="false" signature="6:153" ph="..." />
-                <marker date="1582486969898" expanded="true" signature="181:2068" ph="{...}" />
-                <marker date="1582486969898" expanded="true" signature="234:2066" ph="{...}" />
-                <marker date="1582486969898" expanded="true" signature="268:369" ph="{...}" />
-                <marker date="1582486969898" expanded="true" signature="775:885" ph="{...}" />
-                <marker date="1582486969898" expanded="true" signature="948:1129" ph="{...}" />
-                <marker date="1582486969898" expanded="true" signature="1194:1417" ph="{...}" />
-                <marker date="1582486969898" expanded="true" signature="1220:1407" ph="{...}" />
-                <marker date="1582486969898" expanded="true" signature="1283:1363" ph="{...}" />
-                <marker date="1582486969898" expanded="true" signature="1480:1743" ph="{...}" />
-                <marker date="1582486969898" expanded="true" signature="1570:1733" ph="{...}" />
-                <marker date="1582486969898" expanded="true" signature="1642:1719" ph="{...}" />
-                <marker date="1582486969898" expanded="true" signature="1790:1998" ph="{...}" />
-                <marker date="1582486969898" expanded="true" signature="1880:1988" ph="{...}" />
-                <marker date="1582486969898" expanded="true" signature="2027:2060" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Height.TerraWorldChunk.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/World/Height.TerraWorldChunk.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-              <folding>
-                <marker date="1582481484891" expanded="true" signature="36:157" ph="{...}" />
-                <marker date="1582481484891" expanded="true" signature="79:155" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Entities.TerraWorldChunk.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/World/Entities.TerraWorldChunk.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="56" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="56" />
-              <folding>
-                <marker date="1582496709265" expanded="true" signature="6:96" ph="..." />
-                <marker date="1582496709265" expanded="true" signature="134:207" ph="{...}" />
-                <marker date="1582496709265" expanded="true" signature="193:205" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TerraWorld.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/World/TerraWorld.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-              <folding>
-                <marker date="1582496757621" expanded="false" signature="6:96" ph="..." />
-                <marker date="1582496757621" expanded="true" signature="134:194" ph="{...}" />
-                <marker date="1582496757621" expanded="true" signature="180:192" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TerraEntities.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/TerraEntities.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="38" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="65" />
-              <folding>
-                <marker date="1582496676998" expanded="true" signature="6:59" ph="..." />
-                <marker date="1582496676998" expanded="true" signature="100:506" ph="{...}" />
-                <marker date="1582496676998" expanded="true" signature="168:504" ph="{...}" />
-                <marker date="1582496676998" expanded="true" signature="328:393" ph="{...}" />
-                <marker date="1582496676998" expanded="true" signature="442:498" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TerraEntity.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/TerraEntity.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="76" />
-              <folding>
-                <marker date="1582481390985" expanded="false" signature="6:111" ph="..." />
-                <marker date="1582481390985" expanded="true" signature="152:1079" ph="{...}" />
-                <marker date="1582481390985" expanded="true" signature="183:1077" ph="{...}" />
-                <marker date="1582481390985" expanded="true" signature="621:672" ph="{...}" />
-                <marker date="1582481390985" expanded="true" signature="716:814" ph="{...}" />
-                <marker date="1582481390985" expanded="true" signature="861:964" ph="{...}" />
-                <marker date="1582481390985" expanded="true" signature="1008:1071" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TerraPosition3D.TerraEntities.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/TerraPosition3D.TerraEntities.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="97" lean-forward="true" selection-start-line="7" selection-start-column="97" selection-end-line="7" selection-end-column="97" />
-              <folding>
-                <marker date="1582497151904" expanded="true" signature="6:59" ph="..." />
-                <marker date="1582497151904" expanded="true" signature="100:397" ph="{...}" />
-                <marker date="1582497151904" expanded="true" signature="141:395" ph="{...}" />
-                <marker date="1582497151904" expanded="true" signature="323:389" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TerraPosition3D.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/TerraPosition3D.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="36" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
-              <folding>
-                <marker date="1582497208797" expanded="true" signature="39:338" ph="{...}" />
-                <marker date="1582497208797" expanded="true" signature="75:336" ph="{...}" />
-                <marker date="1582497208797" expanded="true" signature="279:330" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -230,96 +274,93 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/WorldSimulationStateService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/WorldPersistanceService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Services/ServiceRequest.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/Control/InputPuppet.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/ElementiaPlayerPersistanceService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Utils/SerializableDictionary.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/TerraWorldViewModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/WorldData/SaveAreaJob.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/WorldData/WorldDataAccessService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/Control/PauseGame.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Utils/Game2DMathUtils.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/World/Water.TerraWorldChunk.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/WorldData/WorldDataToken.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Grass.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/ViewModels/IParamaterizedViewModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/LayerAttributeEditor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/WorldData/LoadAreaJob.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/ITerraEntityViewModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/AbstractGridDataModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/World/TerraWorldChunk.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/TerraEntityMonoView.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Game.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/World/TerraWorld.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/ThirdParty/AssetBundleManager/Utility.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/TerraViewModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/ScreenSpaceFluids/Scripts/SSF_FluidRenderer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/World/Entities.TerraWorldChunk.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/Documents/Core/Runtime/Gameplay/Control/IInputPuppet.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/TerraChunksViewModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/ThirdParty/AssetBundleManager/Editor/ExecuteInternalMono.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/TerraPosition3D.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/BillboardSprite.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/TerraEntity.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/World/Height.TerraWorldChunk.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/TerraPosition3D.TerraEntities.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Shaders/FlatColor.shader" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Runtime/Utils/TaskProvider.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Data/Static/SynchronousStaticData.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/TerraShape.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/TerraController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/ITerraShape.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/ThreadJob.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/TerraEntities.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Data/DataConfig.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/TerraEntitiesViewModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Views/Services/Service.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Data/SimulationConfiguration.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Data/WorldAssetData.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Services/AbstractService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/AbstractTerraMonoComponent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Data/AreaIndex.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Data/WorldArea.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/ViewModels/IViewModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Data/WorldSimulationState.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Data/WorldIndex.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E1E93E3D-1D8A-43F3-8039-C7C26FC3A447/00/8af186cb/SetupCoroutine.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Shaders/ElementiaShader.shader" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Data/WorldAsset.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/AbstractTerraEntityViewModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/Services/TerraChunkService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E1E93E3D-1D8A-43F3-8039-C7C26FC3A447/8e/cbab7964/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Gameplay/ForestAgentPuppet.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/TerraSerializedEntityPositionMonoView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/TerraWorldViewModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/TerraEntityStreamerMonoView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Gameplay/PlayerForestController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/Controllers/TerraController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/StaticData/TerraEntityPrefabConfigSO.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/AbstractTerraEntityViewModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/TerraEntitiesViewModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Data/Static/AbstractDataContainerSO.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/TerraChunksViewModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/TerraViewModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/Views/TerraView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/AbstractTerraMonoComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/TerraSerializedEntityPositionMonoView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/ViewControllers/ElementiaViewController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/TerraEntityMonoView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Data/DataConfig.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Runtime/Utils/TaskProvider.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/Services/TerraChunkService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Data/WorldAsset.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Data/WorldIndex.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/TerraController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/TerraShape.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Data/SimulationConfiguration.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Data/WorldArea.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Data/WorldAssetData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Data/WorldSimulationState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Data/AreaIndex.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/ViewModels/IViewModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/ViewModels/IParamaterizedViewModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/ITerraShape.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/BillboardSprite.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/Control/InputPuppet.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Data/ScriptableObjectSingleton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/Control/PauseGame.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/ThreadJob.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Services/Elementia.GameResources.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Data/Static/Resources/SynchronousStaticDataResources.GameResources.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Shaders/ElementiaShader.shader" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/ViewControllers/AbstractViewControllerFsm.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Shaders/FlatColor.shader" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Views/Services/Service.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/ViewControllers/AbstractViewController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/WorldData/SaveAreaJob.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Services/AbstractService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Utils/ResourceSingleton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/WorldData/WorldDataToken.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/WorldData/LoadAreaJob.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/WorldData/WorldDataAccessService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ThirdParty/AssetBundleManager/Editor/ExecuteInternalMono.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/ITerraEntityDataController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Services/ServiceRequest.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/WorldSimulationStateService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Game.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/ITerraEntityComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/RuntimeTerraEntity.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ThirdParty/AssetBundleManager/Utility.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Utils/Game2DMathUtils.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Utils/SerializableDictionary.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/TerraPosition3D.TerraEntities.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/TerraEntity.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/TerraEntities.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Data/Static/SynchronousStaticData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/TerraPosition3D.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/ITerraEntity.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Data/GameResources.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/World/Entities.TerraWorldChunk.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Views/AbstractUnityView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Grass.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/World/TerraWorldChunk.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/World/Water.TerraWorldChunk.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/WorldRendererLoader.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/ElementiaPlayerPersistanceService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Data/PandeaGameConfigurationData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/LayerAttributeEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/World/TerraWorld.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/SimulationService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/World/Height.TerraWorldChunk.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/WorldPersistanceService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ScreenSpaceFluids/Scripts/SSF_FluidRenderer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/TerraGameObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/Controllers/TerraController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/ITerraEntityViewModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Gameplay/ForestAgentPuppet.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Terra/ViewModels/INTVector.cs" />
-        <option value="$PROJECT_DIR$/Assets/ITerraShape.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/ViewModels/AbstractGridDataModel.cs" />
-        <option value="$PROJECT_DIR$/Assets/PandeaGames/Data/Static/SynchronousStaticData.cs" />
-        <option value="$PROJECT_DIR$/Assets/Elementia/Scripts/Services/ElementiaPlayerPersistanceService.cs" />
-        <option value="$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/Control/PauseGame.cs" />
-        <option value="$PROJECT_DIR$/Assets/Elementia/Scripts/Services/WorldSimulationStateService.cs" />
-        <option value="$PROJECT_DIR$/Assets/Elementia/Scripts/Services/SimulationService.cs" />
-        <option value="$PROJECT_DIR$/Assets/Elementia/Scripts/Services/WorldData/WorldDataAccessService.cs" />
-        <option value="$PROJECT_DIR$/Assets/Elementia/Scripts/Gameplay/ForestAgentPuppet.cs" />
-        <option value="$PROJECT_DIR$/Assets/WorldRendererLoader.cs" />
-        <option value="$PROJECT_DIR$/Assets/Elementia/Scripts/Data/WorldAsset.cs" />
-        <option value="$PROJECT_DIR$/Assets/Elementia/Scripts/Data/WorldAssetData.cs" />
-        <option value="$PROJECT_DIR$/Assets/Elementia/Scripts/Services/WorldPersistanceService.cs" />
-        <option value="$PROJECT_DIR$/Assets/PandeaGames/Services/ServiceRequest.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/TerraController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/Entities/TerraGlobalEntity.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/ViewModels/TerraEntitesViewModel.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/ViewModels/TerraGlobalEntityViewModel.cs" />
         <option value="$PROJECT_DIR$/Assets/PandeaGames/ViewModels/IParamaterizedViewModel.cs" />
         <option value="$PROJECT_DIR$/Assets/PandeaGames/Game.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/Entities/TerraEntity.cs" />
@@ -330,194 +371,66 @@
         <option value="$PROJECT_DIR$/Assets/Terra/World/Entities.TerraWorldChunk.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/World/Water.TerraWorldChunk.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/World/TerraWorld.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/TerraEntity.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/SerializedData/World/Height.TerraWorldChunk.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/SerializedData/World/TerraWorldChunk.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/SerializedData/World/Water.TerraWorldChunk.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/ViewModels/AbstractTerraEntityViewModel.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/ViewModels/ITerraEntityViewModel.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/Controllers/TerraController.cs" />
         <option value="$PROJECT_DIR$/Assets/PandeaGames/Services/AbstractService.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/ViewModels/TerraViewModel.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/Services/TerraChunkService.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/ViewModels/TerraWorldViewModel.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/ViewModels/TerraChunksViewModel.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/MonoViews/EntityMonoView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/MonoViews/TerraEntityMonoView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/MonoViews/AbstractTerraMonoComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/TerraEntities.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/SerializedData/World/Entities.TerraWorldChunk.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/SerializedData/World/TerraWorld.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/SerializedData/DataControllers.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/TerraPosition3DDataController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/ITerraEntityComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/TerraPosition3D.TerraEntities.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/TerraPosition3D.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/MonoViews/TerraSerializedEntityPositionMonoView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/ViewModels/ITerraEntityDataController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/TerraEntities.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/ViewModels/TerraChunksViewModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/ITerraEntity.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/TerraEntity.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/RuntimeTerraEntity.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/ViewModels/TerraEntitiesViewModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/ViewModels/ITerraEntityViewModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/ViewModels/TerraWorldViewModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/MonoViews/AbstractTerraMonoComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/MonoViews/TerraEntityMonoView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/MonoViews/TerraSerializedEntityPositionMonoView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/TerraPosition3D.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/StaticData/TerraEntityPrefabConfig.cs" />
+        <option value="$PROJECT_DIR$/Assets/PandeaGames/Data/Static/AbstractDataContainerSO.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/StaticData/TerraEntityPrefabConfigSO.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/MonoViews/TerraEntityStreamerMonoView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/Controllers/TerraController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Elementia/ViewControllers/ElementiaViewController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Elementia/ElementiaGameStart.cs" />
+        <option value="$PROJECT_DIR$/Assets/PandeaGames/Data/GameResources.cs" />
+        <option value="$PROJECT_DIR$/Assets/Elementia/Elementia.GameResources.cs" />
+        <option value="$PROJECT_DIR$/Assets/Elementia/Services/Elementia.GameResources.cs" />
+        <option value="$PROJECT_DIR$/Assets/PandeaGames/Data/Static/Resources/SynchronousStaticDataResources.GameResources.cs" />
+        <option value="$PROJECT_DIR$/Assets/Elementia/Scripts/TerraGameObject.cs" />
+        <option value="$PROJECT_DIR$/Assets/PandeaGames/Utils/ResourceSingleton.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/Views/TerraView.cs" />
       </list>
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="NodePackageJsonFileManager">
-    <packageJsonPaths />
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="109" />
-    <option name="y" value="358" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
-  </component>
+  <component name="ProjectId" id="1YEQCn54guQpx1Sf5RQIZC5muEH" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
-  <component name="ProjectView">
-    <navigator currentView="SolutionExplorer" proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="SolutionExplorer">
-        <subPane>
-          <expand>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="UnityClient (8 projects)" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="UnityClient (8 projects)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="PandeaGames" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="UnityClient (8 projects)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="PandeaGames" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="UnityClient (8 projects)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="PandeaGames" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="PandeaGames" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="UnityClient (8 projects)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="PandeaGames" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="PandeaGames" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="ViewModels" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="UnityClient (8 projects)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Terra" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="UnityClient (8 projects)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Terra" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="UnityClient (8 projects)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Terra" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Terra" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="UnityClient (8 projects)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Terra" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Terra" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Controllers" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="UnityClient (8 projects)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Terra" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Terra" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="MonoViews" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="UnityClient (8 projects)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Terra" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Terra" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="SerializedData" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="UnityClient (8 projects)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Terra" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Terra" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="SerializedData" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Entities" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="UnityClient (8 projects)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Terra" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Terra" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="SerializedData" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="World" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="UnityClient (8 projects)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Terra" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Terra" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Services" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="UnityClient (8 projects)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Terra" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Terra" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="ViewModels" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-        <option name="show-file-system" value="false" />
-        <option name="show-all-items" value="false" />
-      </pane>
-      <pane id="Scratches" />
-      <pane id="UnityExplorer">
-        <subPane>
-          <expand>
-            <path>
-              <item name="" type="ad4990d8:FileSystemViewPaneBase$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="UnityClient" type="483dac07:UnityExplorerNode$Root" />
-            </path>
-            <path>
-              <item name="" type="ad4990d8:FileSystemViewPaneBase$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="UnityClient" type="483dac07:UnityExplorerNode$Root" />
-              <item name="" type="1045f7f1:UnityExplorerNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-        <option name="show-hidden-items" value="false" />
-      </pane>
-    </panes>
-  </component>
   <component name="PropertiesComponent">
+    <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
     <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
     <property name="SearchEverywhereHistoryKey" value="Game&#9;null&#9;null&#10;IViewM&#9;null&#9;null&#10;WorldAsset&#9;null&#9;null&#10;TerraVector&#9;null&#9;null&#10;INT&#9;null&#9;null&#10;AbstractGridM&#9;null&#9;null&#10;World&#9;FILE&#9;file://D:/Elementia/UnityClient/Assets/Elementia/Scripts/Services/WorldData/WorldDataToken.cs&#10;TerraCon&#9;FILE&#9;file://D:/Elementia/UnityClient/Assets/TerraController.cs&#10;DataConfig&#9;FILE&#9;file://D:/Elementia/UnityClient/Assets/Elementia/Scripts/Data/DataConfig.cs&#10;SimulationSer&#9;FILE&#9;file://D:/Elementia/UnityClient/Assets/Elementia/Scripts/Services/SimulationService.cs&#10;WorldDataAcc&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$USER_HOME$/CarryTheLight/UnityClient/CarryTheLight/CarryTheLight.sln" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunDashboard">
@@ -532,10 +445,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
+      <option name="userSelectedPid" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="userSelectedPid" value="false" />
+      <method v="2" />
     </configuration>
   </component>
   <component name="SvnConfiguration">
@@ -561,658 +484,37 @@
       <workItem from="1574789644663" duration="5417000" />
       <workItem from="1582351916046" duration="8360000" />
       <workItem from="1582418681584" duration="19821000" />
+      <workItem from="1582505163317" duration="10608000" />
     </task>
     <servers />
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="116016000" />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Errors In Solution" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.35820895" side_tool="true" visible="true" weight="0.39978212" />
-      <window_info anchor="bottom" id="Unit Tests" order="7" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2835821" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Unity" order="7" />
-      <window_info anchor="right" id="Database" order="3" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.64179105" weight="0.39978212" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="NuGet" order="7" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
-    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="20" />
+      <breakpoints>
+        <breakpoint enabled="true" suspend="NONE" type="DotNet Exception Breakpoints">
+          <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
     </breakpoint-manager>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Assets/PandeaGames/Runtime/Utils/TaskProvider.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="9" column="23" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/PandeaGames/Views/HubView.cs" />
-    <entry file="file://$PROJECT_DIR$/Assets/PandeaGames/Data/Static/SynchronousStaticData.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="15" column="53" selection-start-line="15" selection-start-column="53" selection-end-line="15" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Gameplay/PlayerForestController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/Control/InputPuppet.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Documents/Core/Runtime/Gameplay/Control/IInputPuppet.cs">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/ElementiaPlayerPersistanceService.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/Control/PauseGame.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/PandeaGames/Utils/Game2DMathUtils.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-928">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/PandeaGames/Views/Services/Service.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="8" column="47" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/WorldSimulationStateService.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="161" column="9" selection-start-line="161" selection-start-column="9" selection-end-line="161" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/SimulationService.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/WorldData/SaveAreaJob.cs">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/WorldData/WorldDataAccessService.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Gameplay/ForestAgentPuppet.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/WorldRendererLoader.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="73" column="9" selection-start-line="73" selection-start-column="9" selection-end-line="73" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Data/WorldIndexGenerator.cs" />
-    <entry file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Data/WorldAssetData.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Data/WorldAsset.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1561">
-          <caret line="148" selection-start-line="148" selection-end-line="148" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Terra/TerraShape.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="33" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/PandeaGames/ViewModels/IViewModel.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="31" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="31" />
-          <folding>
-            <marker date="1550022433182" expanded="true" signature="66:100" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/PandeaGames/Services/ServiceRequest.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
-          <folding>
-            <marker date="1582354869307" expanded="false" signature="6:73" ph="..." />
-            <marker date="1582354869307" expanded="true" signature="156:1407" ph="{...}" />
-            <marker date="1582354869307" expanded="true" signature="229:286" ph="{...}" />
-            <marker date="1582354869307" expanded="true" signature="318:418" ph="{...}" />
-            <marker date="1582354869307" expanded="true" signature="565:831" ph="{...}" />
-            <marker date="1582354869307" expanded="true" signature="607:671" ph="{...}" />
-            <marker date="1582354869307" expanded="true" signature="688:821" ph="{...}" />
-            <marker date="1582354869307" expanded="true" signature="870:1036" ph="{...}" />
-            <marker date="1582354869307" expanded="true" signature="931:994" ph="{...}" />
-            <marker date="1582354869307" expanded="true" signature="1089:1289" ph="{...}" />
-            <marker date="1582354869307" expanded="true" signature="1177:1247" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/WorldPersistanceService.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="50" column="35" selection-start-line="50" selection-start-column="35" selection-end-line="50" selection-end-column="35" />
-          <folding>
-            <marker date="1582354834795" expanded="false" signature="6:186" ph="..." />
-            <marker date="1582354834795" expanded="true" signature="335:1160" ph="{...}" />
-            <marker date="1582354834795" expanded="true" signature="595:715" ph="{...}" />
-            <marker date="1582354834795" expanded="true" signature="823:1154" ph="{...}" />
-            <marker date="1582354834795" expanded="true" signature="925:1024" ph="{...}" />
-            <marker date="1582354834795" expanded="true" signature="1041:1144" ph="{...}" />
-            <marker date="1582354834795" expanded="true" signature="1450:1635" ph="{...}" />
-            <marker date="1582354834795" expanded="true" signature="1468:1629" ph="{...}" />
-            <marker date="1582354834795" expanded="true" signature="1673:1791" ph="{...}" />
-            <marker date="1582354834795" expanded="true" signature="1860:1932" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Terra/Entities/TerraGlobalEntity.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/TerraGlobalEntityViewModel.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="25" column="10" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/PandeaGames/Game.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="77">
-          <caret line="49" column="9" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
-          <folding>
-            <marker date="1582420468616" expanded="false" signature="6:136" ph="..." />
-            <marker date="1582420468616" expanded="true" signature="160:3199" ph="{...}" />
-            <marker date="1582420468616" expanded="false" signature="173:592" ph="..." />
-            <marker date="1582420468616" expanded="true" signature="637:3197" ph="{...}" />
-            <marker date="1582420468616" expanded="true" signature="1041:1143" ph="{...}" />
-            <marker date="1582420468616" expanded="true" signature="1280:1913" ph="{...}" />
-            <marker date="1582420468616" expanded="true" signature="1438:1575" ph="{...}" />
-            <marker date="1582420468616" expanded="true" signature="1724:1874" ph="{...}" />
-            <marker date="1582420468616" expanded="true" signature="2001:2107" ph="{...}" />
-            <marker date="1582420468616" expanded="true" signature="2220:2341" ph="{...}" />
-            <marker date="1582420468616" expanded="true" signature="2544:2739" ph="{...}" />
-            <marker date="1582420468616" expanded="true" signature="2845:2902" ph="{...}" />
-            <marker date="1582420468616" expanded="true" signature="3052:3191" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/PandeaGames/ViewModels/IParamaterizedViewModel.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-          <folding>
-            <marker date="1582419822716" expanded="true" signature="32:171" ph="{...}" />
-            <marker date="1582419822716" expanded="true" signature="105:169" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Terra/ITerraShape.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="92" selection-start-line="17" selection-start-column="92" selection-end-line="17" selection-end-column="92" />
-          <folding>
-            <marker date="1582477567574" expanded="true" signature="56:493" ph="{...}" />
-            <marker date="1582477567574" expanded="true" signature="136:188" ph="{...}" />
-            <marker date="1582477567574" expanded="true" signature="227:370" ph="{...}" />
-            <marker date="1582477567574" expanded="true" signature="431:491" ph="{...}" />
-            <marker date="1582477567574" expanded="true" signature="523:567" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/World/Water.TerraWorldChunk.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-          <folding>
-            <marker date="1582481420274" expanded="true" signature="36:156" ph="{...}" />
-            <marker date="1582481420274" expanded="true" signature="79:154" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Terra/Controllers/TerraController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
-          <folding>
-            <marker date="1582483793764" expanded="true" signature="27:85" ph="{...}" />
-            <marker date="1582483793764" expanded="true" signature="62:83" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Terra/TerraController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-240">
-          <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
-          <folding>
-            <marker date="1582411098634" expanded="true" signature="98:1779" ph="{...}" />
-            <marker date="1582411098634" expanded="true" signature="105:1777" ph="/* [SerializeField] ... */" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/PandeaGames/Services/AbstractService.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="42" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
-          <folding>
-            <marker date="1582485030495" expanded="true" signature="30:484" ph="{...}" />
-            <marker date="1582485030495" expanded="true" signature="143:482" ph="{...}" />
-            <marker date="1582485030495" expanded="true" signature="232:476" ph="{...}" />
-            <marker date="1582485030495" expanded="true" signature="258:466" ph="{...}" />
-            <marker date="1582485030495" expanded="true" signature="311:417" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/TerraViewModel.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="18" selection-start-column="18" selection-end-column="18" />
-          <folding>
-            <marker date="1582485144309" expanded="true" signature="6:82" ph="..." />
-            <marker date="1582485144309" expanded="true" signature="110:437" ph="{...}" />
-            <marker date="1582485144309" expanded="true" signature="157:435" ph="{...}" />
-            <marker date="1582485144309" expanded="true" signature="257:359" ph="{...}" />
-            <marker date="1582485144309" expanded="true" signature="396:429" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/AbstractTerraEntityViewModel.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="85" selection-start-line="12" selection-start-column="85" selection-end-line="12" selection-end-column="85" />
-          <folding>
-            <marker date="1582481503958" expanded="true" signature="6:114" ph="..." />
-            <marker date="1582481503958" expanded="true" signature="142:1189" ph="{...}" />
-            <marker date="1582481503958" expanded="true" signature="257:1187" ph="{...}" />
-            <marker date="1582481503958" expanded="true" signature="512:789" ph="{...}" />
-            <marker date="1582481503958" expanded="true" signature="566:624" ph="{...}" />
-            <marker date="1582481503958" expanded="true" signature="641:753" ph="{...}" />
-            <marker date="1582481503958" expanded="true" signature="843:1127" ph="{...}" />
-            <marker date="1582481503958" expanded="true" signature="898:956" ph="{...}" />
-            <marker date="1582481503958" expanded="true" signature="973:1091" ph="{...}" />
-            <marker date="1582481503958" expanded="true" signature="1160:1181" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Terra/Services/TerraChunkService.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
-          <folding>
-            <marker date="1582487151781" expanded="true" signature="6:118" ph="..." />
-            <marker date="1582487151781" expanded="true" signature="144:1128" ph="{...}" />
-            <marker date="1582487151781" expanded="true" signature="218:1126" ph="{...}" />
-            <marker date="1582487151781" expanded="true" signature="475:573" ph="{...}" />
-            <marker date="1582487151781" expanded="true" signature="742:967" ph="{...}" />
-            <marker date="1582487151781" expanded="true" signature="796:872" ph="{...}" />
-            <marker date="1582487151781" expanded="true" signature="889:957" ph="{...}" />
-            <marker date="1582487151781" expanded="true" signature="1050:1120" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/TerraWorldViewModel.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <marker date="1582488159473" expanded="true" signature="6:153" ph="..." />
-            <marker date="1582488159473" expanded="true" signature="181:945" ph="{...}" />
-            <marker date="1582488159473" expanded="true" signature="233:943" ph="{...}" />
-            <marker date="1582488159473" expanded="true" signature="447:534" ph="{...}" />
-            <marker date="1582488159473" expanded="true" signature="589:875" ph="{...}" />
-            <marker date="1582488159473" expanded="true" signature="631:791" ph="{...}" />
-            <marker date="1582488159473" expanded="true" signature="700:777" ph="{...}" />
-            <marker date="1582488159473" expanded="true" signature="808:865" ph="{...}" />
-            <marker date="1582488159473" expanded="true" signature="904:937" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/ITerraEntityViewModel.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
-          <folding>
-            <marker date="1582481507955" expanded="true" signature="6:84" ph="..." />
-            <marker date="1582481507955" expanded="true" signature="112:438" ph="{...}" />
-            <marker date="1582481507955" expanded="true" signature="231:436" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/AbstractGridDataModel.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
-          <folding>
-            <marker date="1582353115616" expanded="false" signature="7:48" ph="..." />
-            <marker date="1582353115616" expanded="true" signature="83:310" ph="{...}" />
-            <marker date="1582353115616" expanded="true" signature="167:188" ph="{...}" />
-            <marker date="1582353115616" expanded="true" signature="250:308" ph="{...}" />
-            <marker date="1582353115616" expanded="true" signature="429:2554" ph="{...}" />
-            <marker date="1582353115616" expanded="true" signature="741:846" ph="{...}" />
-            <marker date="1582353115616" expanded="true" signature="909:963" ph="{...}" />
-            <marker date="1582353115616" expanded="true" signature="1006:1119" ph="{...}" />
-            <marker date="1582353115616" expanded="true" signature="1160:1245" ph="{...}" />
-            <marker date="1582353115616" expanded="true" signature="1295:1569" ph="{...}" />
-            <marker date="1582353115616" expanded="true" signature="1354:1563" ph="{...}" />
-            <marker date="1582353115616" expanded="true" signature="1421:1553" ph="{...}" />
-            <marker date="1582353115616" expanded="true" signature="1625:1646" ph="{...}" />
-            <marker date="1582353115616" expanded="true" signature="1723:1775" ph="{...}" />
-            <marker date="1582353115616" expanded="true" signature="1889:2180" ph="{...}" />
-            <marker date="1582353115616" expanded="true" signature="2296:2552" ph="{...}" />
-            <marker date="1582353115616" expanded="true" signature="2346:2546" ph="{...}" />
-            <marker date="1582353115616" expanded="true" signature="2404:2536" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/TerraEntityMonoView.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="55" selection-start-line="12" selection-start-column="55" selection-end-line="12" selection-end-column="55" />
-          <folding>
-            <marker date="1582496115145" expanded="true" signature="6:93" ph="..." />
-            <marker date="1582496115145" expanded="true" signature="120:510" ph="{...}" />
-            <marker date="1582496115145" expanded="true" signature="175:508" ph="{...}" />
-            <marker date="1582496115145" expanded="true" signature="411:502" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/AbstractTerraMonoComponent.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="36" column="40" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="40" />
-          <folding>
-            <marker date="1582496382010" expanded="true" signature="6:55" ph="..." />
-            <marker date="1582496382010" expanded="true" signature="82:969" ph="{...}" />
-            <marker date="1582496382010" expanded="true" signature="144:967" ph="{...}" />
-            <marker date="1582496382010" expanded="true" signature="326:397" ph="{...}" />
-            <marker date="1582496382010" expanded="true" signature="427:680" ph="{...}" />
-            <marker date="1582496382010" expanded="true" signature="501:565" ph="{...}" />
-            <marker date="1582496382010" expanded="true" signature="582:670" ph="{...}" />
-            <marker date="1582496382010" expanded="true" signature="743:851" ph="{...}" />
-            <marker date="1582496382010" expanded="true" signature="885:961" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/World/TerraWorldChunk.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-          <folding>
-            <marker date="1582481416814" expanded="true" signature="36:137" ph="{...}" />
-            <marker date="1582481416814" expanded="true" signature="79:135" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/World/Height.TerraWorldChunk.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-          <folding>
-            <marker date="1582481484891" expanded="true" signature="36:157" ph="{...}" />
-            <marker date="1582481484891" expanded="true" signature="79:155" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/World/Entities.TerraWorldChunk.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="56" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="56" />
-          <folding>
-            <marker date="1582496709265" expanded="true" signature="6:96" ph="..." />
-            <marker date="1582496709265" expanded="true" signature="134:207" ph="{...}" />
-            <marker date="1582496709265" expanded="true" signature="193:205" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/World/TerraWorld.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-          <folding>
-            <marker date="1582496757621" expanded="false" signature="6:96" ph="..." />
-            <marker date="1582496757621" expanded="true" signature="134:194" ph="{...}" />
-            <marker date="1582496757621" expanded="true" signature="180:192" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/TerraEntities.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="38" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="65" />
-          <folding>
-            <marker date="1582496676998" expanded="true" signature="6:59" ph="..." />
-            <marker date="1582496676998" expanded="true" signature="100:506" ph="{...}" />
-            <marker date="1582496676998" expanded="true" signature="168:504" ph="{...}" />
-            <marker date="1582496676998" expanded="true" signature="328:393" ph="{...}" />
-            <marker date="1582496676998" expanded="true" signature="442:498" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/TerraEntity.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="76" />
-          <folding>
-            <marker date="1582481390985" expanded="false" signature="6:111" ph="..." />
-            <marker date="1582481390985" expanded="true" signature="152:1079" ph="{...}" />
-            <marker date="1582481390985" expanded="true" signature="183:1077" ph="{...}" />
-            <marker date="1582481390985" expanded="true" signature="621:672" ph="{...}" />
-            <marker date="1582481390985" expanded="true" signature="716:814" ph="{...}" />
-            <marker date="1582481390985" expanded="true" signature="861:964" ph="{...}" />
-            <marker date="1582481390985" expanded="true" signature="1008:1071" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/TerraPosition3D.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="36" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
-          <folding>
-            <marker date="1582497208797" expanded="true" signature="39:338" ph="{...}" />
-            <marker date="1582497208797" expanded="true" signature="75:336" ph="{...}" />
-            <marker date="1582497208797" expanded="true" signature="279:330" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/TerraSerializedEntityPositionMonoView.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
-          <folding>
-            <marker date="1582497222427" expanded="true" signature="6:55" ph="..." />
-            <marker date="1582497222427" expanded="true" signature="82:490" ph="{...}" />
-            <marker date="1582497222427" expanded="true" signature="168:488" ph="{...}" />
-            <marker date="1582497222427" expanded="true" signature="204:298" ph="{...}" />
-            <marker date="1582497222427" expanded="true" signature="243:288" ph="{...}" />
-            <marker date="1582497222427" expanded="true" signature="362:482" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/TerraPosition3D.TerraEntities.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="97" lean-forward="true" selection-start-line="7" selection-start-column="97" selection-end-line="7" selection-end-column="97" />
-          <folding>
-            <marker date="1582497151904" expanded="true" signature="6:59" ph="..." />
-            <marker date="1582497151904" expanded="true" signature="100:397" ph="{...}" />
-            <marker date="1582497151904" expanded="true" signature="141:395" ph="{...}" />
-            <marker date="1582497151904" expanded="true" signature="323:389" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/TerraChunksViewModel.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="24" column="9" lean-forward="true" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
-          <folding>
-            <marker date="1582486969898" expanded="false" signature="6:153" ph="..." />
-            <marker date="1582486969898" expanded="true" signature="181:2068" ph="{...}" />
-            <marker date="1582486969898" expanded="true" signature="234:2066" ph="{...}" />
-            <marker date="1582486969898" expanded="true" signature="268:369" ph="{...}" />
-            <marker date="1582486969898" expanded="true" signature="775:885" ph="{...}" />
-            <marker date="1582486969898" expanded="true" signature="948:1129" ph="{...}" />
-            <marker date="1582486969898" expanded="true" signature="1194:1417" ph="{...}" />
-            <marker date="1582486969898" expanded="true" signature="1220:1407" ph="{...}" />
-            <marker date="1582486969898" expanded="true" signature="1283:1363" ph="{...}" />
-            <marker date="1582486969898" expanded="true" signature="1480:1743" ph="{...}" />
-            <marker date="1582486969898" expanded="true" signature="1570:1733" ph="{...}" />
-            <marker date="1582486969898" expanded="true" signature="1642:1719" ph="{...}" />
-            <marker date="1582486969898" expanded="true" signature="1790:1998" ph="{...}" />
-            <marker date="1582486969898" expanded="true" signature="1880:1988" ph="{...}" />
-            <marker date="1582486969898" expanded="true" signature="2027:2060" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/TerraEntitiesViewModel.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="27" column="1" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
-          <folding>
-            <marker date="1582500726396" expanded="false" signature="6:256" ph="..." />
-            <marker date="1582500726396" expanded="true" signature="284:5385" ph="{...}" />
-            <marker date="1582500726396" expanded="true" signature="423:5383" ph="{...}" />
-            <marker date="1582500726396" expanded="true" signature="462:518" ph="{...}" />
-            <marker date="1582500726396" expanded="true" signature="1018:1582" ph="{...}" />
-            <marker date="1582500726396" expanded="true" signature="1649:1725" ph="{...}" />
-            <marker date="1582500726396" expanded="true" signature="1832:1896" ph="{...}" />
-            <marker date="1582500726396" expanded="true" signature="2001:2062" ph="{...}" />
-            <marker date="1582500726396" expanded="true" signature="2134:2580" ph="{...}" />
-            <marker date="1582500726396" expanded="true" signature="2189:2267" ph="{...}" />
-            <marker date="1582500726396" expanded="true" signature="2284:2544" ph="{...}" />
-            <marker date="1582500726396" expanded="true" signature="2440:2530" ph="{...}" />
-            <marker date="1582500726396" expanded="true" signature="2648:2784" ph="{...}" />
-            <marker date="1582500726396" expanded="true" signature="2711:2774" ph="{...}" />
-            <marker date="1582500726396" expanded="true" signature="2835:3399" ph="{...}" />
-            <marker date="1582500726396" expanded="true" signature="2889:2947" ph="{...}" />
-            <marker date="1582500726396" expanded="true" signature="2964:3363" ph="{...}" />
-            <marker date="1582500726396" expanded="true" signature="3074:3165" ph="{...}" />
-            <marker date="1582500726396" expanded="true" signature="3470:3609" ph="{...}" />
-            <marker date="1582500726396" expanded="true" signature="3533:3599" ph="{...}" />
-            <marker date="1582500726396" expanded="true" signature="3663:4252" ph="{...}" />
-            <marker date="1582500726396" expanded="true" signature="3718:3776" ph="{...}" />
-            <marker date="1582500726396" expanded="true" signature="3793:4216" ph="{...}" />
-            <marker date="1582500726396" expanded="true" signature="3922:4015" ph="{...}" />
-            <marker date="1582500726396" expanded="true" signature="4329:4553" ph="{...}" />
-            <marker date="1582500726396" expanded="true" signature="4473:4543" ph="{...}" />
-            <marker date="1582500726396" expanded="true" signature="4636:4967" ph="{...}" />
-            <marker date="1582500726396" expanded="true" signature="4780:4921" ph="{...}" />
-            <marker date="1582500726396" expanded="true" signature="5026:5095" ph="{...}" />
-            <marker date="1582500726396" expanded="true" signature="5128:5149" ph="{...}" />
-            <marker date="1582500726396" expanded="true" signature="5206:5272" ph="{...}" />
-            <marker date="1582500726396" expanded="true" signature="5321:5377" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
   </component>
 </project>

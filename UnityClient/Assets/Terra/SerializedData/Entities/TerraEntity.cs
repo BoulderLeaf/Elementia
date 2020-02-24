@@ -6,12 +6,10 @@ using UnityEngine;
 
 namespace Terra.SerializedData.Entities
 {
-    public class TerraEntity
+    public class TerraEntity : ITerraEntity
     {
-        public delegate void LabelDelegate(TerraEntity entity, string label);
-
-        public event LabelDelegate OnLabelRemoved;
-        public event LabelDelegate OnLabelAdded;
+        public event Action<TerraEntity, string> OnLabelRemoved;
+        public event Action<TerraEntity, string> OnLabelAdded;
         
         public int InstanceId { get; set; } = GUID.Generate().GetHashCode();
         public HashSet<string> Labels { get; set; } = new HashSet<string>();

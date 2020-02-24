@@ -1,11 +1,9 @@
 using Data;
 using UnityEditor;
 using UnityEngine;
-
+    
 namespace PandeaGames.Data
 {
-
-    
     public partial class GameResources : ScriptableObjectSingleton<GameResources>, ILoadableObject
     {
 #if UNITY_EDITOR

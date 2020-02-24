@@ -1,3 +1,16 @@
-﻿{
-	"name": "ElementiaServices"
+{
+    "name": "ElementiaServices",
+    "references": [
+        "GUID:28ddb628a821b8944b47a18888a7a566",
+        "GUID:060608f069635714c9efd355579cfc21"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }

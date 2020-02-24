@@ -4,7 +4,7 @@ using Terra.SerializedData.Entities;
 
 namespace Terra.ViewModels
 {
-    public interface ITerraEntityViewModel<TTerraEntity> : IEnumerable<TerraEntity> where TTerraEntity : TerraEntity
+    public interface ITerraEntityViewModel<TTerraEntity> : IEnumerable<RuntimeTerraEntity> where TTerraEntity : ITerraEntity
     {
         event Action<TTerraEntity> OnAddEntity;
         event Action<TTerraEntity> OnRemoveEntity;

@@ -9,15 +9,15 @@ namespace Terra.MonoViews
         {
             if (Initialized)
             {
-                
+                Entity.SetTerraPosition3D(transform.position);
             }
         }
 
-        protected override void Initialize(TerraEntity entity)
+        protected override void Initialize(RuntimeTerraEntity entity)
         {
             base.Initialize(entity);
-            
-            //transform.position = new Vector3();
+
+            transform.position = entity.GetTerraPosition3D();
         }
     }
 }

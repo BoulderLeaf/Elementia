@@ -10,21 +10,23 @@ using UnityEngine;
 
 namespace Terra.ViewModels
 {
-    public class TerraEntitiesViewModel : IParamaterizedViewModel<TerraEntitiesViewModel.Parameters>, ITerraEntityViewModel<TerraEntity>
+    public class TerraEntitiesViewModel : IParamaterizedViewModel<TerraEntitiesViewModel.Parameters>, ITerraEntityViewModel<RuntimeTerraEntity>
     {
         public struct Parameters
         {
             public string[] Labels;
         }
         
-        public event Action<TerraEntity> OnAddEntity;
-        public event Action<TerraEntity> OnRemoveEntity;
+        public event Action<RuntimeTerraEntity> OnAddEntity;
+        public event Action<RuntimeTerraEntity> OnRemoveEntity;
 
-        private HashSet<TerraEntity> _entities { get; } = new HashSet<TerraEntity>();
-        private Dictionary<string, HashSet<TerraEntity>> _filteredEntities { get; } = new Dictionary<string, HashSet<TerraEntity>>();
+        private HashSet<RuntimeTerraEntity> _entities { get; } = new HashSet<RuntimeTerraEntity>();
+        private Dictionary<string, HashSet<RuntimeTerraEntity>> _filteredEntities { get; } = new Dictionary<string, HashSet<RuntimeTerraEntity>>();
         
         private TerraChunksViewModel _chunksViewModel;
         private TerraWorldViewModel _worldViewModel;
+
+        private List<ITerraEntityDataController> _entityDataControllers { get; } = new List<ITerraEntityDataController>();
  
         public TerraEntitiesViewModel()
         {
@@ -36,26 +38,33 @@ namespace Terra.ViewModels
             _chunksViewModel.OnChunkAdded += ChunksViewModelOnOnChunkAdded;
             _chunksViewModel.OnChunkRemoved += ChunksViewModelOnOnChunkRemoved;
             
-            AddEntities(_chunksViewModel.GetEntities());
-            AddEntities(_worldViewModel.GetEntities());
+            AddEntities(_chunksViewModel.GetRuntimeEntities());
+            AddEntities(_worldViewModel.GetRuntimeEntities());
+
+            AddDataController(new RuntimeTerraEntity.TerraPosition3DDataController());
+        }
+
+        public void AddDataController(ITerraEntityDataController dataController)
+        {
+            _entityDataControllers.Add(dataController);
         }
 
         private void WorldViewModelOnOnWorldSet(TerraWorld world)
         {
-            AddEntities(_worldViewModel.GetEntities());
+            AddEntities(_worldViewModel.GetRuntimeEntities());
         }
         
         private void ChunksViewModelOnOnChunkRemoved(TerraVector position, TerraWorldChunk chunk)
         {
-            RemoveEntities(chunk.Entities);
+            RemoveEntities(chunk);
         }
         
         private void ChunksViewModelOnOnChunkAdded(TerraVector position, TerraWorldChunk chunk)
         {
-            AddEntities(chunk.Entities);
+            AddEntities(chunk);
         }
 
-        public IEnumerator<TerraEntity> GetEntities(string label = "")
+        public IEnumerator<RuntimeTerraEntity> GetEntities(string label = "")
         {
             if (string.IsNullOrEmpty(label))
             {
@@ -63,7 +72,7 @@ namespace Terra.ViewModels
             }
             else
             {
-                _filteredEntities.TryGetValue(label, out HashSet<TerraEntity> filterSet);
+                _filteredEntities.TryGetValue(label, out HashSet<RuntimeTerraEntity> filterSet);
             
                 if (filterSet != null)
                 {
@@ -74,15 +83,15 @@ namespace Terra.ViewModels
             return null;
         }
 
-        public void AddEntities(IEnumerable<TerraEntity> entities)
+        public void AddEntities(IEnumerable<RuntimeTerraEntity> entitiesToAdd)
         {
-            foreach (TerraEntity entity in entities)
+            foreach (RuntimeTerraEntity entity in entitiesToAdd)
             {
                 AddEntity(entity);
             }
         }
 
-        public bool AddEntity(TerraEntity entity)
+        public bool AddEntity(RuntimeTerraEntity entity)
         {
             if (_entities.Contains(entity))
             {
@@ -105,15 +114,15 @@ namespace Terra.ViewModels
             return true;
         }
 
-        public void RemoveEntities(IEnumerable<TerraEntity> entities)
+        public void RemoveEntities(IEnumerable<RuntimeTerraEntity> entities)
         {
-            foreach (TerraEntity entity in entities)
+            foreach (RuntimeTerraEntity entity in entities)
             {
                 RemoveEntity(entity);
             }
         }
 
-        public bool RemoveEntity(TerraEntity entity)
+        public bool RemoveEntity(RuntimeTerraEntity entity)
         {
             if (!_entities.Contains(entity))
             {
@@ -136,9 +145,9 @@ namespace Terra.ViewModels
             return true;
         }
 
-        private void EntityOnLabelRemoved(TerraEntity entity, string label)
+        private void EntityOnLabelRemoved(RuntimeTerraEntity entity, string label)
         {
-            _filteredEntities.TryGetValue(label, out HashSet<TerraEntity> filterSet);
+            _filteredEntities.TryGetValue(label, out HashSet<RuntimeTerraEntity> filterSet);
             
             if (filterSet != null)
             {
@@ -146,13 +155,13 @@ namespace Terra.ViewModels
             }
         }
         
-        private void EntityOnLabelAdded(TerraEntity entity, string label)
+        private void EntityOnLabelAdded(RuntimeTerraEntity entity, string label)
         {
-            _filteredEntities.TryGetValue(label, out HashSet<TerraEntity> filterSet);
+            _filteredEntities.TryGetValue(label, out HashSet<RuntimeTerraEntity> filterSet);
             
             if (filterSet == null)
             {
-                filterSet = new HashSet<TerraEntity>();
+                filterSet = new HashSet<RuntimeTerraEntity>();
                 _filteredEntities.Add(label, filterSet);
             }
 
@@ -170,7 +179,7 @@ namespace Terra.ViewModels
 
         }
 
-        public IEnumerator<TerraEntity> GetEnumerator()
+        public IEnumerator<RuntimeTerraEntity> GetEnumerator()
         {
             return _entities.GetEnumerator();
         }

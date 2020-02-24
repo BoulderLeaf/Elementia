@@ -47,13 +47,24 @@ namespace Terra.ViewModels
             }
         }
         
+        public IEnumerable<RuntimeTerraEntity> GetRuntimeEntities()
+        {
+            foreach (KeyValuePair<TerraVector, TerraWorldChunk> kvp in _chunks)
+            {
+                foreach (RuntimeTerraEntity entity in kvp.Value)
+                {
+                    yield return entity;
+                }
+            }
+        }
+        
         public IEnumerable<TerraEntity> GetEntities()
         {
             foreach (KeyValuePair<TerraVector, TerraWorldChunk> kvp in _chunks)
             {
-                foreach (TerraEntity entity in kvp.Value)
+                foreach (RuntimeTerraEntity entity in kvp.Value)
                 {
-                    yield return entity;
+                    yield return entity.Entity;
                 }
             }
         }
