@@ -6,6 +6,7 @@ using PandeaGames;
 using PandeaGames.ViewModels;
 using Terra.SerializedData.Entities;
 using Terra.SerializedData.World;
+using Terra.StaticData;
 using UnityEngine;
 
 namespace Terra.ViewModels
@@ -27,7 +28,9 @@ namespace Terra.ViewModels
         private TerraWorldViewModel _worldViewModel;
 
         private List<ITerraEntityDataController> _entityDataControllers { get; } = new List<ITerraEntityDataController>();
- 
+
+        public TerraEntityPrefabConfig TerraEntityPrefabConfig;
+        
         public TerraEntitiesViewModel()
         {
             _chunksViewModel = Game.Instance.GetViewModel<TerraChunksViewModel>(0);

@@ -15,6 +15,15 @@ namespace Terra.SerializedData.Entities
         public HashSet<string> Labels { get; set; } = new HashSet<string>();
         public string Type { get; set; } = "";
 
+        public TerraEntity() : this("")
+        {
+        }
+        
+        public TerraEntity(string type)
+        {
+            Type = type;
+        }
+        
         public override int GetHashCode()
         {
             return InstanceId;

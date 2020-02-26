@@ -7,7 +7,7 @@ namespace PandeaGames.Data
     public partial class GameResources : ScriptableObjectSingleton<GameResources>, ILoadableObject
     {
 #if UNITY_EDITOR
-        public const string AssetPath = "Assets/Resources/GameResources.asset";
+        public const string AssetPath = "Assets/Resources/PandeaGames/GameResources.asset";
         
         [MenuItem("PandeaGames/Data/Generate Game Resources")]
         public static void CreateAsset()

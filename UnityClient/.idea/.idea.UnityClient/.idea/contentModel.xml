@@ -19,6 +19,7 @@
             <e p="Data" t="Include">
               <e p="AreaIndex.cs" t="Include" />
               <e p="DataConfig.cs" t="Include" />
+              <e p="ElementiaGameResources.cs" t="Include" />
               <e p="ElementiaWorldState.cs" t="Include" />
               <e p="SimulationConfiguration.cs" t="Include" />
               <e p="WorldArea.cs" t="Include" />
@@ -29,6 +30,7 @@
               <e p="WorldSimulationState.cs" t="Include" />
             </e>
             <e p="Elementia.cs" t="Include" />
+            <e p="ElementiaGameStart.cs" t="Include" />
             <e p="Gameplay" t="Include">
               <e p="ForestAgentPuppet.cs" t="Include" />
               <e p="LineupCameraAgent.cs" t="Include" />
@@ -51,7 +53,6 @@
           </e>
           <e p="Services" t="Include">
             <e p="Elementia.GameResources.cs" t="Include" />
-            <e p="ElementiaGameStart.cs" t="Include" />
           </e>
           <e p="Shaders" t="Include">
             <e p="ElementiaShader.shader" t="Include" />
@@ -501,6 +502,7 @@
           <e p="ITerraWorld.cs" t="Include" />
           <e p="MonoViews" t="Include">
             <e p="AbstractTerraMonoComponent.cs" t="Include" />
+            <e p="TerraEntitiesMonoView.cs" t="Include" />
             <e p="TerraEntityMonoView.cs" t="Include" />
             <e p="TerraEntityStreamerMonoView.cs" t="Include" />
             <e p="TerraSerializedEntityPositionMonoView.cs" t="Include" />
@@ -525,6 +527,7 @@
           </e>
           <e p="Services" t="Include">
             <e p="TerraChunkService.cs" t="Include" />
+            <e p="TerraWorldService.cs" t="Include" />
           </e>
           <e p="StaticData" t="Include">
             <e p="TerraEntityPrefabConfigSO.cs" t="Include" />
@@ -544,6 +547,11 @@
           </e>
           <e p="Views" t="Include">
             <e p="TerraView.cs" t="Include" />
+            <e p="ViewDataStreamers" t="Include">
+              <e p="IDataStreamer.cs" t="Include" />
+              <e p="TerraWorldDataStreamer.cs" t="Include" />
+              <e p="ViewDataStreamerGroup.cs" t="Include" />
+            </e>
           </e>
         </e>
         <e p="ThirdParty" t="Include">
@@ -560,6 +568,14 @@
           </e>
           <e p="emilesonneveld" t="Include">
             <e p="ColorShader.shader" t="Include" />
+          </e>
+          <e p="Golem" t="Include">
+            <e p="script" t="Include">
+              <e p="CameraRotate.cs" t="Include" />
+            </e>
+            <e p="Shader" t="Include">
+              <e p="Toon2side-Lighted.shader" t="Include" />
+            </e>
           </e>
           <e p="NaughtyAttributes" t="Include">
             <e p="Scripts" t="Include">

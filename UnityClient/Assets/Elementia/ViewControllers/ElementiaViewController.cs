@@ -1,4 +1,7 @@
+using PandeaGames;
+using PandeaGames.Data;
 using PandeaGames.Views.ViewControllers;
+using Terra.ViewModels;
 using TerraController = Terra.Controllers.TerraController;
 
 namespace ViewControllers
@@ -13,6 +16,13 @@ namespace ViewControllers
     {
         private class TerraState : AbstractViewControllerState<ElementiaViewControllerStates>
         {
+            public override void EnterState(ElementiaViewControllerStates @from)
+            {
+                base.EnterState(@from);
+                Game.Instance.GetViewModel<TerraEntitiesViewModel>(0).TerraEntityPrefabConfig =
+                    ElementiaGameResources.Instance.TerraEntityPrefabConfig;
+            }
+
             protected override IViewController GetViewController()
             {
                 return new Terra.Controllers.TerraController();

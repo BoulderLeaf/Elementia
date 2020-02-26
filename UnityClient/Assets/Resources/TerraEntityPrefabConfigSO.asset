@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: TerraEntityPrefabConfigSO
   m_EditorClassIdentifier: 
   _data:
-    _config: []
+    _config:
+    - {fileID: 5426508648649264385, guid: a0cb5117cf312364380b56d7415ec8f9, type: 3}
