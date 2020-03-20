@@ -1,0 +1,17 @@
+{
+    "name": "AssetBundleManagerEditor",
+    "references": [
+        "GUID:1130b9d34766ec947a8ed6c80a8be39b"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

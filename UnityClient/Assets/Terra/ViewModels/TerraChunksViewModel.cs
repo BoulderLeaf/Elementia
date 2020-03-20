@@ -14,24 +14,24 @@ namespace Terra.ViewModels
             public TerraWorldChunk chunk;
         }
         
-        public delegate void ChunkDelegate(TerraVector position, TerraWorldChunk chunk);
+        public delegate void ChunkDelegate(TerraWorldChunk chunk);
 
         public event ChunkDelegate OnChunkAdded;
         public event ChunkDelegate OnChunkRemoved;
-        
+        public TerraWorldChunk CurrentChunk;
         private Dictionary<TerraVector, TerraWorldChunk> _chunks = new Dictionary<TerraVector, TerraWorldChunk>();
         
-        public void AddChunk(TerraVector position, TerraWorldChunk chunk)
+        public void AddChunk(TerraWorldChunk chunk)
         {
-            _chunks[position] = chunk;
-            OnChunkAdded?.Invoke(position, chunk);
+            CurrentChunk = chunk;
+            OnChunkAdded?.Invoke(chunk);
         }
         
         public void RemoveChunk(TerraVector position)
         {
             _chunks.TryGetValue(position, out TerraWorldChunk chunk);
             _chunks.Remove(position);
-            OnChunkRemoved?.Invoke(position, chunk);
+            OnChunkRemoved?.Invoke(chunk);
         }
         
         public TerraWorldChunk this[TerraVector vector]
@@ -49,32 +49,17 @@ namespace Terra.ViewModels
         
         public IEnumerable<RuntimeTerraEntity> GetRuntimeEntities()
         {
-            foreach (KeyValuePair<TerraVector, TerraWorldChunk> kvp in _chunks)
-            {
-                foreach (RuntimeTerraEntity entity in kvp.Value)
-                {
-                    yield return entity;
-                }
-            }
+            return null;
         }
         
         public IEnumerable<TerraEntity> GetEntities()
         {
-            foreach (KeyValuePair<TerraVector, TerraWorldChunk> kvp in _chunks)
-            {
-                foreach (RuntimeTerraEntity entity in kvp.Value)
-                {
-                    yield return entity.Entity;
-                }
-            }
+            return null;
         }
 
         public IEnumerator<Chunk> GetChunks()
         {
-            foreach (KeyValuePair<TerraVector, TerraWorldChunk> kvp in _chunks)
-            {
-                yield return new Chunk(){ vector = kvp.Key, chunk = kvp.Value};
-            }
+            return null;
         }
 
         public void Reset()

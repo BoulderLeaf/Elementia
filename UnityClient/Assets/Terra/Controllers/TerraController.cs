@@ -1,5 +1,8 @@
-﻿using PandeaGames.Views;
+﻿using PandeaGames;
+using PandeaGames.Views;
 using PandeaGames.Views.ViewControllers;
+using Terra.SerializedData.Entities;
+using Terra.Services;
 using Terra.Views;
 
 namespace Terra.Controllers
@@ -8,7 +11,14 @@ namespace Terra.Controllers
     {
         public TerraController()
         {
-            
+            Game.Instance.GetService<TerraDBService>().Setup(
+                new IDBSchema[]
+                {
+                    TerraEntity.Serializer,
+                    TerraPosition3D.Serializer,
+                    TerraPoint.Serializer
+                }
+                );
         }
 
         protected override IView CreateView()

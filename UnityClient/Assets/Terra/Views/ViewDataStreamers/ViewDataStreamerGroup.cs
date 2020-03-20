@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace Terra.Views.ViewDataStreamers
 {
@@ -16,6 +17,14 @@ namespace Terra.Views.ViewDataStreamers
             foreach (IDataStreamer dataStreamer in _dataStreamers)
             {
                 dataStreamer.Start();
+            }
+        }
+
+        public void Update(float time)
+        {
+            foreach (IDataStreamer dataStreamer in _dataStreamers)
+            {
+                dataStreamer.Update(time);
             }
         }
 

@@ -7,6 +7,7 @@
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="AssetBundleManager.csproj" t="IncludeRecursive" />
+      <e p="AssetBundleManagerEditor.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Elementia" t="Include">
           <e p="Scripts" t="Include">
@@ -65,6 +66,8 @@
             <e p="NewBehaviourScript.cs" t="Include" />
           </e>
         </e>
+        <e p="ElementiaPlayer.cs" t="Include" />
+        <e p="ElementiaPlayerCamera.cs" t="Include" />
         <e p="Grass.cs" t="Include" />
         <e p="GrassShader" t="Include">
           <e p="Editor" t="Include">
@@ -84,29 +87,6 @@
             <e p="Grass.shader" t="Include" />
             <e p="GrassShadows.cginc" t="Include" />
             <e p="RandomDots.shader" t="Include" />
-          </e>
-        </e>
-        <e p="HeightMapGeneratorPackage" t="Include">
-          <e p="Readme.txt" t="Include" />
-          <e p="Scripts" t="Include">
-            <e p="Demos" t="Include">
-              <e p="BoxPresentation" t="Include">
-                <e p="DisplayRenderedTexture.cs" t="Include" />
-              </e>
-              <e p="HeightMapGenerator" t="Include">
-                <e p="DisplayGeneratedTexture.cs" t="Include" />
-              </e>
-            </e>
-            <e p="HeightMap" t="Include">
-              <e p="AbstractHeightMapGenerator.cs" t="Include" />
-              <e p="HeightMapGenerator.cs" t="Include" />
-              <e p="HeightMapRenderer.cs" t="Include" />
-            </e>
-          </e>
-          <e p="Shader" t="Include">
-            <e p="DepthNormalShader.shader" t="Include" />
-            <e p="DepthShader.shader" t="Include" />
-            <e p="DepthShaderEye.shader" t="Include" />
           </e>
         </e>
         <e p="I2" t="Include">
@@ -250,7 +230,102 @@
             </e>
           </e>
         </e>
+        <e p="IL3DN" t="Include">
+          <e p="Scripts" t="Include">
+            <e p="Editor" t="Include">
+              <e p="IL3DN_ColorController_Editor.cs" t="Include" />
+              <e p="IL3DN_ColorManagerEffects_Editor.cs" t="Include" />
+              <e p="IL3DN_ColorManagerTextures_Editor.cs" t="Include" />
+              <e p="IL3DN_Snow_Editor.cs" t="Include" />
+              <e p="IL3DN_Wind_Editor.cs" t="Include" />
+            </e>
+            <e p="IL3DN_ChangeWalkingSound.cs" t="Include" />
+            <e p="IL3DN_ColorController.cs" t="Include" />
+            <e p="IL3DN_ColorManagerEffects.cs" t="Include" />
+            <e p="IL3DN_ColorManagerTextures.cs" t="Include" />
+            <e p="IL3DN_Fog.cs" t="Include" />
+            <e p="IL3DN_Fog_PP.cs" t="Include" />
+            <e p="IL3DN_PlayRandomSound.cs" t="Include" />
+            <e p="IL3DN_SimpleFPSController.cs" t="Include" />
+            <e p="IL3DN_SimpleMouseLook.cs" t="Include" />
+            <e p="IL3DN_Snow.cs" t="Include" />
+            <e p="IL3DN_Wind.cs" t="Include" />
+          </e>
+          <e p="Shaders" t="Include">
+            <e p="IL3DN_Branch.shader" t="Include" />
+            <e p="IL3DN_CardComplex.shader" t="Include" />
+            <e p="IL3DN_CardSimple.shader" t="Include" />
+            <e p="IL3DN_Cloud.shader" t="Include" />
+            <e p="IL3DN_Decals.shader" t="Include" />
+            <e p="IL3DN_Fog.shader" t="Include" />
+            <e p="IL3DN_Fog_PP.shader" t="Include" />
+            <e p="IL3DN_Grass.shader" t="Include" />
+            <e p="IL3DN_Leaf.shader" t="Include" />
+            <e p="IL3DN_OpaqueSurface.shader" t="Include" />
+            <e p="IL3DN_Pine.shader" t="Include" />
+            <e p="IL3DN_Sky.shader" t="Include" />
+            <e p="IL3DN_SoftParticle.shader" t="Include" />
+            <e p="IL3DN_Terrain.shader" t="Include" />
+            <e p="IL3DN_Water.shader" t="Include" />
+          </e>
+        </e>
+        <e p="Invector-3rdPersonController_LITE" t="Include">
+          <e p="3D Models" t="Include">
+            <e p="Others" t="Include">
+              <e p="HealthItem" t="Include">
+                <e p="vAnimateUV.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="README_Basic.txt" t="Include" />
+          <e p="Scripts" t="Include">
+            <e p="Camera" t="Include">
+              <e p="Editor" t="Include">
+                <e p="vThirdPersonCameraEditor.cs" t="Include" />
+              </e>
+              <e p="vThirdPersonCamera.cs" t="Include" />
+            </e>
+            <e p="CharacterController" t="Include">
+              <e p="Editor" t="Include">
+                <e p="Resources" t="Include">
+                  <e p="vEditorStartupPrefs.cs" t="Include" />
+                </e>
+                <e p="vCharacterEditor.cs" t="Include" />
+                <e p="vInvectorStartup.cs" t="Include" />
+                <e p="vInvectorWelcomeWindow.cs" t="Include" />
+                <e p="vThirdPersonInputEditor.cs" t="Include" />
+              </e>
+              <e p="vThirdPersonAnimator.cs" t="Include" />
+              <e p="vThirdPersonController.cs" t="Include" />
+              <e p="vThirdPersonInput.cs" t="Include" />
+              <e p="vThirdPersonMotor.cs" t="Include" />
+            </e>
+            <e p="CharacterCreator" t="Include">
+              <e p="script" t="Include">
+                <e p="Editor" t="Include">
+                  <e p="vCreateBasicCharacterEditor.cs" t="Include" />
+                  <e p="vHelperEditor.cs" t="Include" />
+                </e>
+              </e>
+            </e>
+            <e p="Generic" t="Include">
+              <e p="Utils" t="Include">
+                <e p="Editor" t="Include">
+                  <e p="vCommentEditor.cs" t="Include" />
+                </e>
+                <e p="vComment.cs" t="Include" />
+                <e p="vExtensions.cs" t="Include" />
+                <e p="vPickupItem.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+        </e>
         <e p="LayerAttributeEditor.cs" t="Include" />
+        <e p="NuGet" t="Include">
+          <e p="net45" t="Include">
+            <e p="System.Data.SQLite.xml" t="Include" />
+          </e>
+        </e>
         <e p="OutlineEffect" t="Include">
           <e p="Readme.txt" t="Include" />
           <e p="VerticesOutline_Always.shader" t="Include" />
@@ -262,6 +337,7 @@
             <e p="AssetList.cs" t="Include" />
             <e p="ConfiguredScreen.cs" t="Include" />
             <e p="Core.cs" t="Include" />
+            <e p="DataSO.cs" t="Include" />
             <e p="DialogConfig.cs" t="Include" />
             <e p="Factories" t="Include">
               <e p="MaterialFactory.cs" t="Include" />
@@ -401,7 +477,6 @@
           <e p="UI" t="Include">
             <e p="AbstractListItem.cs" t="Include" />
             <e p="AbstractListView.cs" t="Include" />
-            <e p="DeviceUIModifier.cs" t="Include" />
             <e p="IListItem.cs" t="Include" />
             <e p="IListView.cs" t="Include" />
             <e p="SimpleButtonTab.cs" t="Include" />
@@ -498,6 +573,9 @@
           <e p="Controllers" t="Include">
             <e p="TerraController.cs" t="Include" />
           </e>
+          <e p="Editor" t="Include">
+            <e p="TerraCheatWindow.cs" t="Include" />
+          </e>
           <e p="ITerraShape.cs" t="Include" />
           <e p="ITerraWorld.cs" t="Include" />
           <e p="MonoViews" t="Include">
@@ -506,32 +584,43 @@
             <e p="TerraEntityMonoView.cs" t="Include" />
             <e p="TerraEntityStreamerMonoView.cs" t="Include" />
             <e p="TerraSerializedEntityPositionMonoView.cs" t="Include" />
+            <e p="TerraTerrainMonoView.cs" t="Include" />
           </e>
           <e p="SerializedData" t="Include">
             <e p="Entities" t="Include">
+              <e p="AbstractEntityComponent.cs" t="Include" />
+              <e p="EntityComponent.cs" t="Include" />
+              <e p="IEntityComponent.cs" t="Include" />
               <e p="ITerraEntity.cs" t="Include" />
               <e p="ITerraEntityComponent.cs" t="Include" />
               <e p="RuntimeTerraEntity.cs" t="Include" />
               <e p="TerraEntities.cs" t="Include" />
               <e p="TerraEntity.cs" t="Include" />
               <e p="TerraPosition3D.cs" t="Include" />
-              <e p="TerraPosition3D.TerraEntities.cs" t="Include" />
+              <e p="TerraPosition3DComponent.cs" t="Include" />
+            </e>
+            <e p="GameData" t="Include">
+              <e p="ITerraEntityType.cs" t="Include" />
+              <e p="TerraEntityTypeData.cs" t="Include" />
+              <e p="TerraEntityTypeSO.cs" t="Include" />
             </e>
             <e p="World" t="Include">
-              <e p="Entities.TerraWorldChunk.cs" t="Include" />
-              <e p="Height.TerraWorldChunk.cs" t="Include" />
               <e p="TerraWorld.cs" t="Include" />
               <e p="TerraWorldChunk.cs" t="Include" />
-              <e p="Water.TerraWorldChunk.cs" t="Include" />
             </e>
           </e>
           <e p="Services" t="Include">
+            <e p="IDBSerializable.cs" t="Include" />
             <e p="TerraChunkService.cs" t="Include" />
+            <e p="TerraDBService.cs" t="Include" />
+            <e p="TerraEntitesService.cs" t="Include" />
             <e p="TerraWorldService.cs" t="Include" />
           </e>
           <e p="StaticData" t="Include">
             <e p="TerraEntityPrefabConfigSO.cs" t="Include" />
+            <e p="TerraGameResources.cs" t="Include" />
           </e>
+          <e p="TerraArea.cs" t="Include" />
           <e p="TerraController.cs" t="Include" />
           <e p="TerraShape.cs" t="Include" />
           <e p="TerraShapeSO.cs" t="Include" />
@@ -542,6 +631,7 @@
             <e p="ITerraEntityViewModel.cs" t="Include" />
             <e p="TerraChunksViewModel.cs" t="Include" />
             <e p="TerraEntitiesViewModel.cs" t="Include" />
+            <e p="TerraTerrainGeometryDataModel.cs" t="Include" />
             <e p="TerraViewModel.cs" t="Include" />
             <e p="TerraWorldViewModel.cs" t="Include" />
           </e>
@@ -788,15 +878,28 @@
       </e>
       <e p="ElementiaServices.csproj" t="IncludeRecursive" />
       <e p="I2.csproj" t="IncludeRecursive" />
+      <e p="I2LocalizationEditor.csproj" t="IncludeRecursive" />
+      <e p="IL3DN.csproj" t="IncludeRecursive" />
+      <e p="IL3DNEditor.csproj" t="IncludeRecursive" />
+      <e p="Invector3rdPerson.csproj" t="IncludeRecursive" />
+      <e p="Invector3rdPersonCameraEditor.csproj" t="IncludeRecursive" />
+      <e p="Invector3rdPersonCharacterControllerEditor.csproj" t="IncludeRecursive" />
+      <e p="Invector3rdPersonGenericEditor.csproj" t="IncludeRecursive" />
+      <e p="InvectorCharacterCreatorEditor.csproj" t="IncludeRecursive" />
       <e p="NaughtyAttributes.Core.csproj" t="IncludeRecursive" />
       <e p="NaughtyAttributes.Editor.csproj" t="IncludeRecursive" />
       <e p="NaughtyAttributes.Test.csproj" t="IncludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="packages" t="ExcludeRecursive" />
       <e p="PandeaGames.csproj" t="IncludeRecursive" />
+      <e p="PandeaGamesEditor.csproj" t="IncludeRecursive" />
+      <e p="PandeaGamesServicesEditor.csproj" t="IncludeRecursive" />
+      <e p="PandeaGamesStaticDataEditor.csproj" t="IncludeRecursive" />
+      <e p="PandeaGamesWeakReferenceEditor.csproj" t="IncludeRecursive" />
       <e p="SharpSerializer.csproj" t="IncludeRecursive" />
       <e p="Temp\bin" t="ExcludeRecursive" />
       <e p="Terra.csproj" t="IncludeRecursive" />
+      <e p="TerraEditor.csproj" t="IncludeRecursive" />
       <e p="UnityClient.sln" t="IncludeFlat" />
     </e>
   </component>

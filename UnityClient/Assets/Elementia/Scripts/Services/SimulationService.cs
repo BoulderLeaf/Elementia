@@ -23,7 +23,6 @@ public class SimulationService : Service
         _worldSimulationStateService = Game.Instance.GetService<WorldSimulationStateService>();
         _worldDataAccessService =  Game.Instance.GetService<WorldDataAccessService>();
         _worldSimulationStateService.Load(OnSimulationStateLoaded, () => { });
-        PlayerSettings.MTRendering = false;
     }
     
     public override void StartService(ServiceManager serviceManager)

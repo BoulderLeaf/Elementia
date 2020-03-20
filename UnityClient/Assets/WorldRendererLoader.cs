@@ -34,7 +34,7 @@ public class WorldRendererLoader : MonoBehaviour, ITerraWorld {
     [SerializeField] 
     private LayerMask _layerMaskForMousePosition;
     
-    [SerializeField, Layer] 
+    [SerializeField] 
     private int _geometryLayer;
 
     private WorldDataToken _currentToken;

@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using ICSharpCode.NRefactory.PrettyPrinter;
 using PandeaGames;
+using PandeaGames.Data;
 using PandeaGames.ViewModels;
 using Terra.SerializedData.Entities;
+using Terra.SerializedData.GameData;
 using Terra.SerializedData.World;
 using Terra.StaticData;
 using UnityEngine;
@@ -30,7 +31,9 @@ namespace Terra.ViewModels
         private List<ITerraEntityDataController> _entityDataControllers { get; } = new List<ITerraEntityDataController>();
 
         public TerraEntityPrefabConfig TerraEntityPrefabConfig;
-        
+
+        public RuntimeTerraEntity Player { get; private set; }
+
         public TerraEntitiesViewModel()
         {
             _chunksViewModel = Game.Instance.GetViewModel<TerraChunksViewModel>(0);
@@ -41,10 +44,10 @@ namespace Terra.ViewModels
             _chunksViewModel.OnChunkAdded += ChunksViewModelOnOnChunkAdded;
             _chunksViewModel.OnChunkRemoved += ChunksViewModelOnOnChunkRemoved;
             
-            AddEntities(_chunksViewModel.GetRuntimeEntities());
-            AddEntities(_worldViewModel.GetRuntimeEntities());
+           // AddEntities(_chunksViewModel.GetRuntimeEntities());
+           // AddEntities(_worldViewModel.GetRuntimeEntities());
 
-            AddDataController(new RuntimeTerraEntity.TerraPosition3DDataController());
+            //AddDataController(new RuntimeTerraEntity.TerraPosition3DDataController());
         }
 
         public void AddDataController(ITerraEntityDataController dataController)
@@ -57,14 +60,27 @@ namespace Terra.ViewModels
             AddEntities(_worldViewModel.GetRuntimeEntities());
         }
         
-        private void ChunksViewModelOnOnChunkRemoved(TerraVector position, TerraWorldChunk chunk)
+        private void ChunksViewModelOnOnChunkRemoved(TerraWorldChunk chunk)
         {
-            RemoveEntities(chunk);
+            //RemoveEntities(chunk);
         }
         
-        private void ChunksViewModelOnOnChunkAdded(TerraVector position, TerraWorldChunk chunk)
+        private void ChunksViewModelOnOnChunkAdded(TerraWorldChunk chunk)
         {
-            AddEntities(chunk);
+           // AddEntities(chunk);
+        }
+
+        public RuntimeTerraEntity GetEntity(ITerraEntityType type)
+        {
+            foreach (RuntimeTerraEntity entity in _entities)
+            {
+                if (entity.EntityTypeData.EntityID == type.EntityID)
+                {
+                    return entity;
+                }
+            }
+
+            return null;
         }
 
         public IEnumerator<RuntimeTerraEntity> GetEntities(string label = "")
@@ -107,6 +123,11 @@ namespace Terra.ViewModels
                 foreach (string label in entity.Labels)
                 {
                     EntityOnLabelAdded(entity, label);
+                }
+
+                if (entity.EntityID == TerraGameResources.Instance.TerraEntityPrefabConfig.PlayerConfig.Data.EntityID)
+                {
+                    Player = entity;
                 }
                 
                 entity.OnLabelAdded += EntityOnLabelAdded;

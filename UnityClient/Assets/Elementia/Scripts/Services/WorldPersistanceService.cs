@@ -47,7 +47,8 @@ public class WorldPersistanceService : AbstractService<WorldPersistanceService> 
     {
         get
         {
-            return AssetDatabase.LoadAssetAtPath<WorldAsset>("Assets/Elementia/Config/MainWorld.asset");
+            return null;
+            //return AssetDatabase.LoadAssetAtPath<WorldAsset>("Assets/Elementia/Config/MainWorld.asset");
             return _indexGenerator;
         }
     }

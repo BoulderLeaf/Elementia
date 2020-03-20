@@ -42,13 +42,13 @@ public abstract class AbstractGridDataModel<TData, TGridDataPoint> where TGridDa
         _data = new TData[width, height];
     }
 
-    public TData this[TerraVector vector]
+    public virtual TData this[TerraVector vector]
     {
         get { return _data[vector.x, vector.y]; }
         set { _data[vector.x, vector.y] = value; }
     }
     
-    public TData this[int x, int y]
+    public virtual TData this[int x, int y]
     {
         get { return _data[x, y]; }
         set { _data[x, y] = value; }

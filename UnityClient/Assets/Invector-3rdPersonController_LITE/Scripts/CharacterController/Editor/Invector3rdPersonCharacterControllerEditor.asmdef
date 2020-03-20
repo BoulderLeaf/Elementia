@@ -1,0 +1,17 @@
+{
+    "name": "Invector3rdPersonCharacterControllerEditor",
+    "references": [
+        "GUID:e134332f8729d3f43b4e3206ff8f00a0"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -7,14 +7,19 @@ public class TaskProvider : MonoBehaviourSingleton<TaskProvider>
 {
     public delegate IEnumerator Task();
 
-    public void RunTask( IEnumerator task, Action onComplete )
+    public Coroutine RunTask( IEnumerator task, Action onComplete )
     {
-        StartCoroutine(Run(task, onComplete));
+        return StartCoroutine(Run(task, onComplete));
     }
     
-    public void RunTask( IEnumerator task )
+    public void EndTask( Coroutine task )
     {
-        StartCoroutine(Run(task, () => { }));
+        StopCoroutine(task);
+    }
+    
+    public Coroutine RunTask( IEnumerator task )
+    {
+        return StartCoroutine(Run(task, () => { }));
     }
     
     public void DelayedAction(Action onComplete )

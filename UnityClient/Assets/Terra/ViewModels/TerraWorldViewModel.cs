@@ -20,11 +20,11 @@ namespace Terra.ViewModels
             OnWorldSet?.Invoke(world);
         }
 
-        public IEnumerable<TerraEntity> GetEntities()
+        public IEnumerable<AssembledEntity> GetEntities()
         {
             if (_world != null)
             {
-                foreach (TerraEntity entity in _world.Entities)
+                foreach (AssembledEntity entity in _world.Entities)
                 {
                     yield return entity;
                 }

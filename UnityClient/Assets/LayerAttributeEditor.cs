@@ -1,4 +1,5 @@
-﻿using UnityEditor;
+﻿#if UNITY_EDITOR
+using UnityEditor;
 using UnityEngine;
 
 /// <summary>
@@ -19,3 +20,4 @@ class LayerAttributeEditor : PropertyDrawer
         property.intValue = EditorGUI.LayerField(position, label,  property.intValue);
     }
 }
+#endif
