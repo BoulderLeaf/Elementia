@@ -4,4 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Elementia/Scenes/World.unity
+    guid: 8be695e5fd51a1541a87b8e9bb3ee8db
+  m_configObjects: {}
